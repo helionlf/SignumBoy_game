@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://kd7a1qff1k1m"]
+[gd_scene load_steps=5 format=3 uid="uid://kd7a1qff1k1m"]
 
 [ext_resource type="PackedScene" uid="uid://s0gchwxgwkv2" path="res://Scenes/home.tscn" id="1_lj77e"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="2_ccti3"]
+[ext_resource type="PackedScene" uid="uid://7sob4gho1sd2" path="res://Scenes/daddy.tscn" id="3_54rfc"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_d3w3i"]
+vertices = PackedVector2Array(226, 44, 134, 44, 134, 30, 227, 30)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(124, 20, 237, 20, 236, 54, 124, 54)])
+source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="world" type="Node2D"]
 
@@ -10,3 +17,18 @@ position = Vector2(-31, -32)
 
 [node name="player" parent="." instance=ExtResource("2_ccti3")]
 position = Vector2(163, 12)
+
+[node name="naviagation_positions" type="Node2D" parent="."]
+position = Vector2(177, 28)
+
+[node name="position_r" type="Marker2D" parent="naviagation_positions"]
+position = Vector2(42, 8)
+
+[node name="position_l" type="Marker2D" parent="naviagation_positions"]
+position = Vector2(-40, 8)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_d3w3i")
+
+[node name="daddy" parent="NavigationRegion2D" instance=ExtResource("3_54rfc")]
+position = Vector2(178, 30)
