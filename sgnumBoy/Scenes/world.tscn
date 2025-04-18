@@ -15,9 +15,6 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 [node name="home" parent="." instance=ExtResource("1_lj77e")]
 position = Vector2(-31, -32)
 
-[node name="player" parent="." instance=ExtResource("2_ccti3")]
-position = Vector2(163, 12)
-
 [node name="naviagation_positions" type="Node2D" parent="."]
 position = Vector2(177, 28)
 
@@ -31,4 +28,7 @@ position = Vector2(-40, 8)
 navigation_polygon = SubResource("NavigationPolygon_d3w3i")
 
 [node name="daddy" parent="NavigationRegion2D" instance=ExtResource("3_54rfc")]
-position = Vector2(178, 30)
+position = Vector2(179, 32)
+
+[node name="player" parent="." instance=ExtResource("2_ccti3")]
+position = Vector2(163, 12)

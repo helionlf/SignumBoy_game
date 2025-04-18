@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 30.0
+var SPEED = 30.0
 
 @onready var position_r = $"../../naviagation_positions/position_r"
 @onready var position_l = $"../../naviagation_positions/position_l"
@@ -21,16 +21,17 @@ func _ready():
 	navigation_agent_2d.set_target_position(current_target)
 
 func _physics_process(delta):
-	if waiting:
-		return
+	handle_animation()
+	if not waiting:
+		if navigation_agent_2d.is_navigation_finished():
+			await pause_and_switch_target()
+		else:
+			var next_point = navigation_agent_2d.get_next_path_position()
+			var direction = (next_point - global_position).normalized()
+			velocity = direction * SPEED
+			move_and_slide()
 
-	if navigation_agent_2d.is_navigation_finished():
-		await pause_and_switch_target()
-	else:
-		var next_point = navigation_agent_2d.get_next_path_position()
-		var direction = (next_point - global_position).normalized()
-		velocity = direction * SPEED
-		move_and_slide()
+	
 
 func pause_and_switch_target():
 	waiting = true
@@ -46,3 +47,24 @@ func pause_and_switch_target():
 
 	navigation_agent_2d.set_target_position(current_target)
 	waiting = false
+
+func handle_animation():
+	if velocity.x > 0:
+		animation.play("walk")
+		animation.flip_h = false # Direção para a direita
+	elif velocity.x < 0:
+		animation.play("walk")
+		animation.flip_h = true # Direção para a esquerda
+	else:
+		animation.play("idle") # Estado parado
+
+
+func _on_area_2d_body_entered(body):
+	if body.get_name() == "player":
+		SPEED = 0.0
+		$key_E.visible = true
+
+func _on_area_2d_body_exited(body):
+	if body.get_name() == "player":
+		SPEED = 30.0
+		$key_E.visible = false

@@ -13,3 +13,9 @@ config_version=5
 config/name="sgnumBoy"
 run/main_scene="res://Scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="player"
+2d_physics/layer_3="npc"
