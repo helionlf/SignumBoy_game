@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckasv7xjv4xvg"]
+[gd_scene load_steps=4 format=3 uid="uid://ckasv7xjv4xvg"]
 
 [ext_resource type="Script" path="res://Scripts/miniGame_alfabeto.gd" id="1_dtm1x"]
+[ext_resource type="Texture2D" uid="uid://dk2ijfpr42tx8" path="res://Assets/UI/cards/aranha.png" id="2_0rrqq"]
+
+[sub_resource type="Theme" id="Theme_3kqak"]
 
 [node name="miniGame_alfabeto" type="Node2D"]
 script = ExtResource("1_dtm1x")
@@ -9,48 +12,56 @@ script = ExtResource("1_dtm1x")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchor_right = 0.238
-anchor_bottom = 0.193
-offset_right = -0.175995
-offset_bottom = -0.064003
+anchor_right = 1.01
+anchor_bottom = 1.04
+offset_right = -0.52002
+offset_bottom = 0.0799561
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionsContainer" type="MenuBar" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_right = 275.0
-offset_bottom = 125.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.003
+anchor_bottom = 0.325
+offset_right = -0.489014
+offset_bottom = -0.0500183
 
 [node name="option_A" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.145
-anchor_bottom = 0.32
-offset_right = 0.124996
+anchor_right = 0.172
+anchor_bottom = 0.767
+offset_right = -0.552002
+offset_bottom = 0.0269928
+theme = SubResource("Theme_3kqak")
 stretch_mode = 1
 
 [node name="option_B" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.251
-anchor_right = 0.396
-anchor_bottom = 0.32
-offset_left = -0.0250015
-offset_right = 0.0999908
+anchor_right = 0.417
+anchor_bottom = 0.872
+offset_left = 0.334015
+offset_right = -0.222015
+offset_bottom = 0.0319977
 
 [node name="option_C" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.582
+anchor_left = 0.539
 anchor_right = 0.727
-anchor_bottom = 0.32
-offset_left = -0.0500031
-offset_right = 0.0749817
+anchor_bottom = 0.918
+offset_left = 0.52594
+offset_right = 0.317993
+offset_bottom = -0.0420074
 
 [node name="option_D" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
@@ -58,15 +69,22 @@ anchors_preset = -1
 anchor_left = 0.851
 anchor_right = 1.0
 anchor_bottom = 0.32
-offset_left = -0.0250092
+offset_left = -47.266
 offset_right = -1.0
+offset_bottom = 139.92
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.007
-anchor_top = 0.536
-anchor_right = 1.0
-anchor_bottom = 0.992
-offset_left = -0.0819999
-offset_right = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5001
+offset_top = -11.0
+offset_right = 5222.5
+offset_bottom = 2989.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_0rrqq")

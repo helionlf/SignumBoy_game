@@ -11,7 +11,7 @@ func _process(delta):
 
 func load_question():
 	var question_data =  GlobalMGA.quiz_data[GlobalMGA.current_phase][GlobalMGA.current_question_index]
-	current_world.texture = load(question_data["question"]) #aqui vai colocar a imagem da palavra
+	current_world.texture = load(question_data["question"])
 	
 	var options = question_data["options"].duplicate()
 	options.shuffle()
@@ -21,13 +21,14 @@ func load_question():
 	 
 	for i in range($CanvasLayer/Control/OptionsContainer.get_child_count()):
 		var button = $CanvasLayer/Control/OptionsContainer.get_child(i)
-		button.texture = load(options[i])  # Associa o texto ou imagem da opção ao botão
+		
+		#button.texture = load(options[i])  # Associa o texto ou imagem da opção ao botão
 		button.set_meta("is_correct", i == shuffled_correct_index)  # Define metadados indicando se é a resposta correta
-		button.connect("pressed", Callable(self, "_on_button_pressed"))
+		button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
 
 
-func _on_button_pressed():
-	var button = get_node(get_tree().current_scene.focus_owner)
+
+func _on_button_pressed(button):
 	var is_correct = button.get_meta("is_correct")
 
 	if is_correct:

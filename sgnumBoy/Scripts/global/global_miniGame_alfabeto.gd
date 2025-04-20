@@ -7,10 +7,10 @@ var current_question_index = 0
 var quiz_data = {
 	#TEM QUE CRIAR UM VETOR COM CADA OPÇÂO PRA CADA FASE
 	"fase_1": [
-		{"question": "Qual é a capital do Brasil?", "options": ["Rio de Janeiro", "Brasília", "São Paulo"], "correct": 1},
-		{"question": "Quantos continentes existem?", "options": ["5", "6", "7"], "correct": 2},
-		{"question": "Quem foi Einstein?", "options": ["Cientista", "Cantor", "Escritor"], "correct": 0},
-		{"question": "Qual é o maior planeta?", "options": ["Terra", "Júpiter", "Saturno"], "correct": 1}
+		{"question": "res://Assets/UI/cards/aranha.png", "options": ["Rio de Janeiro", "Brasília", "São Paulo"], "correct": 1},
+		{"question": "res://Assets/UI/cards/abelha.png", "options": ["5", "6", "7"], "correct": 2},
+		{"question": "res://Assets/UI/cards/cachorro.png", "options": ["Cientista", "Cantor", "Escritor"], "correct": 0},
+		{"question": "res://Assets/UI/cards/panda.png", "options": ["Terra", "Júpiter", "Saturno"], "correct": 1}
 	],
 	"fase_2": [
 		{"question": "Qual é a capital da França?", "options": ["Berlim", "Paris", "Madrid"], "correct": 1},
@@ -27,4 +27,4 @@ func next_level():
 	#TEM QUE CRIAR UM IF PRA CADA FASE
 	else:
 		print("Fim do quiz!")
-		return
+		get_tree().change_scene_to_file("res://Scenes/home.tscn")
