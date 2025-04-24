@@ -61,10 +61,9 @@ func handle_animation():
 
 func _on_area_2d_body_entered(body):
 	if body.get_name() == "player":
-		SPEED = 0.0
+		velocity = Vector2.ZERO
 		$key_E.visible = true
 
 func _on_area_2d_body_exited(body):
 	if body.get_name() == "player":
-		SPEED = 30.0
 		$key_E.visible = false
