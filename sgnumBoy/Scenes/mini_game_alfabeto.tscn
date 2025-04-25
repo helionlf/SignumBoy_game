@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckasv7xjv4xvg"]
+[gd_scene load_steps=3 format=3 uid="uid://ckasv7xjv4xvg"]
 
 [ext_resource type="Script" path="res://Scripts/miniGame_alfabeto.gd" id="1_dtm1x"]
-[ext_resource type="Texture2D" uid="uid://dk2ijfpr42tx8" path="res://Assets/UI/cards/aranha.png" id="2_0rrqq"]
 [ext_resource type="Texture2D" uid="uid://2uvujgg3rv1v" path="res://Assets/UI/tablet-removebg-preview.png" id="2_5bpxp"]
-[ext_resource type="Texture2D" uid="uid://ds1stwp4bcfio" path="res://Assets/teste.jpg" id="2_ho1nc"]
 
 [node name="miniGame_alfabeto" type="Node2D"]
 script = ExtResource("1_dtm1x")
@@ -24,13 +22,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/ColorRect"]
+[node name="tablet" type="TextureRect" parent="CanvasLayer/Control/ColorRect"]
 layout_mode = 0
-offset_left = -152.0
-offset_top = -296.0
-offset_right = 1319.0
-offset_bottom = 974.0
+offset_left = -20.0
+offset_top = -289.0
+offset_right = 480.0
+offset_bottom = 232.0
+scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_5bpxp")
 
 [node name="OptionsContainer" type="MenuBar" parent="CanvasLayer/Control"]
@@ -44,42 +44,38 @@ offset_bottom = -0.0500183
 [node name="option_A" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 165.0
-offset_top = 59.0
-offset_right = 565.0
-offset_bottom = 459.0
+offset_left = 182.0
+offset_top = 133.0
+offset_right = 582.0
+offset_bottom = 533.0
 scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_ho1nc")
 
 [node name="option_B" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 375.0
-offset_top = 57.0
-offset_right = 775.0
-offset_bottom = 457.0
+offset_left = 392.0
+offset_top = 131.0
+offset_right = 792.0
+offset_bottom = 531.0
 scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_ho1nc")
 
 [node name="option_C" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 575.0
-offset_top = 56.0
-offset_right = 975.0
-offset_bottom = 456.0
+offset_left = 609.0
+offset_top = 130.0
+offset_right = 1009.0
+offset_bottom = 530.0
 scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_ho1nc")
 
 [node name="option_D" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 801.0
-offset_top = 57.0
-offset_right = 1201.0
-offset_bottom = 457.0
+offset_left = 818.0
+offset_top = 131.0
+offset_right = 1218.0
+offset_bottom = 531.0
 scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("2_ho1nc")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -88,11 +84,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -140.5
-offset_top = -65.0
-offset_right = 5136.5
-offset_bottom = 2935.0
+offset_left = -133.5
+offset_top = 69.0
+offset_right = 5143.5
+offset_bottom = 3069.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_0rrqq")

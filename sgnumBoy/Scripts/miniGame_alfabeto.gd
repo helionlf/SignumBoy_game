@@ -22,7 +22,7 @@ func load_question():
 	for i in range($CanvasLayer/Control/OptionsContainer.get_child_count()):
 		var button = $CanvasLayer/Control/OptionsContainer.get_child(i)
 		
-		#button.texture_normal = load("res://Assets/teste.jpg") # Associa o texto ou imagem da opção ao botão
+		button.texture_normal = load("res://Assets/teste.jpg") # Associa o texto ou imagem da opção ao botão
 		button.set_meta("is_correct", i == shuffled_correct_index)  # Define metadados indicando se é a resposta correta
 		button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
 
