@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/miniGame_alfabeto.gd" id="1_dtm1x"]
 [ext_resource type="Texture2D" uid="uid://dk2ijfpr42tx8" path="res://Assets/UI/cards/aranha.png" id="2_0rrqq"]
-
-[sub_resource type="Theme" id="Theme_3kqak"]
+[ext_resource type="Texture2D" uid="uid://ds1stwp4bcfio" path="res://Assets/teste.jpg" id="2_ho1nc"]
 
 [node name="miniGame_alfabeto" type="Node2D"]
 script = ExtResource("1_dtm1x")
@@ -36,42 +35,12 @@ offset_bottom = -0.0500183
 [node name="option_A" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.172
-anchor_bottom = 0.767
-offset_right = -0.552002
-offset_bottom = 0.0269928
-theme = SubResource("Theme_3kqak")
-stretch_mode = 1
-
-[node name="option_B" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.251
-anchor_right = 0.417
-anchor_bottom = 0.872
-offset_left = 0.334015
-offset_right = -0.222015
-offset_bottom = 0.0319977
-
-[node name="option_C" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.539
-anchor_right = 0.727
-anchor_bottom = 0.918
-offset_left = 0.52594
-offset_right = 0.317993
-offset_bottom = -0.0420074
-
-[node name="option_D" type="TextureButton" parent="CanvasLayer/Control/OptionsContainer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.851
-anchor_right = 1.0
-anchor_bottom = 0.32
-offset_left = -47.266
-offset_right = -1.0
-offset_bottom = 139.92
+offset_left = 178.0
+offset_top = 139.0
+offset_right = 578.0
+offset_bottom = 539.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_ho1nc")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 1
