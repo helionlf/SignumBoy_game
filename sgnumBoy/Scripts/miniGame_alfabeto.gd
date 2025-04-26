@@ -2,8 +2,11 @@ extends Node
 
 
 @onready var current_world = $CanvasLayer/Control/TextureRect
+@onready var options_container = $CanvasLayer/Control/OptionsContainer
 
 func _ready():
+	for button in options_container.get_children():
+		button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
 	load_question()
 
 func _process(delta):
@@ -19,22 +22,33 @@ func load_question():
 	var correct_option = question_data["correct"]
 	var shuffled_correct_index = options.find(question_data["options"][correct_option])
 	 
-	for i in range($CanvasLayer/Control/OptionsContainer.get_child_count()):
-		var button = $CanvasLayer/Control/OptionsContainer.get_child(i)
+	for i in range(options_container.get_child_count()):
+		var button = options_container.get_child(i)
 		
+		button.modulate = Color(1, 1, 1)
 		button.texture_normal = load("res://Assets/teste.jpg") # Associa o texto ou imagem da opção ao botão
 		button.set_meta("is_correct", i == shuffled_correct_index)  # Define metadados indicando se é a resposta correta
-		button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
-
-
+		
 
 func _on_button_pressed(button):
 	var is_correct = button.get_meta("is_correct")
 
 	if is_correct:
 		print("Resposta correta!")
+		$CanvasLayer/Control/correct_song.play()
+		button.modulate = Color(0, 1, 0)
+		button.disabled = true
+		await get_tree().create_timer(0.5).timeout 
+		button.disabled = false
 	else:
 		print("Resposta errada.")
+		$CanvasLayer/Control/wrong_song.play()
+		button.modulate = Color(1, 0, 0) 
+		button.disabled = true
+		await get_tree().create_timer(0.5).timeout
+		button.disabled = false
+		load_question()
+		return
 	
 	GlobalMGA.current_question_index += 1
 	if GlobalMGA.current_question_index >= GlobalMGA.quiz_data[GlobalMGA.current_phase].size():
