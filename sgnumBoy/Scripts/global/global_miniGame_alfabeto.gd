@@ -1,6 +1,8 @@
 extends Node
 
 
+var completed = false
+
 var current_phase = "fase_1"
 var current_question_index = 0
 
@@ -23,8 +25,15 @@ var quiz_data = {
 func next_level():
 	current_question_index = 0
 	if current_phase == "fase_1":
-		current_phase = "fase_2"
+		current_phase = "completed"
+		exit()
+		
+	#if current_phase == "fase_2":
+		#current_phase = "completed"
 	#TEM QUE CRIAR UM IF PRA CADA FASE
-	else:
-		print("Fim do quiz!")
-		get_tree().change_scene_to_file("res://Scenes/home.tscn")
+		
+func exit():
+	completed = true
+	await get_tree().create_timer(5).timeout
+	get_tree().change_scene_to_file("res://Scenes/home.tscn")
+	
