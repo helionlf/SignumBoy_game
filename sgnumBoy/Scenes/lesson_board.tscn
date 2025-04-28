@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://7qu6qas08ivn"]
+
+[ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="1_d73o0"]
+[ext_resource type="Script" path="res://Scripts/lesson_board.gd" id="1_m1wbi"]
+[ext_resource type="Texture2D" uid="uid://ds1stwp4bcfio" path="res://Assets/teste.jpg" id="2_pnxac"]
+
+[node name="lesson_board" type="Node2D"]
+script = ExtResource("1_m1wbi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="board" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1536.0
+offset_bottom = 864.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_d73o0")
+
+[node name="alfabeto" type="TextureRect" parent="CanvasLayer/board"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 164.0
+offset_right = 653.0
+offset_bottom = 564.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_pnxac")
+
+[node name="Label" type="Label" parent="CanvasLayer/board/alfabeto"]
+layout_mode = 0
+offset_left = 76.1111
+offset_top = 404.444
+offset_right = 340.111
+offset_bottom = 448.444
+text = "Alfabeto
+"
+horizontal_alignment = 1
+vertical_alignment = 1
