@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckasv7xjv4xvg"]
+[gd_scene load_steps=5 format=3 uid="uid://ckasv7xjv4xvg"]
 
 [ext_resource type="Script" path="res://Scripts/miniGame_alfabeto.gd" id="1_dtm1x"]
 [ext_resource type="Texture2D" uid="uid://tlndgurki5f7" path="res://Assets/UI/tablet.png" id="2_u33wu"]
+[ext_resource type="AudioStream" path="res://Assets/Souds/1-efek-sound-3-220030.mp3" id="3_hkjpx"]
+[ext_resource type="AudioStream" path="res://Assets/Souds/error-8-206492.mp3" id="4_wsluu"]
 
 [node name="miniGame_alfabeto" type="Node2D"]
 script = ExtResource("1_dtm1x")
@@ -76,3 +78,24 @@ offset_bottom = 2982.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.05, 0.05)
+
+[node name="completed" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 244.0
+offset_right = 832.0
+offset_bottom = 410.0
+text = "Parabéns,
+ você completou este mini jogo!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="correct_song" type="AudioStreamPlayer2D" parent="CanvasLayer/Control"]
+position = Vector2(222, 176)
+scale = Vector2(0.3, 0.3)
+stream = ExtResource("3_hkjpx")
+
+[node name="wrong_song" type="AudioStreamPlayer2D" parent="CanvasLayer/Control"]
+position = Vector2(222, 176)
+scale = Vector2(0.3, 0.3)
+stream = ExtResource("4_wsluu")
