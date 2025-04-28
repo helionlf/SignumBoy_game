@@ -6,7 +6,6 @@ func _ready():
 
 
 func _process(delta):
-	pass
-	#if GlobalMGA.completed:
-		#$CanvasLayer/board.visible = false
+	if GlobalMGA.completed:
+		$CanvasLayer/board.visible = false
 		

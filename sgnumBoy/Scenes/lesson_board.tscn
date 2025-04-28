@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://7qu6qas08ivn"]
 
-[ext_resource type="Script" path="res://Scripts/global/lesson_board.gd" id="1_7mlt7"]
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="1_d73o0"]
+[ext_resource type="Script" path="res://Scripts/lesson_board.gd" id="1_m1wbi"]
 [ext_resource type="Texture2D" uid="uid://ds1stwp4bcfio" path="res://Assets/teste.jpg" id="2_pnxac"]
 
 [node name="lesson_board" type="Node2D"]
-script = ExtResource("1_7mlt7")
+script = ExtResource("1_m1wbi")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
