@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DialogueMetaData" load_steps=2 format=3 uid="uid://bp0ot1xsacjc"]
+
+[ext_resource type="Script" path="res://Scripts/Metadaddos.gd" id="1_5nhmg"]
+
+[resource]
+script = ExtResource("1_5nhmg")
+msg_queue = ["Oi Oi", "Eu quero trabai", "*Claro que sim, o helio é um viadinho e que gosta de uma PIKA IHUUUUUUUUUU BAITOLA"]
