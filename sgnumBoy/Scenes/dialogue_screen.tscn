@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://brf4qbikuxp8o"]
+[gd_scene load_steps=4 format=3 uid="uid://ssxgsdlk0681"]
 
-[ext_resource type="Texture2D" uid="uid://c2lo68p5gpj1l" path="res://Assets/UI/GUI_talk-Sheet.png" id="1_j2hl4"]
+[ext_resource type="Texture2D" uid="uid://dsex6aboxmaud" path="res://Assets/UI/GUI_L (1).png" id="1_y1rwp"]
 [ext_resource type="Script" path="res://Scenes/NinePatchRect.gd" id="2_whct5"]
 [ext_resource type="FontFile" uid="uid://bqd5bbto7v64i" path="res://Assets/UI/ThaleahFat.ttf" id="3_nx6n2"]
 
@@ -21,13 +21,14 @@ scale = Vector2(1.48, 1.48)
 size_flags_vertical = 8
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_j2hl4")
+texture = ExtResource("1_y1rwp")
 script = ExtResource("2_whct5")
 
 [node name="Text" type="RichTextLabel" parent="NinePatchRect"]

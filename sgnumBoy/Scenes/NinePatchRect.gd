@@ -4,17 +4,19 @@ extends NinePatchRect
 @onready var timer := $Text/Timer
 
 var msg_queue: Array = [
-	"Oi tudo bem?",
-	"Claro que sim"
+	'Oi',
+	'Vamos aprender libras, ufdnauifhiuhdiasuhfuiahsufiahfuiadhfuiashiufhafiuhafihauifas'
 ]
+
 
 
 func _input(event):
 	if event is InputEventKey and event.is_action_pressed("E"):
 		show_massage()
 
-func add_msg(msg: String) -> void:
-	msg_queue.append(msg)
+func add_msg(msg: Array) -> void:
+	for m in msg:
+		msg_queue.append(m)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
