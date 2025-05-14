@@ -3,7 +3,7 @@ extends Node
 
 var completed = false
 
-var current_phase = "fase_1"
+var current_phase = "fase_3"
 var current_question_index = 0
 
 var quiz_data = {
@@ -19,6 +19,12 @@ var quiz_data = {
 		{"question": "res://Assets/UI/cards/faca.png", "options": ["res://Assets/UI/alfabeto/E.png", "res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/G.png", "res://Assets/UI/alfabeto/H.png"], "correct": 1},
 		{"question": "res://Assets/UI/cards/seringa.png", "options": ["res://Assets/UI/alfabeto/E.png", "res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/G.png", "res://Assets/UI/alfabeto/H.png"], "correct": 2},
 		{"question": "res://Assets/UI/cards/chave.png", "options": ["res://Assets/UI/alfabeto/E.png", "res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/G.png", "res://Assets/UI/alfabeto/H.png"], "correct": 3}
+	],
+	"fase_3": [
+		{"question": "res://Assets/UI/cards/limao.png", "options": ["res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/J.png", "res://Assets/UI/alfabeto/K.png", "res://Assets/UI/alfabeto/L.png"], "correct": 0},
+		{"question": "res://Assets/UI/cards/jaca.png", "options": ["res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/J.png", "res://Assets/UI/alfabeto/K.png", "res://Assets/UI/alfabeto/L.png"], "correct": 1},
+		{"question": "res://Assets/UI/cards/kiwi.png", "options": ["res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/J.png", "res://Assets/UI/alfabeto/K.png", "res://Assets/UI/alfabeto/L.png"], "correct": 2},
+		{"question": "res://Assets/UI/cards/laranja.png", "options": ["res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/J.png", "res://Assets/UI/alfabeto/K.png", "res://Assets/UI/alfabeto/L.png"], "correct": 3}
 	]
 }
 
@@ -27,9 +33,11 @@ func next_level():
 	if current_phase == "fase_1":
 		current_phase = "fase_2"
 	elif current_phase == "fase_2":
+		current_phase = "fase_3"
+	elif current_phase == "fase_3":
 		current_phase = "completed"
 		completed = true
-		
+	
 
 	#if current_phase == "fase_2":
 		#current_phase = "completed"
