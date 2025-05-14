@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://7qu6qas08ivn"]
+[gd_scene load_steps=4 format=3 uid="uid://crn8con3u4wdb"]
 
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="1_d73o0"]
 [ext_resource type="Script" path="res://Scripts/lesson_board.gd" id="1_m1wbi"]
