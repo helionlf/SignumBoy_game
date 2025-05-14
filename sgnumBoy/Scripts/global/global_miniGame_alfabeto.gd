@@ -9,16 +9,16 @@ var current_question_index = 0
 var quiz_data = {
 	#TEM QUE CRIAR UM VETOR COM CADA OPÇÂO PRA CADA FASE
 	"fase_1": [
-		{"question": "res://Assets/UI/cards/aranha.png", "options": ["Rio de Janeiro", "Brasília", "São Paulo"], "correct": 1},
-		{"question": "res://Assets/UI/cards/abelha.png", "options": ["5", "6", "7"], "correct": 2},
-		{"question": "res://Assets/UI/cards/cachorro.png", "options": ["Cientista", "Cantor", "Escritor"], "correct": 0},
-		{"question": "res://Assets/UI/cards/panda.png", "options": ["Terra", "Júpiter", "Saturno"], "correct": 1}
+		{"question": "res://Assets/UI/cards/aranha.png", "options": ["res://Assets/UI/alfabeto/A.png", "res://Assets/UI/alfabeto/B.png", "res://Assets/UI/alfabeto/C.png", "res://Assets/UI/alfabeto/D.png"], "correct": 0},
+		{"question": "res://Assets/UI/cards/abelha.png", "options": ["res://Assets/UI/alfabeto/A.png", "res://Assets/UI/alfabeto/B.png", "res://Assets/UI/alfabeto/C.png", "res://Assets/UI/alfabeto/D.png"], "correct": 1},
+		{"question": "res://Assets/UI/cards/cachorro.png", "options": ["res://Assets/UI/alfabeto/A.png", "res://Assets/UI/alfabeto/B.png", "res://Assets/UI/alfabeto/C.png", "res://Assets/UI/alfabeto/D.png"], "correct": 2},
+		{"question": "res://Assets/UI/cards/panda.png", "options": ["res://Assets/UI/alfabeto/A.png", "res://Assets/UI/alfabeto/B.png", "res://Assets/UI/alfabeto/C.png", "res://Assets/UI/alfabeto/D.png"], "correct": 3}
 	],
 	"fase_2": [
-		{"question": "Qual é a capital da França?", "options": ["Berlim", "Paris", "Madrid"], "correct": 1},
-		{"question": "Qual é o menor país?", "options": ["Vaticano", "Mônaco", "San Marino"], "correct": 0},
-		{"question": "Quanto é 2+2?", "options": ["3", "4", "5"], "correct": 1},
-		{"question": "Qual animal é o rei da selva?", "options": ["Leão", "Tigre", "Elefante"], "correct": 0}
+		{"question": "Qual é a capital da França?", "options": ["Berlim", "Paris", "Madrid", "teste"], "correct": 1},
+		{"question": "Qual é o menor país?", "options": ["Vaticano", "Mônaco", "San Marino", "teste"], "correct": 0},
+		{"question": "Quanto é 2+2?", "options": ["3", "4", "5", "teste"], "correct": 1},
+		{"question": "Qual animal é o rei da selva?", "options": ["Leão", "Tigre", "Elefante", "teste"], "correct": 0}
 	]
 }
 

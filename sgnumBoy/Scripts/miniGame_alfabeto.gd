@@ -27,6 +27,7 @@ func load_question():
 		
 		var options = question_data["options"].duplicate()
 		options.shuffle()
+		print(options)
 		
 		var correct_option = question_data["correct"]
 		var shuffled_correct_index = options.find(question_data["options"][correct_option])
@@ -35,7 +36,7 @@ func load_question():
 			var button = options_container.get_child(i)
 			
 			button.modulate = Color(1, 1, 1)
-			button.texture_normal = load("res://Assets/teste.jpg") # Associa o texto ou imagem da opção ao botão
+			button.texture_normal = load(options[i]) # Associa o texto ou imagem da opção ao botão
 			button.set_meta("is_correct", i == shuffled_correct_index)  # Define metadados indicando se é a resposta correta
 		
 
