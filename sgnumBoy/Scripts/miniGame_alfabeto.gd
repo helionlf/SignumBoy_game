@@ -11,13 +11,6 @@ func _ready():
 		for button in options_container.get_children():
 			button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
 		load_question()
-
-func _process(delta):
-	if GlobalMGA.current_phase == "completed":
-			completed_label.visible = true
-			$CanvasLayer/Control/OptionsContainer.visible = false
-			$CanvasLayer/Control/TextureRect.visible = false
-			GlobalMGA.exit()
 	
 
 func load_question():
@@ -27,7 +20,6 @@ func load_question():
 		
 		var options = question_data["options"].duplicate()
 		options.shuffle()
-		print(options)
 		
 		var correct_option = question_data["correct"]
 		var shuffled_correct_index = options.find(question_data["options"][correct_option])
@@ -63,5 +55,11 @@ func _on_button_pressed(button):
 	GlobalMGA.current_question_index += 1
 	if GlobalMGA.current_question_index >= GlobalMGA.quiz_data[GlobalMGA.current_phase].size():
 		GlobalMGA.next_level()
+		
+		if GlobalMGA.completed:
+			completed_label.visible = true
+			$CanvasLayer/Control/OptionsContainer.visible = false
+			$CanvasLayer/Control/TextureRect.visible = false
+			GlobalMGA.exit()
 	
 	load_question()
