@@ -17,7 +17,7 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 [autoload]
 
 GlobalMGA="*res://Scripts/global/global_miniGame_alfabeto.gd"
-DialogueScreen="*res://Scenes/dialogue_screen.tscn"
+GlobalNinePatchRect="*res://Scripts/NinePatchRect.gd"
 
 [input]
 

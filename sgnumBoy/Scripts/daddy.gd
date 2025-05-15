@@ -6,10 +6,8 @@ extends CharacterBody2D
 @onready var position_l = $"../../naviagation_positions/position_l"
 @onready var navigation_agent_2d = $NavigationAgent2D
 @onready var animation = $AnimatedSprite2D
-@onready var dialogue_screen = $"res://Scenes/dialogue_screen.tscn"
+@onready var dialogue_screen = $"res://Scenes/dialogue_box.tscn"
 
-var dialogue_scene = preload("res://Scenes/dialogue_screen.tscn")
-var dialogue_instance = dialogue_scene.instantiate()
 
 var SPEED = 30.0
 var target_position_r: Vector2
@@ -20,8 +18,6 @@ var player_near = false
 
 
 func _ready():
-	# Salva as posições globais no início
-	show_dialogue()
 	target_position_r = position_r.global_position
 	target_position_l = position_l.global_position
 
@@ -29,8 +25,6 @@ func _ready():
 	navigation_agent_2d.set_target_position(current_target)
 
 func _process(delta):
-	if player_near and Input.is_action_just_pressed("E"): 
-		show_dialogue()
 	handle_animation()
 	if not waiting:
 		if navigation_agent_2d.is_navigation_finished():
@@ -40,10 +34,6 @@ func _process(delta):
 			var direction = (next_point - global_position).normalized()
 			velocity = direction * SPEED
 			move_and_slide()
-
-func show_dialogue():
-	get_tree().get_root().add_child(dialogue_instance)
-	dialogue_instance.add_msg(msq_queue)
 
 func pause_and_switch_target():
 	waiting = true

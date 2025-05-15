@@ -78,7 +78,6 @@ animations = [{
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_bky2v")
-msq_queue = Array[String](["Oi", "Vou te ensinar libras!"])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
