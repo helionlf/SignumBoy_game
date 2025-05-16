@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds1stwp4bcfio"
-path="res://.godot/imported/teste.jpg-54bb40ba2b91392b6c7802c8fb1cbcca.ctex"
+uid="uid://dansv8baibd2p"
+path="res://.godot/imported/limao.png-aed176c6e5df04836f6ed4e23f4fd5b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/teste.jpg"
-dest_files=["res://.godot/imported/teste.jpg-54bb40ba2b91392b6c7802c8fb1cbcca.ctex"]
+source_file="res://Assets/UI/cards/limao.png"
+dest_files=["res://.godot/imported/limao.png-aed176c6e5df04836f6ed4e23f4fd5b7.ctex"]
 
 [params]
 
