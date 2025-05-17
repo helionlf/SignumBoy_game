@@ -24,6 +24,14 @@ offset_bottom = 1053.0
 scale = Vector2(0.75, 0.64)
 texture = ExtResource("2_u33wu")
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/tablet"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 255.0
+offset_right = 1261.0
+offset_bottom = 769.0
+color = Color(0.338151, 0.536453, 0.727162, 1)
+
 [node name="OptionsContainer" type="MenuBar" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = -1

@@ -37,6 +37,14 @@ var quiz_data = {
 		{"question": "res://Assets/UI/cards/brasil.png", "options": ["res://Assets/UI/alfabeto/Q.png", "res://Assets/UI/alfabeto/R.png", "res://Assets/UI/alfabeto/S.png", "res://Assets/UI/alfabeto/T.png"], "correct": 1},
 		{"question": "res://Assets/UI/cards/russia.png", "options": ["res://Assets/UI/alfabeto/Q.png", "res://Assets/UI/alfabeto/R.png", "res://Assets/UI/alfabeto/S.png", "res://Assets/UI/alfabeto/T.png"], "correct": 2},
 		{"question": "res://Assets/UI/cards/portugal.png", "options": ["res://Assets/UI/alfabeto/Q.png", "res://Assets/UI/alfabeto/R.png", "res://Assets/UI/alfabeto/S.png", "res://Assets/UI/alfabeto/T.png"], "correct": 3}
+	],
+	"fase_6": [
+		{"question": "res://Assets/UI/cards/pudim.png", "options": ["res://Assets/UI/alfabeto/U.png", "res://Assets/UI/alfabeto/V.png", "res://Assets/UI/alfabeto/W.png", "res://Assets/UI/alfabeto/X.png"], "correct": 0},
+		{"question": "res://Assets/UI/cards/sorvete.png", "options": ["res://Assets/UI/alfabeto/U.png", "res://Assets/UI/alfabeto/V.png", "res://Assets/UI/alfabeto/W.png", "res://Assets/UI/alfabeto/X.png"], "correct": 1},
+		{"question": "res://Assets/UI/cards/wafer.png", "options": ["res://Assets/UI/alfabeto/U.png", "res://Assets/UI/alfabeto/V.png", "res://Assets/UI/alfabeto/W.png", "res://Assets/UI/alfabeto/X.png"], "correct": 2},
+		{"question": "res://Assets/UI/cards/xicara.png", "options": ["res://Assets/UI/alfabeto/U.png", "res://Assets/UI/alfabeto/V.png", "res://Assets/UI/alfabeto/W.png", "res://Assets/UI/alfabeto/X.png"], "correct": 3},
+		{"question": "res://Assets/UI/cards/yakisoba.png", "options": ["res://Assets/UI/alfabeto/Y.png", "res://Assets/UI/alfabeto/Z.png", "res://Assets/UI/alfabeto/W.png", "res://Assets/UI/alfabeto/X.png"], "correct": 0},
+		{"question": "res://Assets/UI/cards/zumbi.png", "options": ["res://Assets/UI/alfabeto/Y.png", "res://Assets/UI/alfabeto/Z.png", "res://Assets/UI/alfabeto/W.png", "res://Assets/UI/alfabeto/X.png"], "correct": 1}
 	]
 }
 
@@ -51,6 +59,8 @@ func next_level():
 	elif current_phase == "fase_4":
 		current_phase = "fase_5"
 	elif current_phase == "fase_5":
+		current_phase = "fase_6"
+	elif current_phase == "fase_6":
 		current_phase = "completed"
 		completed = true
 	
