@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcu8xcwlm4iuw"]
+
+[ext_resource type="Script" path="res://Scripts/livro.gd" id="1_a8umf"]
+[ext_resource type="Texture2D" uid="uid://eeotvcopa8dw" path="res://Assets/UI/alfabeto/A.png" id="2_2enpi"]
+
+[node name="schoolMaterial_mission" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="mochila" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 38.0
+offset_right = 382.0
+offset_bottom = 388.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/mochila"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 350.0
+texture = ExtResource("2_2enpi")
+
+[node name="livro" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 641.0
+offset_top = 25.0
+offset_right = 991.0
+offset_bottom = 375.0
+script = ExtResource("1_a8umf")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/livro"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 350.0
+texture = ExtResource("2_2enpi")
