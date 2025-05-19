@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-@export var msq_queue: Array[String] = []
+@export var interaction: DialogueMetaData
 
 @onready var position_r = $"../../naviagation_positions/position_r"
 @onready var position_l = $"../../naviagation_positions/position_l"
 @onready var navigation_agent_2d = $NavigationAgent2D
 @onready var animation = $AnimatedSprite2D
-@onready var dialogue_screen = $"res://Scenes/dialogue_box.tscn"
+@onready var dialogue_screen_scene = preload("res://Scenes/dialogue_box.tscn")
+
 
 
 var SPEED = 30.0
@@ -15,6 +16,8 @@ var target_position_l: Vector2
 var current_target: Vector2
 var waiting = false
 var player_near = false
+var dialogue_triggered = false
+var dialogue_screen_instance: Node = null
 
 
 func _ready():
@@ -34,6 +37,19 @@ func _process(delta):
 			var direction = (next_point - global_position).normalized()
 			velocity = direction * SPEED
 			move_and_slide()
+			
+	if player_near and Input.is_action_just_pressed("E") and not dialogue_triggered:
+		dialogue_triggered = true
+		print(SPEED)
+		start_dialogue()
+
+
+func start_dialogue():
+	if dialogue_screen_instance == null:
+		dialogue_screen_instance = dialogue_screen_scene.instantiate()
+		get_tree().current_scene.add_child(dialogue_screen_instance) # adiciona à cena atual
+
+	dialogue_screen_instance.add_msg(interaction.msg_queue)
 
 func pause_and_switch_target():
 	waiting = true
@@ -65,6 +81,7 @@ func _on_area_2d_body_entered(body):
 	if body.get_name() == "player":
 		player_near = true
 		$key_E.visible = true
+		dialogue_triggered = false
 		#implementar lógica para chamar o diálogo 
 
 func _on_area_2d_body_exited(body):

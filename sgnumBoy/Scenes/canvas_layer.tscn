@@ -39,5 +39,6 @@ theme_override_font_sizes/normal_font_size = 32
 
 [node name="Timer" type="Timer" parent="Dialogue_Box"]
 wait_time = 0.05
+autostart = true
 
 [connection signal="timeout" from="Dialogue_Box/Timer" to="Dialogue_Box" method="_on_timer_timeout"]

@@ -21,8 +21,12 @@ func _input(event):
 			show_massage()
 
 func add_msg(msg: Array) -> void:
-	for m in msg:
-		msg_queue.append(m)
+	if not visible:
+		show()
+		
+	msg_queue.append(msg)
+	show_massage()
+
 
 func show_massage() -> void:
 	if msg_queue.size() == 0:
