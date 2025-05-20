@@ -1,7 +1,7 @@
-extends NinePatchRect
+extends CanvasLayer
 
-@onready var text := $RichTextLabel
-@onready var timer := $Timer
+@onready var text := $DialogueBox/RichTextLabel
+@onready var timer := $DialogueBox/Timer
 
 var msg_queue: Array = [
 	'Oi',
@@ -12,19 +12,33 @@ var is_showing_message := false
 
 func _input(event):
 	if event is InputEventKey and event.is_action_pressed("E"):
+		if not visible:
+			return
+
 		if is_showing_message and text.visible_characters < text.text.length():
-			# Pula a digitação
+			# Pular digitação
 			text.visible_characters = text.text.length()
 			timer.stop()
 		else:
-			show_massage()
+			# Mostrar próxima mensagem, ou esconder se acabou
+			if msg_queue.size() > 0:
+				show_massage()
+			else:
+				hide()
+				is_showing_message = false
+
 
 func add_msg(msg: Array) -> void:
 	if not visible:
 		show()
-		
-	msg_queue.append(msg)
+
+	msg_queue = msg.duplicate()  # <- Corrige para reiniciar a fila corretamente
+	is_showing_message = false
+	text.visible_characters = 0
+	text.text = ""
 	show_massage()
+
+
 
 
 func show_massage() -> void:

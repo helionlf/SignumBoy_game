@@ -6,9 +6,7 @@ extends CharacterBody2D
 @onready var position_l = $"../../naviagation_positions/position_l"
 @onready var navigation_agent_2d = $NavigationAgent2D
 @onready var animation = $AnimatedSprite2D
-@onready var dialogue_screen_scene = preload("res://Scenes/dialogue_box.tscn")
-
-
+@onready var dialogue_node = $Dialogue
 
 var SPEED = 30.0
 var target_position_r: Vector2
@@ -17,7 +15,6 @@ var current_target: Vector2
 var waiting = false
 var player_near = false
 var dialogue_triggered = false
-var dialogue_screen_instance: Node = null
 
 
 func _ready():
@@ -26,6 +23,10 @@ func _ready():
 
 	current_target = target_position_l
 	navigation_agent_2d.set_target_position(current_target)
+
+	# Garante que o diálogo está invisível no início
+	dialogue_node.visible = false
+
 
 func _process(delta):
 	handle_animation()
@@ -37,19 +38,19 @@ func _process(delta):
 			var direction = (next_point - global_position).normalized()
 			velocity = direction * SPEED
 			move_and_slide()
-			
+
 	if player_near and Input.is_action_just_pressed("E") and not dialogue_triggered:
+		SPEED = 0
 		dialogue_triggered = true
-		print(SPEED)
 		start_dialogue()
 
 
 func start_dialogue():
-	if dialogue_screen_instance == null:
-		dialogue_screen_instance = dialogue_screen_scene.instantiate()
-		get_tree().current_scene.add_child(dialogue_screen_instance) # adiciona à cena atual
+	if interaction == null:
+		return
+	dialogue_node.add_msg(interaction.msg_queue)
+	SPEED = 30
 
-	dialogue_screen_instance.add_msg(interaction.msg_queue)
 
 func pause_and_switch_target():
 	waiting = true
@@ -57,7 +58,6 @@ func pause_and_switch_target():
 	move_and_slide()
 	await get_tree().create_timer(5.0).timeout
 
-	# Troca o destino
 	if current_target == target_position_r:
 		current_target = target_position_l
 	else:
@@ -66,25 +66,28 @@ func pause_and_switch_target():
 	navigation_agent_2d.set_target_position(current_target)
 	waiting = false
 
+
 func handle_animation():
 	if velocity.x > 0:
 		animation.play("walk")
-		animation.flip_h = false # Direção para a direita
+		animation.flip_h = false
 	elif velocity.x < 0:
 		animation.play("walk")
-		animation.flip_h = true # Direção para a esquerda
+		animation.flip_h = true
 	else:
-		animation.play("idle") # Estado parado
+		animation.play("idle")
 
 
 func _on_area_2d_body_entered(body):
-	if body.get_name() == "player":
+	if body.name == "player":
 		player_near = true
 		$key_E.visible = true
+		dialogue_node.visible = false
 		dialogue_triggered = false
-		#implementar lógica para chamar o diálogo 
+
 
 func _on_area_2d_body_exited(body):
-	if body.get_name() == "player":
+	if body.name == "player":
 		player_near = false
 		$key_E.visible = false
+		dialogue_node.visible = false
