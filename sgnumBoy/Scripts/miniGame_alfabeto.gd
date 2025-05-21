@@ -63,3 +63,4 @@ func _on_button_pressed(button):
 			GlobalMGA.exit()
 	
 	load_question()
+		
