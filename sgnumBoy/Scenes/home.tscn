@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://kd7a1qff1k1m"]
+[gd_scene load_steps=6 format=3 uid="uid://kd7a1qff1k1m"]
 
 [ext_resource type="PackedScene" uid="uid://s0gchwxgwkv2" path="res://Scenes/tileMap_home.tscn" id="1_pvil1"]
 [ext_resource type="PackedScene" uid="uid://7sob4gho1sd2" path="res://Scenes/daddy.tscn" id="2_sr7w4"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="3_a0pbc"]
+[ext_resource type="PackedScene" uid="uid://bdx67fof2b6my" path="res://Scenes/mom.tscn" id="4_orfmn"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_d3w3i"]
 vertices = PackedVector2Array(226, 44, 134, 44, 134, 30, 227, 30)
@@ -32,3 +33,6 @@ position = Vector2(179, 32)
 
 [node name="player" parent="." instance=ExtResource("3_a0pbc")]
 position = Vector2(163, 12)
+
+[node name="Mom" parent="." instance=ExtResource("4_orfmn")]
+position = Vector2(123, 8)

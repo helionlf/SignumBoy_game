@@ -40,7 +40,6 @@ func _process(delta):
 			move_and_slide()
 
 	if player_near and Input.is_action_just_pressed("E") and not dialogue_triggered:
-		SPEED = 0
 		dialogue_triggered = true
 		start_dialogue()
 
@@ -49,7 +48,6 @@ func start_dialogue():
 	if interaction == null:
 		return
 	dialogue_node.add_msg(interaction.msg_queue)
-	SPEED = 30
 
 
 func pause_and_switch_target():
