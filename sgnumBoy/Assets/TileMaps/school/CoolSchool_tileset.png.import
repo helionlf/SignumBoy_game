@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dork5i6vlk7pf"
-path="res://.godot/imported/TopDownHouse_FloorsAndWalls.png-c491041c7c6fea8156de0ca8ef05e195.ctex"
+uid="uid://ka1v6yrjfg45"
+path="res://.godot/imported/CoolSchool_tileset.png-20db2874b8027e2cff045cb5f7bd713f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileMaps/TopDownHouse_FloorsAndWalls.png"
-dest_files=["res://.godot/imported/TopDownHouse_FloorsAndWalls.png-c491041c7c6fea8156de0ca8ef05e195.ctex"]
+source_file="res://Assets/TileMaps/school/CoolSchool_tileset.png"
+dest_files=["res://.godot/imported/CoolSchool_tileset.png-20db2874b8027e2cff045cb5f7bd713f.ctex"]
 
 [params]
 
