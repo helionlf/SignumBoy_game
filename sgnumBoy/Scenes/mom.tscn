@@ -8,7 +8,7 @@
 
 [sub_resource type="Resource" id="Resource_23g1q"]
 script = ExtResource("2_w2bhl")
-msg_queue = ["Meu filho é hora de ir par a escola", "Se arrume!", "E não esqueça seus materiais!"]
+msg_queue = ["Meu filho é hora de ir para a escola", "Se arrume!", "E não esqueça seus materiais!"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wticl"]
 atlas = ExtResource("2_ds1iv")
@@ -146,6 +146,7 @@ animations = [{
 }]
 
 [node name="Mom" type="CharacterBody2D"]
+scale = Vector2(0.854912, 0.854912)
 script = ExtResource("1_uunv4")
 Interaction = SubResource("Resource_23g1q")
 
@@ -171,6 +172,7 @@ shape = SubResource("CircleShape2D_k8ob0")
 debug_color = Color(0.85354, 0, 0.312942, 0.42)
 
 [node name="KeyE" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(0, -24)
 scale = Vector2(0.720001, 0.720001)

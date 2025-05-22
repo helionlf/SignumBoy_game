@@ -11,6 +11,7 @@ var dialogue_triggered = false
 
 func _ready():
 	Dialogue_box.visible = false
+	$KeyE.play("Key_E")
 
 func _physics_process(delta):
 	if player_near and Input.is_action_just_pressed("E") and not dialogue_triggered:

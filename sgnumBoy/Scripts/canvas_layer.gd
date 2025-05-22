@@ -38,9 +38,6 @@ func add_msg(msg: Array) -> void:
 	text.text = ""
 	show_massage()
 
-
-
-
 func show_massage() -> void:
 	if msg_queue.size() == 0:
 		hide()
