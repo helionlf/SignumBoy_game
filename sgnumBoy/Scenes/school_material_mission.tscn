@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcu8xcwlm4iuw"]
+[gd_scene load_steps=9 format=3 uid="uid://bcu8xcwlm4iuw"]
 
-[ext_resource type="Script" path="res://Scripts/livro.gd" id="1_a8umf"]
-[ext_resource type="Texture2D" uid="uid://eeotvcopa8dw" path="res://Assets/UI/alfabeto/A.png" id="2_2enpi"]
+[ext_resource type="Script" path="res://Scripts/materiais.gd" id="1_a8umf"]
+[ext_resource type="Texture2D" uid="uid://cocwe7v14iuwy" path="res://Assets/UI/livro.png" id="2_bnixn"]
+[ext_resource type="Texture2D" uid="uid://8btjn1c1tvwh" path="res://Assets/UI/caneta.png" id="3_elv0x"]
+[ext_resource type="Texture2D" uid="uid://baablul2ocq06" path="res://Assets/UI/caderno.png" id="4_gpsvy"]
+[ext_resource type="Texture2D" uid="uid://exv46qeq03xx" path="res://Assets/UI/borracha.png" id="5_q370f"]
+[ext_resource type="AudioStream" uid="uid://c8f86in2ndkkf" path="res://Assets/Souds/1-efek-sound-3-220030.mp3" id="6_m2amd"]
+[ext_resource type="AudioStream" uid="uid://dfimsncoflkya" path="res://Assets/Souds/error-8-206492.mp3" id="7_wgx8d"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w66vo"]
+load_path = "res://.godot/imported/mochila.png-2a0e03cdf3195905a9146c9493287014.ctex"
 
 [node name="schoolMaterial_mission" type="Node2D"]
 
@@ -12,48 +20,93 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = 32.0
 offset_top = 38.0
-offset_right = 382.0
-offset_bottom = 388.0
+offset_right = 340.0
+offset_bottom = 379.0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/mochila"]
 layout_mode = 0
-offset_right = 350.0
-offset_bottom = 350.0
-texture = ExtResource("2_2enpi")
+offset_left = -51.0
+offset_top = -55.0
+offset_right = 973.0
+offset_bottom = 969.0
+scale = Vector2(0.46, 0.46)
+texture = SubResource("CompressedTexture2D_w66vo")
 
 [node name="livro" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 545.0
-offset_top = 141.0
-offset_right = 745.0
-offset_bottom = 341.0
+offset_left = 461.0
+offset_top = 214.0
+offset_right = 661.0
+offset_bottom = 414.0
 script = ExtResource("1_a8umf")
 type = "livro"
-pos = Vector2(545, 141)
+pos = Vector2(461, 214)
 metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/livro"]
+layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
-texture = ExtResource("2_2enpi")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_bnixn")
 
 [node name="caneta" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 890.0
-offset_top = 144.0
-offset_right = 1090.0
-offset_bottom = 344.0
+offset_left = 640.0
+offset_top = 117.0
+offset_right = 811.0
+offset_bottom = 281.0
 script = ExtResource("1_a8umf")
 type = "caneta"
-pos = Vector2(890, 144)
+pos = Vector2(640, 117)
 metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/caneta"]
+layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
-texture = ExtResource("2_2enpi")
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("3_elv0x")
+
+[node name="caderno" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 767.0
+offset_top = 216.0
+offset_right = 967.0
+offset_bottom = 416.0
+script = ExtResource("1_a8umf")
+type = "caderno"
+pos = Vector2(767, 216)
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/caderno"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_gpsvy")
+
+[node name="borracha" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 950.0
+offset_top = 138.0
+offset_right = 1091.0
+offset_bottom = 276.0
+script = ExtResource("1_a8umf")
+type = "borracha"
+pos = Vector2(959, 138)
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/borracha"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("5_q370f")
 
 [node name="completed" type="Label" parent="CanvasLayer"]
 visible = false
@@ -65,3 +118,9 @@ text = "Parabéns! Você completou  sua primeira tarefa.
 Agora você aumentou o seu vocabulário
 e está preparado para o seu primeiro dia de aula!"
 vertical_alignment = 1
+
+[node name="correct_song" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_m2amd")
+
+[node name="wrong_song" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_wgx8d")

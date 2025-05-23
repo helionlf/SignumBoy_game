@@ -8,6 +8,8 @@ var dragging := false
 var offset := Vector2.ZERO
 
 @onready var mochila = $"../mochila"
+@onready var mochila_rect = $"../mochila/TextureRect"
+var mochila_aberta := false
 
 @onready var completed_label = $"../completed"
 
@@ -20,6 +22,15 @@ func _ready():
 func _process(delta):
 	if dragging:
 		global_position = get_global_mouse_position() - offset
+		
+	var intersecting = get_global_rect().intersects(mochila.get_global_rect())
+
+	if intersecting and not mochila_aberta:
+		mochila_aberta = true
+		mochila_rect.texture = load("res://Assets/UI/mochilaAberta.png")
+	elif not intersecting and mochila_aberta:
+		mochila_aberta = false
+		mochila_rect.texture = load("res://Assets/UI/mochila.png")
 
 func _gui_input(event):
 	if event is InputEventMouseButton:
@@ -30,13 +41,17 @@ func _gui_input(event):
 			else:
 				dragging = false
 				if type != GlobalSMM.palavra:
+					$"../../wrong_song".play()
 					self.position = pos
 				else:
 					guardar_material()
 
 func guardar_material():
 	if get_global_rect().intersects(mochila.get_global_rect()):
+		$"../../correct_song".play()
 		queue_free()
+		mochila_aberta = false
+		mochila_rect.texture = load("res://Assets/UI/mochila.png")
 		GlobalSMM.next_level()
 		if GlobalSMM.completed:
 			completed_label.visible = true

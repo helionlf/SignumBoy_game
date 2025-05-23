@@ -3,13 +3,17 @@ extends Node
 
 var completed = false
 
-var palavra = "livro"
+var palavra = "caneta"
 
 
 func next_level():
-	if palavra == "livro":
-		palavra = "caneta"
-	elif palavra == "caneta":
+	if palavra == "caneta":
+		palavra = "caderno"
+	elif palavra == "caderno":
+		palavra = "livro"
+	elif palavra == "livro":
+		palavra = "borracha"
+	else:
 		palavra = "completed"
 		completed = true
 
