@@ -8,5 +8,5 @@ func _ready():
 func _process(delta):
 	if GlobalMGA.completed:
 		$CanvasLayer/board/alfabeto.visible = true
-	if GlobaSMM.completed:
+	if GlobalSMM.completed:
 		$CanvasLayer/board/schoolMaterials.visible = true
