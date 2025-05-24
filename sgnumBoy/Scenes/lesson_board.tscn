@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://crn8con3u4wdb"]
+[gd_scene load_steps=4 format=3 uid="uid://7qu6qas08ivn"]
 
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="1_d73o0"]
 [ext_resource type="Script" path="res://Scripts/lesson_board.gd" id="1_m1wbi"]
-[ext_resource type="Texture2D" uid="uid://ds1stwp4bcfio" path="res://Assets/teste.jpg" id="2_pnxac"]
+[ext_resource type="Texture2D" path="res://Assets/teste.jpg" id="2_pnxac"]
 
 [node name="lesson_board" type="Node2D"]
 script = ExtResource("1_m1wbi")
@@ -34,3 +34,20 @@ text = "Alfabeto
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="schoolMaterials" type="TextureRect" parent="CanvasLayer/board"]
+layout_mode = 0
+offset_left = 606.667
+offset_top = 165.333
+offset_right = 1006.67
+offset_bottom = 565.333
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_pnxac")
+
+[node name="Label" type="Label" parent="CanvasLayer/board/schoolMaterials"]
+layout_mode = 0
+offset_left = 155.556
+offset_top = 422.222
+offset_right = 279.556
+offset_bottom = 445.222
+text = "Material Escolar"
