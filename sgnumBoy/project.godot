@@ -24,3 +24,7 @@ GlobalSMM="*res://Scripts/global/global_schoolMaterial_mission.gd"
 2d_physics/layer_1="world"
 2d_physics/layer_2="player"
 2d_physics/layer_3="npc"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
