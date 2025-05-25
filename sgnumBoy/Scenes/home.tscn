@@ -31,4 +31,4 @@ navigation_polygon = SubResource("NavigationPolygon_d3w3i")
 position = Vector2(179, 32)
 
 [node name="player" parent="." instance=ExtResource("3_a0pbc")]
-position = Vector2(163, 12)
+position = Vector2(160, -3)
