@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://7qmuao0s0f5"]
 
-[ext_resource type="Texture2D" uid="uid://b4ltepew8dwpv" path="res://Assets/TileMaps/park/summer tilemap.png" id="1_a16f6"]
-[ext_resource type="Texture2D" uid="uid://bfr7yaovrgic3" path="res://Assets/TileMaps/park/summer and spring items.png" id="2_7uruy"]
+[ext_resource type="Texture2D" uid="uid://b4ltepew8dwpv" path="res://Assets/TileMaps/park/summer tilemap.png" id="1_icm3a"]
+[ext_resource type="Texture2D" uid="uid://bfr7yaovrgic3" path="res://Assets/TileMaps/park/summer and spring items.png" id="2_k2hhy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7t2u"]
-texture = ExtResource("1_a16f6")
+texture = ExtResource("1_icm3a")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -127,7 +127,7 @@ texture = ExtResource("1_a16f6")
 7:14/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ompsg"]
-texture = ExtResource("2_7uruy")
+texture = ExtResource("2_k2hhy")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
