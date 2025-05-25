@@ -67,5 +67,5 @@ func next_level():
 func exit():
 	completed = true
 	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://Scenes/home.tscn")
+	Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")
 	

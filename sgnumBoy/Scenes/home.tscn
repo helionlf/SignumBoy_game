@@ -1,14 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://kd7a1qff1k1m"]
+[gd_scene load_steps=11 format=3 uid="uid://kd7a1qff1k1m"]
 
 [ext_resource type="PackedScene" uid="uid://s0gchwxgwkv2" path="res://Scenes/tileMap_home.tscn" id="1_pvil1"]
 [ext_resource type="PackedScene" uid="uid://7sob4gho1sd2" path="res://Scenes/daddy.tscn" id="2_sr7w4"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="3_a0pbc"]
+[ext_resource type="Script" path="res://Scripts/porta_sala.gd" id="4_u2syh"]
+[ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="5_j57kf"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_d3w3i"]
 vertices = PackedVector2Array(226, 44, 134, 44, 134, 30, 227, 30)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(124, 20, 237, 20, 236, 54, 124, 54)])
 source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvo7l"]
+atlas = ExtResource("5_j57kf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c83e3"]
+atlas = ExtResource("5_j57kf")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7tvuu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvo7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c83e3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3768h"]
+size = Vector2(34, 11)
 
 [node name="home" type="Node2D"]
 
@@ -30,5 +57,26 @@ navigation_polygon = SubResource("NavigationPolygon_d3w3i")
 [node name="daddy" parent="NavigationRegion2D" instance=ExtResource("2_sr7w4")]
 position = Vector2(179, 32)
 
+[node name="porta" type="Node2D" parent="."]
+position = Vector2(152, 8)
+script = ExtResource("4_u2syh")
+
+[node name="key_E" type="AnimatedSprite2D" parent="porta"]
+visible = false
+position = Vector2(9, -41)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_7tvuu")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="porta"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta/Area2D"]
+position = Vector2(7, -4.5)
+shape = SubResource("RectangleShape2D_3768h")
+
 [node name="player" parent="." instance=ExtResource("3_a0pbc")]
-position = Vector2(163, 12)
+position = Vector2(160, -3)
+
+[connection signal="body_entered" from="porta/Area2D" to="porta" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="porta/Area2D" to="porta" method="_on_area_2d_body_exited"]
