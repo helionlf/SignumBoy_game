@@ -65,4 +65,5 @@ func _on_button_pressed(button):
 	load_question()
 		
 func _input(event):
-	pass
+	if event.is_action_pressed("sair"):
+		Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")
