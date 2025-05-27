@@ -114,9 +114,10 @@ shape = SubResource("CircleShape2D_fu6jd")
 debug_color = Color(0.652905, 0, 0.152228, 0.42)
 
 [node name="key_E" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(0, -20)
-scale = Vector2(0.67765, 0.67765)
+scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_5ilgf")
 animation = &"new_animation"
 autoplay = "new_animation"
