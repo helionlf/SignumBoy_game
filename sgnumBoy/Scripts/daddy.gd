@@ -39,7 +39,7 @@ func _process(delta):
 			velocity = direction * SPEED
 			move_and_slide()
 
-	if player_near and Input.is_action_just_pressed("E") and not dialogue_triggered:
+	if player_near and Input.is_action_just_pressed("e") and not dialogue_triggered:
 		dialogue_triggered = true
 		start_dialogue()
 

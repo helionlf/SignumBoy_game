@@ -11,7 +11,7 @@ var msg_queue: Array = [
 var is_showing_message := false
 
 func _input(event):
-	if event is InputEventKey and event.is_action_pressed("E"):
+	if event is InputEventKey and event.is_action_pressed("e"):
 		if not visible:
 			return
 
