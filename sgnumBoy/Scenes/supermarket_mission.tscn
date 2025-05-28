@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://cag150mqv5fmg"]
+
+[ext_resource type="Script" path="res://Scripts/supermarket_mission.gd" id="1_s8oer"]
+[ext_resource type="Texture2D" uid="uid://c4t8u2sxlo86e" path="res://Assets/UI/prateleiras.png" id="1_yqqib"]
+[ext_resource type="AudioStream" uid="uid://c8f86in2ndkkf" path="res://Assets/Souds/1-efek-sound-3-220030.mp3" id="3_2k0c6"]
+[ext_resource type="AudioStream" uid="uid://dfimsncoflkya" path="res://Assets/Souds/error-8-206492.mp3" id="4_x33qp"]
+
+[node name="supermarket_mission" type="Node2D"]
+script = ExtResource("1_s8oer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -145.0
+offset_right = 4.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqqib")
+
+[node name="btn_1" type="TextureButton" parent="CanvasLayer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 306.0
+offset_right = 1106.0
+offset_bottom = 1330.0
+scale = Vector2(0.35, 0.35)
+
+[node name="btn_2" type="TextureButton" parent="CanvasLayer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 306.0
+offset_right = 1481.0
+offset_bottom = 1330.0
+scale = Vector2(0.35, 0.35)
+
+[node name="btn_3" type="TextureButton" parent="CanvasLayer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 306.0
+offset_right = 1825.0
+offset_bottom = 1330.0
+scale = Vector2(0.35, 0.35)
+
+[node name="correct_song" type="AudioStreamPlayer2D" parent="CanvasLayer/Control"]
+position = Vector2(222, 176)
+scale = Vector2(0.3, 0.3)
+stream = ExtResource("3_2k0c6")
+
+[node name="wrong_song" type="AudioStreamPlayer2D" parent="CanvasLayer/Control"]
+position = Vector2(222, 176)
+scale = Vector2(0.3, 0.3)
+stream = ExtResource("4_x33qp")
