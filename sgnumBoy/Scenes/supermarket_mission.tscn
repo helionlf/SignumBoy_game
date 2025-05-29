@@ -34,26 +34,26 @@ texture = ExtResource("1_yqqib")
 [node name="btn_1" type="TextureButton" parent="CanvasLayer/Control/TextureRect"]
 layout_mode = 0
 offset_left = 82.0
-offset_top = 306.0
+offset_top = 345.0
 offset_right = 1106.0
-offset_bottom = 1330.0
-scale = Vector2(0.35, 0.35)
+offset_bottom = 1369.0
+scale = Vector2(0.31, 0.31)
 
 [node name="btn_2" type="TextureButton" parent="CanvasLayer/Control/TextureRect"]
 layout_mode = 0
-offset_left = 457.0
-offset_top = 306.0
-offset_right = 1481.0
-offset_bottom = 1330.0
-scale = Vector2(0.35, 0.35)
+offset_left = 439.0
+offset_top = 345.0
+offset_right = 1463.0
+offset_bottom = 1369.0
+scale = Vector2(0.31, 0.31)
 
 [node name="btn_3" type="TextureButton" parent="CanvasLayer/Control/TextureRect"]
 layout_mode = 0
 offset_left = 801.0
-offset_top = 306.0
+offset_top = 345.0
 offset_right = 1825.0
-offset_bottom = 1330.0
-scale = Vector2(0.35, 0.35)
+offset_bottom = 1369.0
+scale = Vector2(0.31, 0.31)
 
 [node name="correct_song" type="AudioStreamPlayer2D" parent="CanvasLayer/Control"]
 position = Vector2(222, 176)
