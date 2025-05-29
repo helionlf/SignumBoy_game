@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var Interaction: DialogueMetaData
 
 @onready var Dialogue_box = $Dialogue
-@onready var AnimationChar = $AnimatedSprite2D
+@onready var AnimationChar = $MomAnm
 
 var SPEED = 30.0
 var player_near = false
@@ -14,7 +14,7 @@ func _ready():
 	$KeyE.play("Key_E")
 
 func _physics_process(delta):
-	if player_near and Input.is_action_just_pressed("E") and not dialogue_triggered:
+	if player_near and Input.is_action_just_pressed("e") and not dialogue_triggered:
 		dialogue_triggered = true
 		start_dialogue()
 
