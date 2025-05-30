@@ -27,10 +27,10 @@ var quiz_data = {
 		{"question": "res://Assets/UI/cards/laranja.png", "options": ["res://Assets/UI/alfabeto/I.png", "res://Assets/UI/alfabeto/J.png", "res://Assets/UI/alfabeto/K.png", "res://Assets/UI/alfabeto/L.png"], "correct": 3}
 	],
 	"fase_4": [
-		{"question": "res://Assets/UI/cards/musculo.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/L.png"], "correct": 0},
-		{"question": "res://Assets/UI/cards/nariz.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/L.png"], "correct": 1},
-		{"question": "res://Assets/UI/cards/coracao.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/L.png"], "correct": 2},
-		{"question": "res://Assets/UI/cards/pulmao.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/L.png"], "correct": 3}
+		{"question": "res://Assets/UI/cards/musculo.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/P.png"], "correct": 0},
+		{"question": "res://Assets/UI/cards/nariz.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/P.png"], "correct": 1},
+		{"question": "res://Assets/UI/cards/coracao.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/P.png"], "correct": 2},
+		{"question": "res://Assets/UI/cards/pulmao.png", "options": ["res://Assets/UI/alfabeto/M.png", "res://Assets/UI/alfabeto/N.png", "res://Assets/UI/alfabeto/O.png", "res://Assets/UI/alfabeto/P.png"], "correct": 3}
 	],
 	"fase_5": [
 		{"question": "res://Assets/UI/cards/qatar.png", "options": ["res://Assets/UI/alfabeto/Q.png", "res://Assets/UI/alfabeto/R.png", "res://Assets/UI/alfabeto/S.png", "res://Assets/UI/alfabeto/T.png"], "correct": 0},

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Metadaddos.gd" id="2_apaul"]
 [ext_resource type="Texture2D" uid="uid://c5d1vle107vet" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/003.png" id="2_ogmh2"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="3_khf0o"]
-[ext_resource type="PackedScene" uid="uid://dl0kixha8s8it" path="res://Scenes/canvas_layer.tscn" id="5_km7sv"]
+[ext_resource type="PackedScene" uid="uid://dlpd1r2mpo3it" path="res://Scenes/canvas_layer.tscn" id="5_km7sv"]
 
 [sub_resource type="Resource" id="Resource_2md1k"]
 script = ExtResource("2_apaul")

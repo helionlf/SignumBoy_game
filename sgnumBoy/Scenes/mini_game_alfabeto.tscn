@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckasv7xjv4xvg"]
+[gd_scene load_steps=6 format=3 uid="uid://ckasv7xjv4xvg"]
 
 [ext_resource type="Script" path="res://Scripts/miniGame_alfabeto.gd" id="1_dtm1x"]
 [ext_resource type="Texture2D" uid="uid://tlndgurki5f7" path="res://Assets/UI/tablet.png" id="2_u33wu"]
+[ext_resource type="FontFile" path="res://Assets/UI/Pixellari.ttf" id="3_8pnqo"]
 [ext_resource type="AudioStream" uid="uid://c8f86in2ndkkf" path="res://Assets/Souds/1-efek-sound-3-220030.mp3" id="3_hkjpx"]
 [ext_resource type="AudioStream" uid="uid://dfimsncoflkya" path="res://Assets/Souds/error-8-206492.mp3" id="4_wsluu"]
 
@@ -97,6 +98,8 @@ offset_left = 318.0
 offset_top = 244.0
 offset_right = 832.0
 offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("3_8pnqo")
+theme_override_font_sizes/font_size = 36
 text = "Parabéns,
  você completou este mini jogo!"
 horizontal_alignment = 1
