@@ -10,8 +10,8 @@ func next_level():
 	if palavra == "caneta":
 		palavra = "caderno"
 	elif palavra == "caderno":
-		palavra = "livro"
-	elif palavra == "livro":
+		palavra = "apontador"
+	elif palavra == "apontador":
 		palavra = "borracha"
 	else:
 		palavra = "completed"
