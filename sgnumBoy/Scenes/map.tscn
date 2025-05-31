@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://dspudkyr3rrma"]
+
+[ext_resource type="Script" path="res://Scripts/map.gd" id="1_sp184"]
+[ext_resource type="Texture2D" uid="uid://dtl05ugki1smw" path="res://Assets/TileMaps/map.png" id="2_ym6q8"]
+
+[node name="map" type="Node2D"]
+script = ExtResource("1_sp184")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1159.0
+offset_bottom = 644.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 0.435294)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.5
+offset_top = -304.0
+offset_right = 714.5
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ym6q8")
+
+[node name="home" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 255.0
+offset_right = 496.0
+offset_bottom = 291.0
+text = "Casa
+"
+
+[node name="schol" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 256.0
+offset_right = 796.0
+offset_bottom = 292.0
+text = "Escola
+"
+
+[node name="supermarket" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 530.0
+offset_right = 496.0
+offset_bottom = 566.0
+text = "Supermercado"
+
+[node name="park" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 666.0
+offset_top = 531.0
+offset_right = 797.0
+offset_bottom = 567.0
+text = "Parque"
+
+[connection signal="pressed" from="CanvasLayer/Control/home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/schol" to="." method="_on_schol_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/supermarket" to="." method="_on_supermarket_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/park" to="." method="_on_park_pressed"]
