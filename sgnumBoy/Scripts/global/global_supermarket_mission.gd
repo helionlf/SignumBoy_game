@@ -36,14 +36,14 @@ func next_level():
 		
 	
 func exit():
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(3).timeout
 	next_level()
-	Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")
+	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
 	
 
 
 func set_completed():
 	completed = true
 	await get_tree().create_timer(5).timeout
-	Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")
+	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
 	

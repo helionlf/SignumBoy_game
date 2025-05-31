@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/miniGame_alfabeto.gd" id="1_dtm1x"]
 [ext_resource type="Texture2D" uid="uid://tlndgurki5f7" path="res://Assets/UI/tablet.png" id="2_u33wu"]
-[ext_resource type="FontFile" path="res://Assets/UI/Pixellari.ttf" id="3_8pnqo"]
+[ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="3_8pnqo"]
 [ext_resource type="AudioStream" uid="uid://c8f86in2ndkkf" path="res://Assets/Souds/1-efek-sound-3-220030.mp3" id="3_hkjpx"]
 [ext_resource type="AudioStream" uid="uid://dfimsncoflkya" path="res://Assets/Souds/error-8-206492.mp3" id="4_wsluu"]
 

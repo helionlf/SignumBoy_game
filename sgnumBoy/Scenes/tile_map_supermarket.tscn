@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq2oel00he2y5"]
+[gd_scene load_steps=11 format=3 uid="uid://cq2oel00he2y5"]
 
 [ext_resource type="Texture2D" uid="uid://dewsbuvt3fvws" path="res://Assets/TileMaps/Supermarket/MarketSet_Tileset.png" id="1_lmtah"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="2_c368n"]
+[ext_resource type="Script" path="res://Scripts/prateleiras.gd" id="2_sxmoh"]
+[ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="3_akny5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sj58"]
 texture = ExtResource("1_lmtah")
@@ -230,6 +232,31 @@ texture = ExtResource("1_lmtah")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7sj58")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvo7l"]
+atlas = ExtResource("3_akny5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c83e3"]
+atlas = ExtResource("3_akny5")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3m1f8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvo7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c83e3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4o7xh"]
+size = Vector2(46, 10.5)
+
 [node name="tileMap_supermarket" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -248,5 +275,126 @@ layer_4/tile_data = PackedInt32Array(851997, 196608, 4, 917533, 196608, 5, 85199
 layer_5/name = "outros"
 layer_5/tile_data = PackedInt32Array(720905, 196608, 6, 786441, 196608, 7, 720906, 262144, 6, 786442, 262144, 7, 720907, 327680, 6, 786443, 327680, 7)
 
+[node name="prateleiras" type="Node2D" parent="."]
+position = Vector2(224, 292)
+script = ExtResource("2_sxmoh")
+
+[node name="key_E" type="AnimatedSprite2D" parent="prateleiras"]
+visible = false
+position = Vector2(9, -41)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_3m1f8")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="prateleiras"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prateleiras/Area2D"]
+position = Vector2(8, -4.25)
+shape = SubResource("RectangleShape2D_4o7xh")
+
+[node name="prateleiras2" type="Node2D" parent="."]
+position = Vector2(161, 292)
+script = ExtResource("2_sxmoh")
+
+[node name="key_E" type="AnimatedSprite2D" parent="prateleiras2"]
+visible = false
+position = Vector2(9, -41)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_3m1f8")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="prateleiras2"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prateleiras2/Area2D"]
+position = Vector2(7, -4.25)
+shape = SubResource("RectangleShape2D_4o7xh")
+
+[node name="prateleiras3" type="Node2D" parent="."]
+position = Vector2(224, 340)
+script = ExtResource("2_sxmoh")
+
+[node name="key_E" type="AnimatedSprite2D" parent="prateleiras3"]
+visible = false
+position = Vector2(9, -41)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_3m1f8")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="prateleiras3"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prateleiras3/Area2D"]
+position = Vector2(8, -4.25)
+shape = SubResource("RectangleShape2D_4o7xh")
+
+[node name="prateleiras4" type="Node2D" parent="."]
+position = Vector2(160, 340)
+script = ExtResource("2_sxmoh")
+
+[node name="key_E" type="AnimatedSprite2D" parent="prateleiras4"]
+visible = false
+position = Vector2(9, -41)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_3m1f8")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="prateleiras4"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prateleiras4/Area2D"]
+position = Vector2(8, -4.25)
+shape = SubResource("RectangleShape2D_4o7xh")
+
+[node name="prateleiras5" type="Node2D" parent="."]
+position = Vector2(224, 388)
+script = ExtResource("2_sxmoh")
+
+[node name="key_E" type="AnimatedSprite2D" parent="prateleiras5"]
+visible = false
+position = Vector2(9, -41)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_3m1f8")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="prateleiras5"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prateleiras5/Area2D"]
+position = Vector2(8, -4.25)
+shape = SubResource("RectangleShape2D_4o7xh")
+
+[node name="prateleiras6" type="Node2D" parent="."]
+position = Vector2(161, 388)
+script = ExtResource("2_sxmoh")
+
+[node name="key_E" type="AnimatedSprite2D" parent="prateleiras6"]
+visible = false
+position = Vector2(9, -41)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_3m1f8")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="prateleiras6"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prateleiras6/Area2D"]
+position = Vector2(7, -4.25)
+shape = SubResource("RectangleShape2D_4o7xh")
+
 [node name="player" parent="." instance=ExtResource("2_c368n")]
 position = Vector2(272, 313)
+
+[connection signal="body_entered" from="prateleiras/Area2D" to="prateleiras" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="prateleiras/Area2D" to="prateleiras" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="prateleiras2/Area2D" to="prateleiras2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="prateleiras2/Area2D" to="prateleiras2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="prateleiras3/Area2D" to="prateleiras3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="prateleiras3/Area2D" to="prateleiras3" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="prateleiras4/Area2D" to="prateleiras4" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="prateleiras4/Area2D" to="prateleiras4" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="prateleiras5/Area2D" to="prateleiras5" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="prateleiras5/Area2D" to="prateleiras5" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="prateleiras6/Area2D" to="prateleiras6" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="prateleiras6/Area2D" to="prateleiras6" method="_on_area_2d_body_exited"]
