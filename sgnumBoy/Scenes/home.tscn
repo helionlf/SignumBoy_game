@@ -6,9 +6,6 @@
 [ext_resource type="Script" path="res://Scripts/porta_sala.gd" id="4_u2syh"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="5_j57kf"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_d3w3i"]
-vertices = PackedVector2Array(226, 44, 134, 44, 134, 30, 227, 30)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(124, 20, 237, 20, 236, 54, 124, 54)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
