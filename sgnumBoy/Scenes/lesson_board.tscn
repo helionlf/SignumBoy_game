@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="1_d73o0"]
 [ext_resource type="Script" path="res://Scripts/lesson_board.gd" id="1_m1wbi"]
-[ext_resource type="Texture2D" path="res://Assets/teste.jpg" id="2_pnxac"]
+[ext_resource type="Texture2D" uid="uid://ds1stwp4bcfio" path="res://Assets/teste.jpg" id="2_pnxac"]
 
 [node name="lesson_board" type="Node2D"]
 script = ExtResource("1_m1wbi")

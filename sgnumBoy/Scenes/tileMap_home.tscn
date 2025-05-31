@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cygo8awqoifvr" path="res://Assets/TileMaps/interior free/interior free.png" id="1_ranga"]
 [ext_resource type="Texture2D" uid="uid://cqt8qe3a5ybrs" path="res://Assets/TileMaps/TopDownHouse_DoorsAndWindows.png" id="2_l5ym5"]
-[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TileMaps/TopDownHouse_FloorsAndWalls.png" id="3_fu3xd"]
+[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="3_fu3xd"]
 [ext_resource type="Texture2D" uid="uid://yamx0hms121l" path="res://Assets/TileMaps/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="4_dcpol"]
 [ext_resource type="Texture2D" uid="uid://k2hpoydj6bwr" path="res://Assets/TileMaps/TopDownHouse_FurnitureState1.png" id="5_asreh"]
 [ext_resource type="Texture2D" uid="uid://3pckvu0hmxdx" path="res://Assets/TileMaps/TopDownHouse_FurnitureState2.png" id="6_qnwjh"]
