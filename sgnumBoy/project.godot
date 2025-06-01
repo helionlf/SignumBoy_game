@@ -20,6 +20,7 @@ GlobalMGA="*res://Scripts/global/global_miniGame_alfabeto.gd"
 GlobalSMM="*res://Scripts/global/global_schoolMaterial_mission.gd"
 Transition="*res://Scenes/transition.tscn"
 GlobalSM="*res://Scripts/global/global_supermarket_mission.gd"
+GlobalM="*res://Scripts/global/GlobalMemoria.gd"
 
 [input]
 

@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://ch5bv8sv7fju8"]
+
+[ext_resource type="Texture2D" uid="uid://c21x7i1nqysvg" path="res://Assets/UI/Borracha-Sheet.png" id="1_0lcc6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cglw0"]
+atlas = ExtResource("1_0lcc6")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3nam"]
+atlas = ExtResource("1_0lcc6")
+region = Rect2(70, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp366"]
+atlas = ExtResource("1_0lcc6")
+region = Rect2(140, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcgqm"]
+atlas = ExtResource("1_0lcc6")
+region = Rect2(210, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avpby"]
+atlas = ExtResource("1_0lcc6")
+region = Rect2(280, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8dwk"]
+atlas = ExtResource("1_0lcc6")
+region = Rect2(350, 0, 70, 70)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cglw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3nam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp366")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcgqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avpby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8dwk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
