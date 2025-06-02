@@ -20,82 +20,107 @@ offset_bottom = 40.0
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 49.0
+offset_top = 41.0
+offset_right = 1808.0
+offset_bottom = 1041.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 autoplay = "default"
 
 [node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 189.0
-offset_right = 1762.0
-offset_bottom = 1189.0
+offset_left = 49.0
+offset_top = 230.0
+offset_right = 1808.0
+offset_bottom = 1230.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton2"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 
 [node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_top = 365.0
-offset_right = 1759.0
-offset_bottom = 1365.0
+offset_left = 49.0
+offset_top = 406.0
+offset_right = 1808.0
+offset_bottom = 1406.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton3"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 
 [node name="TextureButton4" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_left = 347.0
-offset_right = 2106.0
-offset_bottom = 1000.0
+offset_left = 401.0
+offset_top = 41.0
+offset_right = 2160.0
+offset_bottom = 1041.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton4"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 
 [node name="TextureButton5" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 189.0
-offset_right = 2103.0
-offset_bottom = 1189.0
+offset_left = 401.0
+offset_top = 230.0
+offset_right = 2160.0
+offset_bottom = 1230.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton5"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 
 [node name="TextureButton6" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_left = 348.0
-offset_top = 365.0
-offset_right = 2107.0
-offset_bottom = 1365.0
+offset_left = 401.0
+offset_top = 406.0
+offset_right = 2160.0
+offset_bottom = 1406.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton6"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 
 [node name="TextureButton7" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_left = 688.0
-offset_top = 10.0
-offset_right = 2447.0
-offset_bottom = 1010.0
+offset_left = 752.0
+offset_top = 41.0
+offset_right = 2510.0
+offset_bottom = 1041.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton7"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 
 [node name="TextureButton8" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
-offset_left = 685.0
-offset_top = 182.0
-offset_right = 2444.0
-offset_bottom = 1182.0
+offset_left = 752.0
+offset_top = 223.0
+offset_right = 2511.0
+offset_bottom = 1223.0
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton8"]
+position = Vector2(870, 445)
+scale = Vector2(11, 11)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

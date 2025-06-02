@@ -46,14 +46,16 @@ var memory_data = {
 
 
 func next_level():
-	current_question_index = 0
 	if current_phase == "fase_1":
-		current_phase = "fase_2"
+		if GlobalSMM.completed:
+			current_phase = "fase_2"
+		else:
+			current_phase = "fase_1"
+			GlobalSMM.unlocked = true
 	elif current_phase == "fase_2":
 		current_phase = "completed"
 		completed = true
 
 func exit():
-	completed = true
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(4).timeout
 	get_tree().change_scene_to_file("res://Scenes/home.tscn")

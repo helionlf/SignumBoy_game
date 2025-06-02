@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://kd7a1qff1k1m"]
+[gd_scene load_steps=23 format=3 uid="uid://kd7a1qff1k1m"]
 
 [ext_resource type="PackedScene" uid="uid://s0gchwxgwkv2" path="res://Scenes/tileMap_home.tscn" id="1_pvil1"]
 [ext_resource type="PackedScene" uid="uid://7sob4gho1sd2" path="res://Scenes/daddy.tscn" id="2_sr7w4"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://Scripts/porta_sala.gd" id="4_u2syh"]
 [ext_resource type="PackedScene" uid="uid://dspudkyr3rrma" path="res://Scenes/map.tscn" id="5_672v6"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="5_j57kf"]
+[ext_resource type="Script" path="res://Scripts/minigame_memoria.gd" id="5_lnhh2"]
+[ext_resource type="Script" path="res://Scripts/missao_1.gd" id="6_b246n"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_d3w3i"]
 vertices = PackedVector2Array(226, 44, 134, 44, 134, 30, 227, 30)
@@ -37,6 +39,56 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3768h"]
 size = Vector2(34, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muqi5"]
+atlas = ExtResource("5_j57kf")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q60m"]
+atlas = ExtResource("5_j57kf")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dbl4i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muqi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1q60m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyvrq"]
+size = Vector2(20, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_252fw"]
+atlas = ExtResource("5_j57kf")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t5lm"]
+atlas = ExtResource("5_j57kf")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_etin7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_252fw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t5lm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_podkk"]
+size = Vector2(20, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ei5br"]
 size = Vector2(38, 15)
@@ -79,6 +131,40 @@ collision_mask = 2
 position = Vector2(7, -4.5)
 shape = SubResource("RectangleShape2D_3768h")
 
+[node name="minigame_memoria" type="Node2D" parent="."]
+position = Vector2(104, 12)
+script = ExtResource("5_lnhh2")
+
+[node name="key_E" type="AnimatedSprite2D" parent="minigame_memoria"]
+visible = false
+position = Vector2(1, -38)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_dbl4i")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="minigame_memoria"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="minigame_memoria/Area2D"]
+shape = SubResource("RectangleShape2D_kyvrq")
+
+[node name="missao_1" type="Node2D" parent="."]
+script = ExtResource("6_b246n")
+
+[node name="key_E" type="AnimatedSprite2D" parent="missao_1"]
+visible = false
+position = Vector2(80, 46)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_etin7")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="missao_1"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="missao_1/Area2D"]
+position = Vector2(80, 35)
+shape = SubResource("RectangleShape2D_podkk")
+
 [node name="map" parent="." instance=ExtResource("5_672v6")]
 position = Vector2(172, 96)
 
@@ -94,5 +180,9 @@ position = Vector2(160, -3)
 
 [connection signal="body_entered" from="porta/Area2D" to="porta" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="porta/Area2D" to="porta" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="minigame_memoria/Area2D" to="minigame_memoria" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="minigame_memoria/Area2D" to="minigame_memoria" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="missao_1/Area2D" to="missao_1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="missao_1/Area2D" to="missao_1" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="map/Area2D" to="map" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="map/Area2D" to="map" method="_on_area_2d_body_exited"]

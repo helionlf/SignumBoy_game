@@ -1,10 +1,9 @@
 extends Node
 
-
+var unlocked = false
 var completed = false
 
 var palavra = "caneta"
-
 
 func next_level():
 	if palavra == "caneta":
@@ -15,6 +14,7 @@ func next_level():
 		palavra = "borracha"
 	else:
 		palavra = "completed"
+		GlobalM.current_phase = "fase_2"
 		completed = true
 
 func exit():
