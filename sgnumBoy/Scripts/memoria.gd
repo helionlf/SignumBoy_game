@@ -45,7 +45,7 @@ func load_cards():
 			button.set_meta("card_path", card_data["path"])
 			
 			# Mostrar o verso da carta (imagem padrão)
-			button.texture_normal = load("res://Assets/UI/cards/abelha.png")
+			button.texture_normal = load("res://Assets/UI/cards/back.png")
 		
 		matches_found = 0
 		first_card = null
@@ -67,7 +67,7 @@ func _on_card_pressed(button):
 	elif card_type == "animation":
 		# Mostrar a animação
 		anim_sprite.frames = load(card_path)
-		button.texture_normal = load("res://Assets/UI/cards/abelha.png")
+		button.texture_normal = load("res://Assets/UI/cards/branco.png")
 		anim_sprite.visible = true
 		anim_sprite.play()
 	
@@ -91,9 +91,10 @@ func _on_card_pressed(button):
 				options_container.visible = false
 				
 				if GlobalM.current_phase == "fase_1":
-					label.text = "Parabéns, você completou a primeira fase. Conclua sua primeira missão para desbloquear a próxima."
+					label.text = "Parabéns, você completou a primeira fase.
+					Conclua sua primeira missão para desbloquear a próxima."
 				elif GlobalM.current_phase == "fase_2":
-					label.text = "Parabéns, você completou a segunda fase. Minigame completo!"
+					label.text = "Parabéns, você completou o Minigame completo!"
 				elif GlobalM.current_phase == "completed":
 					label.text = "Parabéns, você completou o minigame!"
 				
@@ -108,10 +109,14 @@ func _on_card_pressed(button):
 				var anim = card.get_node("AnimatedSprite2D")
 				anim.visible = false
 				anim.frames = null
-				card.texture_normal = load("res://Assets/UI/cards/abelha.png")
+				card.texture_normal = load("res://Assets/UI/cards/back.png")
 		
 		first_card = null
 		second_card = null
 		
 		for card in options_container.get_children():
 			card.disabled = false
+
+func _input(event):
+	if event.is_action_pressed("sair"):
+		Transition.fade_to_scene("res://Scenes/home.tscn")

@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://rx7j30y3a5nj"]
+
+[ext_resource type="Texture2D" uid="uid://c836wmjit2ewf" path="res://Assets/UI/Leite-Sheet.png" id="1_05gko"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iexek"]
+atlas = ExtResource("1_05gko")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vyeh"]
+atlas = ExtResource("1_05gko")
+region = Rect2(70, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyvgi"]
+atlas = ExtResource("1_05gko")
+region = Rect2(140, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp0fy"]
+atlas = ExtResource("1_05gko")
+region = Rect2(210, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ypqt"]
+atlas = ExtResource("1_05gko")
+region = Rect2(280, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijq7r"]
+atlas = ExtResource("1_05gko")
+region = Rect2(350, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1k48"]
+atlas = ExtResource("1_05gko")
+region = Rect2(420, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fob8q"]
+atlas = ExtResource("1_05gko")
+region = Rect2(490, 0, 70, 70)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iexek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vyeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyvgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp0fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ypqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijq7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1k48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fob8q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]

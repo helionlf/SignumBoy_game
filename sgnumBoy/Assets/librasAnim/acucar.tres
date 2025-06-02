@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://q323e5knes4f"]
+
+[ext_resource type="Texture2D" uid="uid://dxv8l803nfso7" path="res://Assets/UI/acucar.png" id="1_l0n5u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n65aj"]
+atlas = ExtResource("1_l0n5u")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp0jb"]
+atlas = ExtResource("1_l0n5u")
+region = Rect2(70, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pildp"]
+atlas = ExtResource("1_l0n5u")
+region = Rect2(140, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7q4v"]
+atlas = ExtResource("1_l0n5u")
+region = Rect2(210, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgsle"]
+atlas = ExtResource("1_l0n5u")
+region = Rect2(280, 0, 70, 70)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n65aj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp0jb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pildp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7q4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgsle")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

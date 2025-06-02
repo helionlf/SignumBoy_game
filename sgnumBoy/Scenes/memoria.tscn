@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cx6md3608rxug"]
+[gd_scene load_steps=3 format=3 uid="uid://cx6md3608rxug"]
 
 [ext_resource type="Script" path="res://Scripts/memoria.gd" id="1_bdhrc"]
+[ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_eax51"]
 
 [node name="Memoria" type="Node2D"]
 script = ExtResource("1_bdhrc")
@@ -9,9 +10,20 @@ script = ExtResource("1_bdhrc")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.536882, 0.694104, 0.692859, 1)
 
 [node name="MenuBar" type="MenuBar" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -28,7 +40,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
 autoplay = "default"
 
 [node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
@@ -41,7 +53,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton2"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
 
 [node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
@@ -53,7 +65,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton3"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
 
 [node name="TextureButton4" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
@@ -65,7 +77,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton4"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
 
 [node name="TextureButton5" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
@@ -77,7 +89,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton5"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
 
 [node name="TextureButton6" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
@@ -101,7 +113,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton7"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
 
 [node name="TextureButton8" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0
@@ -113,7 +125,8 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton8"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
+autoplay = "default"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -121,6 +134,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.5
+offset_top = -44.5
+offset_right = 542.5
+offset_bottom = 44.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_eax51")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1

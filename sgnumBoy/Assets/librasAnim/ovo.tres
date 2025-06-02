@@ -1,0 +1,60 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://ck1b2kuoio4x2"]
+
+[ext_resource type="Texture2D" uid="uid://ddqhyykllwgjn" path="res://Assets/UI/Ovo-Sheet.png" id="1_5iiio"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm16i"]
+atlas = ExtResource("1_5iiio")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8dhc"]
+atlas = ExtResource("1_5iiio")
+region = Rect2(70, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5nei"]
+atlas = ExtResource("1_5iiio")
+region = Rect2(140, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sjb4"]
+atlas = ExtResource("1_5iiio")
+region = Rect2(210, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uoynp"]
+atlas = ExtResource("1_5iiio")
+region = Rect2(280, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd5hc"]
+atlas = ExtResource("1_5iiio")
+region = Rect2(350, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgnql"]
+atlas = ExtResource("1_5iiio")
+region = Rect2(420, 0, 70, 70)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm16i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8dhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5nei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sjb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uoynp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd5hc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgnql")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]

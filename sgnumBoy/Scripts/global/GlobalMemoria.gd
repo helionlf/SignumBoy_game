@@ -8,38 +8,38 @@ var current_question_index = 0
 var memory_data = {
 	"fase_1": [
 		{"pair": [
-			{"id": 1, "type": "texture", "path": "res://Assets/UI/cards/aranha.png"},
+			{"id": 1, "type": "texture", "path": "res://Assets/UI/cards/apontador.png"},
 			{"id": 1, "type": "animation", "path": "res://Assets/librasAnim/apontador.tres"}
 		]},
 		{"pair": [
-			{"id": 2, "type": "texture", "path": "res://Assets/UI/cards/cachorro.png"},
+			{"id": 2, "type": "texture", "path": "res://Assets/UI/cards/borracha.png"},
 			{"id": 2, "type": "animation", "path": "res://Assets/librasAnim/borracha.tres"}
 		]},
 		{"pair": [
-			{"id": 3, "type": "texture", "path": "res://Assets/UI/cards/panda.png"},
+			{"id": 3, "type": "texture", "path": "res://Assets/UI/cards/caderno.png"},
 			{"id": 3, "type": "animation", "path": "res://Assets/librasAnim/caderno.tres"}
 		]},
 		{"pair": [
-			{"id": 4, "type": "texture", "path": "res://Assets/UI/cards/chave.png"},
+			{"id": 4, "type": "texture", "path": "res://Assets/UI/cards/caneta.png"},
 			{"id": 4, "type": "animation", "path": "res://Assets/librasAnim/caneta.tres"}
 		]}
 	],
 	"fase_2": [
 		{"pair": [
-			{"id": 1, "type": "texture", "path": "res://Assets/UI/cards/cat.png"},
-			{"id": 1, "type": "animation", "path": "res://Assets/librasAnim/cat_gesto.tres"}
+			{"id": 1, "type": "texture", "path": "res://Assets/UI/cards/ovos.png"},
+			{"id": 1, "type": "animation", "path": "res://Assets/librasAnim/ovo.tres"}
 		]},
 		{"pair": [
-			{"id": 2, "type": "texture", "path": "res://Assets/UI/cards/dog.png"},
-			{"id": 2, "type": "animation", "path": "res://Assets/librasAnim/dog_gesto.tres"}
+			{"id": 2, "type": "texture", "path": "res://Assets/UI/cards/leite.png"},
+			{"id": 2, "type": "animation", "path": "res://Assets/librasAnim/leite.tres"}
 		]},
 		{"pair": [
-			{"id": 3, "type": "texture", "path": "res://Assets/UI/cards/fox.png"},
-			{"id": 3, "type": "animation", "path": "res://Assets/librasAnim/fox_gesto.tres"}
+			{"id": 3, "type": "texture", "path": "res://Assets/UI/cards/manteiga.png"},
+			{"id": 3, "type": "animation", "path": "res://Assets/librasAnim/manteiga.tres"}
 		]},
 		{"pair": [
-			{"id": 4, "type": "texture", "path": "res://Assets/UI/cards/owl.png"},
-			{"id": 4, "type": "animation", "path": "res://Assets/librasAnim/owl_gesto.tres"}
+			{"id": 4, "type": "texture", "path": "res://Assets/UI/cards/fermento.png"},
+			{"id": 4, "type": "animation", "path": "res://Assets/librasAnim/acucar.tres"}
 		]}
 	]
 }

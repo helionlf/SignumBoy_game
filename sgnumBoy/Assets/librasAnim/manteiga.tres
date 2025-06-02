@@ -1,0 +1,81 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://cbmfmd1cdx4c0"]
+
+[ext_resource type="Texture2D" uid="uid://cl03txi01u7kh" path="res://Assets/UI/Manteiga-Sheet.png" id="1_g2j58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6oo7"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l42bh"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(70, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glxwu"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(140, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hn6c8"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(210, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ywxy"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(280, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpb84"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(350, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rly3j"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(420, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yjvk"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(490, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vps1"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(560, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2p0s"]
+atlas = ExtResource("1_g2j58")
+region = Rect2(630, 0, 70, 70)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6oo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l42bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glxwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hn6c8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ywxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpb84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rly3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yjvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vps1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2p0s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
