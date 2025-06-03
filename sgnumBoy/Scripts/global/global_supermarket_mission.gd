@@ -1,7 +1,7 @@
 extends Node
 
 
-var unlocked = true
+var unlocked = false
 var completed = false
 
 var current_phase = "fase_1"

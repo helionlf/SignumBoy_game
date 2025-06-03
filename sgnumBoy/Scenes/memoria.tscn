@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx6md3608rxug"]
+[gd_scene load_steps=3 format=3 uid="uid://re6i552al1bl"]
 
 [ext_resource type="Script" path="res://Scripts/memoria.gd" id="1_bdhrc"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_eax51"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="2_c368n"]
 [ext_resource type="Script" path="res://Scripts/prateleiras.gd" id="2_sxmoh"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="3_akny5"]
-[ext_resource type="PackedScene" uid="uid://dspudkyr3rrma" path="res://Scenes/map.tscn" id="4_yam1f"]
+[ext_resource type="PackedScene" uid="uid://ytvygxlugbgb" path="res://Scenes/map.tscn" id="4_yam1f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sj58"]
 texture = ExtResource("1_lmtah")
