@@ -101,7 +101,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MenuBar/TextureButton6"]
 position = Vector2(870, 445)
-scale = Vector2(11, 11)
+scale = Vector2(14, 14)
 
 [node name="TextureButton7" type="TextureButton" parent="CanvasLayer/Control/MenuBar"]
 layout_mode = 0

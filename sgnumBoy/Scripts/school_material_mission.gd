@@ -12,3 +12,7 @@ func _process(delta):
 		anim.play("apontador")
 	else:
 		anim.play("borracha")
+
+func _input(event):
+	if event.is_action_pressed("sair"):
+		Transition.fade_to_scene("res://Scenes/home.tscn")

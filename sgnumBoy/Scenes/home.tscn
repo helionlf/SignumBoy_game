@@ -99,7 +99,7 @@ size = Vector2(38, 15)
 position = Vector2(-32, -36)
 
 [node name="naviagation_positions" type="Node2D" parent="."]
-position = Vector2(177, 28)
+position = Vector2(175, 43)
 
 [node name="position_r" type="Marker2D" parent="naviagation_positions"]
 position = Vector2(42, 8)
@@ -108,6 +108,7 @@ position = Vector2(42, 8)
 position = Vector2(-40, 8)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-2, 15)
 navigation_polygon = SubResource("NavigationPolygon_d3w3i")
 
 [node name="daddy" parent="NavigationRegion2D" instance=ExtResource("2_sr7w4")]
@@ -120,7 +121,7 @@ script = ExtResource("4_u2syh")
 [node name="key_E" type="AnimatedSprite2D" parent="porta"]
 visible = false
 position = Vector2(9, -41)
-scale = Vector2(0.9, 0.9)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_7tvuu")
 autoplay = "default"
 

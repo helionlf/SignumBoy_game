@@ -1,6 +1,7 @@
 extends Node
 
 
+var unlocked = true
 var completed = false
 
 var current_phase = "fase_1"
@@ -12,10 +13,10 @@ var data = {
 		{"cenario": "res://Assets/UI/prateleiras.png", "options": ["res://Assets/UI/trigo.png", "res://Assets/UI/ovos.png", "res://Assets/UI/tomate.png"], "correct": 1}
 	],
 	"fase_2": [
-		{"cenario": "res://Assets/UI/prateleiras.png", "options": ["res://Assets/UI/manteiga.png", "res://Assets/UI/biscoito.png", "res://Assets/UI/tomate.png"], "correct": 0}
+		{"cenario": "res://Assets/UI/prateleiras.png", "options": ["res://Assets/UI/manteiga.png", "res://Assets/UI/biscoito.png", "res://Assets/UI/fermento.png"], "correct": 0}
 	],
 	"fase_3": [
-		{"cenario": "res://Assets/UI/prateleiras.png", "options": ["res://Assets/UI/macarrao.png", "res://Assets/UI/ovos.png", "res://Assets/UI/fermento.png"], "correct": 2}
+		{"cenario": "res://Assets/UI/prateleiras.png", "options": ["res://Assets/UI/macarrao.png", "res://Assets/UI/ovos.png", "res://Assets/UI/acucar_sm.png"], "correct": 2}
 	],
 	"fase_4": [
 		{"cenario": "res://Assets/UI/prateleiras.png", "options": ["res://Assets/UI/suco.png", "res://Assets/UI/leite.png", "res://Assets/UI/iogurte.png"], "correct": 1}

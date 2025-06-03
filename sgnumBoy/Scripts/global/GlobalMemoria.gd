@@ -38,7 +38,7 @@ var memory_data = {
 			{"id": 3, "type": "animation", "path": "res://Assets/librasAnim/manteiga.tres"}
 		]},
 		{"pair": [
-			{"id": 4, "type": "texture", "path": "res://Assets/UI/cards/fermento.png"},
+			{"id": 4, "type": "texture", "path": "res://Assets/UI/cards/acucar.png"},
 			{"id": 4, "type": "animation", "path": "res://Assets/librasAnim/acucar.tres"}
 		]}
 	]
@@ -55,6 +55,7 @@ func next_level():
 	elif current_phase == "fase_2":
 		current_phase = "completed"
 		completed = true
+		GlobalSM.unlocked = true
 
 func exit():
 	await get_tree().create_timer(4).timeout

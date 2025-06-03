@@ -2,13 +2,30 @@ extends Node
 
 
 @onready var cenario = $CanvasLayer/Control/TextureRect
+@onready var completed = $CanvasLayer/Control/completed
+@onready var anim = $CanvasLayer/Control/libras/AnimatedSprite2D
 
 func _ready():
 	if not GlobalSM.current_phase == "completed":
 		for button in cenario.get_children():
 			button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
 		load_question()
-	
+	else:
+		$CanvasLayer/Control/libras.visible = false
+		$CanvasLayer/Control/TextureRect/btn_1.visible = false
+		$CanvasLayer/Control/TextureRect/btn_2.visible = false
+		$CanvasLayer/Control/TextureRect/btn_3.visible = false
+		completed.visible = true
+		
+func _process(delta):
+	if GlobalSM.current_phase == "fase_1":
+		anim.play("ovos")
+	elif GlobalSM.current_phase == "fase_2":
+		anim.play("manteiga")
+	elif GlobalSM.current_phase == "fase_3":
+		anim.play("acucar")
+	else:
+		anim.play("leite")
 
 func load_question():
 	if not GlobalSM.current_phase == "completed":
@@ -54,7 +71,6 @@ func _on_button_pressed(button):
 	
 	load_question()
 	
-		
 func _input(event):
 	if event.is_action_pressed("sair"):
 		Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")

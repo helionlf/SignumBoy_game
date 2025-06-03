@@ -9,12 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://baablul2ocq06" path="res://Assets/UI/caderno.png" id="4_gpsvy"]
 [ext_resource type="Texture2D" uid="uid://exv46qeq03xx" path="res://Assets/UI/borracha.png" id="5_q370f"]
 [ext_resource type="AudioStream" uid="uid://c8f86in2ndkkf" path="res://Assets/Souds/1-efek-sound-3-220030.mp3" id="6_m2amd"]
-[ext_resource type="Texture2D" uid="uid://c2le8k6yqdv7f" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/013.png" id="7_p1jjj"]
 [ext_resource type="AudioStream" uid="uid://dfimsncoflkya" path="res://Assets/Souds/error-8-206492.mp3" id="7_wgx8d"]
 [ext_resource type="Texture2D" uid="uid://cbvwftovbteaw" path="res://Assets/UI/GUI_L.png" id="9_jggs1"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="9_mjnfj"]
 [ext_resource type="Texture2D" uid="uid://ce2u0ty24v1ay" path="res://Assets/UI/Apontador-Sheet.png" id="10_mmkvq"]
 [ext_resource type="Texture2D" uid="uid://c21x7i1nqysvg" path="res://Assets/UI/Borracha-Sheet.png" id="11_iklu7"]
+[ext_resource type="Texture2D" uid="uid://c5d1vle107vet" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/003.png" id="11_whoeb"]
 [ext_resource type="Texture2D" uid="uid://dbpux65actxxu" path="res://Assets/UI/Caderno-Sheet.png" id="12_n3wtb"]
 [ext_resource type="Texture2D" uid="uid://b7kijcwus7f1u" path="res://Assets/UI/Caneta02-Sheet.png" id="13_6hyts"]
 
@@ -2010,15 +2010,15 @@ sources/1 = SubResource("TileSetAtlasSource_8eko3")
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w66vo"]
 load_path = "res://.godot/imported/mochila.png-2a0e03cdf3195905a9146c9493287014.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g4tlf"]
-atlas = ExtResource("7_p1jjj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_334h5"]
+atlas = ExtResource("11_whoeb")
 region = Rect2(20, 0, 20, 21)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_woc32"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g4tlf")
+"texture": SubResource("AtlasTexture_334h5")
 }],
 "loop": true,
 "name": &"default",
@@ -2538,8 +2538,8 @@ position = Vector2(794.286, 119.643)
 scale = Vector2(5.5, 5.5)
 sprite_frames = SubResource("SpriteFrames_ylc0j")
 animation = &"caderno"
-frame = 7
-frame_progress = 0.398893
+frame = 15
+frame_progress = 0.831546
 
 [node name="correct_song" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_m2amd")

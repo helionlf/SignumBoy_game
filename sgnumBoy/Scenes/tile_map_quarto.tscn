@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cte4xnyg4kb5c"]
+[gd_scene load_steps=30 format=3 uid="uid://csqnv8vci566b"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="2_qgs11"]
@@ -4567,8 +4567,8 @@ texture = ExtResource("11_bh1pp")
 
 [node name="key_E" type="AnimatedSprite2D" parent="tablet"]
 visible = false
-position = Vector2(-0.000976563, -866.667)
-scale = Vector2(62, 62)
+position = Vector2(-0.000976563, -800)
+scale = Vector2(53, 53)
 sprite_frames = SubResource("SpriteFrames_3xhh8")
 autoplay = "default"
 frame_progress = 0.78278
@@ -4588,7 +4588,7 @@ script = ExtResource("13_s4fve")
 [node name="key_E" type="AnimatedSprite2D" parent="porta"]
 visible = false
 position = Vector2(9, -43)
-scale = Vector2(0.9, 0.9)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_3xhh8")
 autoplay = "default"
 frame_progress = 0.426234
