@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://7qu6qas08ivn"]
+[gd_scene load_steps=9 format=3 uid="uid://7qu6qas08ivn"]
 
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="1_d73o0"]
 [ext_resource type="Script" path="res://Scripts/lesson_board.gd" id="1_m1wbi"]
-[ext_resource type="Texture2D" uid="uid://ds1stwp4bcfio" path="res://Assets/teste.jpg" id="2_pnxac"]
+[ext_resource type="Texture2D" uid="uid://bh1awgqpgld58" path="res://Assets/alfabeto_board.png" id="3_gkpfn"]
+[ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="4_pno5x"]
+[ext_resource type="Texture2D" uid="uid://b3at3bpelunx6" path="res://Assets/materias_board.png" id="5_tfyio"]
+[ext_resource type="Texture2D" uid="uid://deoumadh5r1gx" path="res://Assets/materiais_board_2.png" id="6_ngel4"]
+[ext_resource type="Texture2D" uid="uid://d4f1v13fr76hv" path="res://Assets/ingredientes_board.png" id="7_5jkbc"]
+[ext_resource type="Texture2D" uid="uid://xww67uhycl01" path="res://Assets/ingredientes_board_2.png" id="8_ka4pm"]
 
 [node name="lesson_board" type="Node2D"]
 script = ExtResource("1_m1wbi")
@@ -17,19 +22,21 @@ texture = ExtResource("1_d73o0")
 
 [node name="alfabeto" type="TextureRect" parent="CanvasLayer/board"]
 layout_mode = 0
-offset_left = 253.0
-offset_top = 164.0
-offset_right = 653.0
-offset_bottom = 564.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_pnxac")
+offset_left = 161.333
+offset_top = 70.6667
+offset_right = 845.333
+offset_bottom = 1012.67
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_gkpfn")
 
 [node name="Label" type="Label" parent="CanvasLayer/board/alfabeto"]
 layout_mode = 0
-offset_left = 76.1111
-offset_top = 404.444
-offset_right = 340.111
-offset_bottom = 448.444
+offset_left = 197.333
+offset_top = 941.333
+offset_right = 461.333
+offset_bottom = 995.333
+theme_override_fonts/font = ExtResource("4_pno5x")
+theme_override_font_sizes/font_size = 53
 text = "Alfabeto
 "
 horizontal_alignment = 1
@@ -37,17 +44,84 @@ vertical_alignment = 1
 
 [node name="schoolMaterials" type="TextureRect" parent="CanvasLayer/board"]
 layout_mode = 0
-offset_left = 606.667
-offset_top = 165.333
-offset_right = 1006.67
-offset_bottom = 565.333
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_pnxac")
+offset_left = 501.333
+offset_top = 316.0
+offset_right = 1185.33
+offset_bottom = 1258.0
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("5_tfyio")
 
 [node name="Label" type="Label" parent="CanvasLayer/board/schoolMaterials"]
 layout_mode = 0
-offset_left = 155.556
-offset_top = 422.222
-offset_right = 279.556
-offset_bottom = 445.222
+offset_left = 151.852
+offset_top = 940.741
+offset_right = 537.852
+offset_bottom = 994.741
+theme_override_fonts/font = ExtResource("4_pno5x")
+theme_override_font_sizes/font_size = 53
 text = "Material Escolar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="schoolMaterials2" type="TextureRect" parent="CanvasLayer/board"]
+layout_mode = 0
+offset_left = 741.333
+offset_top = 374.667
+offset_right = 1425.33
+offset_bottom = 1316.67
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("6_ngel4")
+
+[node name="Label" type="Label" parent="CanvasLayer/board/schoolMaterials2"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 923.333
+offset_right = 536.0
+offset_bottom = 977.333
+theme_override_fonts/font = ExtResource("4_pno5x")
+theme_override_font_sizes/font_size = 53
+text = "Material Escolar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ingredientes" type="TextureRect" parent="CanvasLayer/board"]
+layout_mode = 0
+offset_left = 929.333
+offset_top = 126.667
+offset_right = 1613.33
+offset_bottom = 1068.67
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("7_5jkbc")
+
+[node name="Label" type="Label" parent="CanvasLayer/board/ingredientes"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 933.333
+offset_right = 526.0
+offset_bottom = 987.333
+theme_override_fonts/font = ExtResource("4_pno5x")
+theme_override_font_sizes/font_size = 53
+text = "Ingredientes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ingredientes2" type="TextureRect" parent="CanvasLayer/board"]
+layout_mode = 0
+offset_left = 1166.67
+offset_top = 204.0
+offset_right = 1850.67
+offset_bottom = 1146.0
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("8_ka4pm")
+
+[node name="Label" type="Label" parent="CanvasLayer/board/ingredientes2"]
+layout_mode = 0
+offset_left = 156.667
+offset_top = 933.333
+offset_right = 542.667
+offset_bottom = 987.333
+theme_override_fonts/font = ExtResource("4_pno5x")
+theme_override_font_sizes/font_size = 53
+text = "Ingredientes"
+horizontal_alignment = 1
+vertical_alignment = 1

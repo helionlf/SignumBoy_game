@@ -5,11 +5,11 @@
 [ext_resource type="AudioStream" uid="uid://c8f86in2ndkkf" path="res://Assets/Souds/1-efek-sound-3-220030.mp3" id="3_2k0c6"]
 [ext_resource type="Texture2D" uid="uid://c2le8k6yqdv7f" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/013.png" id="3_obiwd"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="3_xl4sg"]
-[ext_resource type="Texture2D" path="res://Assets/UI/acucar.png" id="4_bou7m"]
+[ext_resource type="Texture2D" uid="uid://dxv8l803nfso7" path="res://Assets/UI/acucar.png" id="4_bou7m"]
 [ext_resource type="AudioStream" uid="uid://dfimsncoflkya" path="res://Assets/Souds/error-8-206492.mp3" id="4_x33qp"]
-[ext_resource type="Texture2D" path="res://Assets/UI/Leite-Sheet.png" id="5_5hde8"]
-[ext_resource type="Texture2D" path="res://Assets/UI/Manteiga-Sheet.png" id="6_86baw"]
-[ext_resource type="Texture2D" path="res://Assets/UI/Ovo-Sheet.png" id="7_57qpc"]
+[ext_resource type="Texture2D" uid="uid://c836wmjit2ewf" path="res://Assets/UI/Leite-Sheet.png" id="5_5hde8"]
+[ext_resource type="Texture2D" uid="uid://cl03txi01u7kh" path="res://Assets/UI/Manteiga-Sheet.png" id="6_86baw"]
+[ext_resource type="Texture2D" uid="uid://ddqhyykllwgjn" path="res://Assets/UI/Ovo-Sheet.png" id="7_57qpc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp27x"]
 atlas = ExtResource("3_obiwd")

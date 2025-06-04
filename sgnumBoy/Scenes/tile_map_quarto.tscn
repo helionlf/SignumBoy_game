@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://csqnv8vci566b"]
+[gd_scene load_steps=32 format=3 uid="uid://csqnv8vci566b"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="2_qgs11"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="12_6oxbw"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="12_jmdar"]
 [ext_resource type="Script" path="res://Scripts/porta_quarto.gd" id="13_s4fve"]
+[ext_resource type="Script" path="res://Scripts/board.gd" id="14_tec3d"]
+[ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="15_2px4v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8w06x"]
 texture = ExtResource("1_56lqo")
@@ -4536,7 +4538,7 @@ animations = [{
 size = Vector2(3200, 1100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87pmm"]
-size = Vector2(34, 11)
+size = Vector2(28, 11)
 
 [node name="tileMap_quarto" type="Node2D"]
 
@@ -4549,7 +4551,7 @@ layer_0/tile_data = PackedInt32Array(655373, 327680, 6, 655374, 458752, 6, 72090
 layer_1/name = "wall"
 layer_1/tile_data = PackedInt32Array(589837, 655360, 4, 589838, 720896, 4, 589839, 655360, 4, 589840, 720896, 4, 589841, 655360, 4, 589842, 720896, 4, 589843, 655360, 4, 589844, 720896, 4, 589845, 655360, 4, 589846, 720896, 4, 589847, 655360, 4, 589848, 720896, 4, 589849, 655360, 4, 589850, 720896, 4, 589851, 655360, 4, 524301, 655360, 3, 524302, 655360, 3, 524303, 655360, 3, 524304, 655360, 3, 524305, 655360, 3, 524306, 655360, 3, 524307, 655360, 3, 524308, 655360, 3, 524309, 655360, 3, 524310, 655360, 3, 524311, 655360, 3, 524312, 655360, 3, 524313, 655360, 3, 524314, 655360, 3, 524315, 655360, 3, 458765, 655360, 3, 458766, 655360, 3, 458767, 655360, 3, 458768, 655360, 3, 458769, 655360, 3, 458770, 655360, 3, 458771, 655360, 3, 458772, 655360, 3, 458773, 655360, 3, 458774, 655360, 3, 458775, 655360, 3, 458776, 655360, 3, 458777, 655360, 3, 458778, 655360, 3, 458779, 655360, 3, 327693, 786432, 0, 393229, 655360, 3, 327694, 786432, 0, 393230, 655360, 3, 327695, 786432, 0, 393231, 655360, 3, 327696, 786432, 0, 393232, 655360, 3, 327697, 786432, 0, 393233, 655360, 3, 327698, 786432, 0, 393234, 655360, 3, 327699, 786432, 0, 393235, 655360, 3, 327700, 786432, 0, 393236, 655360, 3, 327701, 786432, 0, 393237, 655360, 3, 327702, 786432, 0, 393238, 655360, 3, 327703, 786432, 0, 393239, 655360, 3, 327704, 786432, 0, 393240, 655360, 3, 327705, 786432, 0, 393241, 655360, 3, 327706, 786432, 0, 393242, 655360, 3, 327707, 786432, 0, 393243, 655360, 3)
 layer_2/name = "decoration"
-layer_2/tile_data = PackedInt32Array(458770, 2, 16, 524306, 2, 17, 458768, 983046, 2, 458769, 1048582, 2, 524315, 196610, 7, 589851, 196610, 8, 655387, 196610, 9, 458772, 786438, 1, 524308, 786438, 2)
+layer_2/tile_data = PackedInt32Array(458770, 2, 16, 524306, 2, 17, 458768, 983046, 2, 458769, 1048582, 2, 524315, 196610, 7, 589851, 196610, 8, 655387, 196610, 9)
 layer_3/name = "fornitude"
 layer_3/tile_data = PackedInt32Array(524301, 65541, 5, 589837, 65541, 6, 655373, 65541, 7, 524302, 131077, 5, 655374, 131077, 7, 524303, 196613, 5, 655375, 196613, 7, 786447, 327682, 2, 851983, 327682, 3, 786448, 393218, 2, 851984, 393218, 3, 851982, 589826, 1, 786446, 589826, 0, 458765, 65541, 4, 458766, 131077, 4, 524304, 262149, 5, 655376, 262149, 7, 524305, 327685, 5, 655377, 327685, 7, 524306, 393221, 5, 655378, 393221, 7, 458777, 1114118, 1, 524313, 1114118, 2, 589849, 1114118, 3, 655385, 1114118, 4, 458778, 1179654, 1, 524314, 1179654, 2, 589850, 1179654, 3, 655386, 1179654, 4, 655390, 1245189, 3, 589842, 393221, 6, 589839, 196613, 6, 589838, 131077, 6, 589841, 327685, 6, 589840, 262149, 6, 786458, 524293, 1, 851994, 524293, 2, 917530, 524293, 3, 786459, 589829, 1, 851995, 589829, 2, 917531, 589829, 3, 720922, 524293, 0, 720923, 589829, 0)
 layer_4/name = "objects"
@@ -4597,7 +4599,34 @@ frame_progress = 0.426234
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta/Area2D"]
-position = Vector2(8, -3)
+position = Vector2(8, -6)
+shape = SubResource("RectangleShape2D_87pmm")
+
+[node name="board" type="Node2D" parent="."]
+position = Vector2(319, 172)
+script = ExtResource("14_tec3d")
+
+[node name="TextureRect" type="TextureRect" parent="board"]
+offset_left = -13.0
+offset_top = -49.0
+offset_right = 1117.0
+offset_bottom = 768.0
+scale = Vector2(0.04, 0.03)
+texture = ExtResource("15_2px4v")
+
+[node name="key_E" type="AnimatedSprite2D" parent="board"]
+visible = false
+position = Vector2(11, -57)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_3xhh8")
+autoplay = "default"
+frame_progress = 0.426234
+
+[node name="Area2D" type="Area2D" parent="board"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board/Area2D"]
+position = Vector2(8, -6)
 shape = SubResource("RectangleShape2D_87pmm")
 
 [node name="player" parent="." instance=ExtResource("12_jmdar")]
@@ -4607,3 +4636,5 @@ position = Vector2(368, 162)
 [connection signal="body_exited" from="tablet/Area2D" to="tablet" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="porta/Area2D" to="porta" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="porta/Area2D" to="porta" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="board/Area2D" to="board" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="board/Area2D" to="board" method="_on_area_2d_body_exited"]

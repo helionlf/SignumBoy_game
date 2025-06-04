@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ytvygxlugbgb"]
 
 [ext_resource type="Script" path="res://Scripts/map.gd" id="1_sp184"]
-[ext_resource type="Texture2D" path="res://Assets/TileMaps/map.png" id="2_ym6q8"]
+[ext_resource type="Texture2D" uid="uid://dtl05ugki1smw" path="res://Assets/TileMaps/map.png" id="2_ym6q8"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="3_cuxx4"]
 
 [node name="map" type="Node2D"]
