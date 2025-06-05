@@ -1,0 +1,237 @@
+[gd_scene load_steps=14 format=3 uid="uid://bqsyawp80m8i0"]
+
+[ext_resource type="Texture2D" uid="uid://b4ygu6f8rtqua" path="res://Assets/UI/quadroNegro.png" id="1_undbu"]
+[ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_ybs2j"]
+[ext_resource type="Texture2D" uid="uid://0tmw3iwyjgcy" path="res://Assets/UI/cards/0.png" id="3_3ol7u"]
+[ext_resource type="Script" path="res://Scripts/numero.gd" id="3_fgn4q"]
+[ext_resource type="Texture2D" uid="uid://dqtfk6h75b4gk" path="res://Assets/UI/cards/1.png" id="4_802o7"]
+[ext_resource type="Texture2D" uid="uid://b7m7xo1jdqt2m" path="res://Assets/UI/cards/2.png" id="5_32v8y"]
+[ext_resource type="Texture2D" uid="uid://bp08mqyu5btsq" path="res://Assets/UI/cards/3.png" id="6_dp5eu"]
+[ext_resource type="Texture2D" uid="uid://bse1gvywdk5w4" path="res://Assets/UI/cards/4.png" id="7_rw61v"]
+[ext_resource type="Texture2D" uid="uid://yn4kcnnal8jo" path="res://Assets/UI/cards/5.png" id="8_vdd44"]
+[ext_resource type="Texture2D" uid="uid://dlya12d13fftu" path="res://Assets/UI/cards/6.png" id="9_tibbt"]
+[ext_resource type="Texture2D" uid="uid://hw54oivx8ss1" path="res://Assets/UI/cards/7.png" id="10_7xhng"]
+[ext_resource type="Texture2D" uid="uid://1nwwqhlhkkk3" path="res://Assets/UI/cards/8.png" id="11_f1gcj"]
+[ext_resource type="Texture2D" uid="uid://bl7i114ngu3or" path="res://Assets/UI/cards/9.png" id="12_cpbct"]
+
+[node name="minigame_numeros" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="quadro" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 621.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_undbu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -208.0
+offset_top = 138.0
+offset_right = 209.0
+offset_bottom = 161.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ybs2j")
+theme_override_font_sizes/font_size = 29
+text = "Vôce consegue colocar os números na ordem correta?
+0 1 2 3 4 5 6 7 8 9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="0" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 76.0
+offset_top = 124.0
+offset_right = 239.0
+offset_bottom = 287.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(76, 124)
+posicao_alvo = Vector2(217, 244)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/0"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_3ol7u")
+
+[node name="1" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 964.0
+offset_top = 461.0
+offset_right = 1127.0
+offset_bottom = 624.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(964, 461)
+posicao_alvo = Vector2(360, 249)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/1"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_802o7")
+
+[node name="2" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 959.0
+offset_top = 205.0
+offset_right = 1122.0
+offset_bottom = 368.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(959, 205)
+posicao_alvo = Vector2(498, 248)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/2"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_32v8y")
+
+[node name="3" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 201.0
+offset_right = 223.0
+offset_bottom = 364.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(60, 201)
+posicao_alvo = Vector2(646, 245)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/3"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_dp5eu")
+
+[node name="4" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 62.0
+offset_top = 372.0
+offset_right = 225.0
+offset_bottom = 535.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(62, 372)
+posicao_alvo = Vector2(789, 247)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/4"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_rw61v")
+
+[node name="5" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 956.0
+offset_top = 125.0
+offset_right = 1119.0
+offset_bottom = 288.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(956, 125)
+posicao_alvo = Vector2(213, 351)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/5"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_vdd44")
+
+[node name="6" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 71.0
+offset_top = 462.0
+offset_right = 234.0
+offset_bottom = 625.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(71, 462)
+posicao_alvo = Vector2(359, 349)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/6"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_tibbt")
+
+[node name="7" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 72.0
+offset_top = 293.0
+offset_right = 235.0
+offset_bottom = 456.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(72, 293)
+posicao_alvo = Vector2(505, 350)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/7"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_7xhng")
+
+[node name="8" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 966.0
+offset_top = 287.0
+offset_right = 1129.0
+offset_bottom = 450.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(966, 287)
+posicao_alvo = Vector2(652, 348)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/8"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_f1gcj")
+
+[node name="9" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 954.0
+offset_top = 376.0
+offset_right = 1117.0
+offset_bottom = 539.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("3_fgn4q")
+pos_inicial = Vector2(954, 376)
+posicao_alvo = Vector2(787, 345)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/9"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_cpbct")
