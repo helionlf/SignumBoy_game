@@ -12,7 +12,7 @@ func _on_home_pressed():
 
 
 func _on_schol_pressed():
-	Transition.fade_to_scene("res://Scenes/home.tscn")
+	Transition.fade_to_scene("res://Scenes/tile_map_scholl.tscn")
 
 
 func _on_supermarket_pressed():
