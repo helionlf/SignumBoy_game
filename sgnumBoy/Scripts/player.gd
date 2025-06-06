@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 38.0
+@export var SPEED = 100.0
 var direction = "south"
 
 func _physics_process(delta):

@@ -91,9 +91,11 @@ animations = [{
 size = Vector2(20, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ei5br"]
-size = Vector2(38, 15)
+size = Vector2(31.6666, 5.33333)
 
 [node name="home" type="Node2D"]
+position = Vector2(243, 284)
+scale = Vector2(3, 3)
 
 [node name="tileMap_home" parent="." instance=ExtResource("1_pvil1")]
 position = Vector2(-32, -36)
@@ -173,7 +175,7 @@ position = Vector2(172, 96)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/Area2D"]
-position = Vector2(4, 2.5)
+position = Vector2(4.16669, 7.33333)
 shape = SubResource("RectangleShape2D_ei5br")
 
 [node name="player" parent="." instance=ExtResource("3_a0pbc")]
@@ -186,4 +188,3 @@ position = Vector2(160, -3)
 [connection signal="body_entered" from="missao_1/Area2D" to="missao_1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="missao_1/Area2D" to="missao_1" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="map/Area2D" to="map" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="map/Area2D" to="map" method="_on_area_2d_body_exited"]

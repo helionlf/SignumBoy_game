@@ -19,14 +19,7 @@ func _on_supermarket_pressed():
 	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
 
 
-func _on_park_pressed():
-	Transition.fade_to_scene("res://Scenes/home.tscn")
-
-
 func _on_area_2d_body_entered(body):
 	if body.get_name() == "player":
+		body.set_physics_process(false)
 		map.visible = true
-
-func _on_area_2d_body_exited(body):
-	if body.get_name() == "player":
-		map.visible = false

@@ -20,5 +20,5 @@ func next_level():
 func exit():
 	completed = true
 	await get_tree().create_timer(7).timeout
-	Transition.fade_to_scene("res://Scenes/home.tscn")
+	Transition.fade_to_scene("res://Scenes/tile_map_scholl.tscn")
 	

@@ -8,7 +8,7 @@ extends CharacterBody2D
 @onready var animation = $AnimatedSprite2D
 @onready var dialogue_node = $Dialogue
 
-var SPEED = 30.0
+var SPEED = 90.0
 var target_position_r: Vector2
 var target_position_l: Vector2
 var current_target: Vector2
