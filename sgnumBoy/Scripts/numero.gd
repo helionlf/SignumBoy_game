@@ -10,6 +10,7 @@ var offset := Vector2.ZERO
 func _ready():
 	position = pos_inicial
 	mouse_filter = Control.MOUSE_FILTER_PASS
+	GlobalMGN.acertos = 0
 
 func _process(_delta):
 	if dragging:
@@ -25,6 +26,7 @@ func _gui_input(event):
 			# Verifica se está perto o suficiente da posição-alvo
 			if global_position.distance_to(posicao_alvo) <= tolerancia:
 				global_position = posicao_alvo  # Encaixa
+				GlobalMGN.marcar_acerto()
 			else:
 				position = pos_inicial
 

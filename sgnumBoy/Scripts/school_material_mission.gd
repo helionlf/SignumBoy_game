@@ -1,7 +1,7 @@
 extends Node2D
 
 
-@onready var anim = $CanvasLayer/TextureRect/AnimatedSprite2D
+@onready var anim = $CanvasLayer/ColorRect/AnimatedSprite2D
 
 func _process(delta):
 	if GlobalSMM.palavra == "caneta":

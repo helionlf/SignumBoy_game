@@ -309,30 +309,27 @@ offset_right = 1825.0
 offset_bottom = 1390.0
 scale = Vector2(0.31, 0.31)
 
-[node name="libras" type="Node2D" parent="CanvasLayer/Control"]
-position = Vector2(153, 47)
-scale = Vector2(0.68, 0.68)
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/libras"]
-offset_left = 412.857
-offset_top = 78.2143
-offset_right = 562.857
-offset_bottom = 228.214
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 153.0
+grow_horizontal = 2
 color = Color(0, 0, 0, 0.321569)
 
-[node name="face" type="AnimatedSprite2D" parent="CanvasLayer/Control/libras/ColorRect"]
+[node name="face" type="AnimatedSprite2D" parent="CanvasLayer/Control/ColorRect"]
 texture_filter = 1
-position = Vector2(75, 75)
+position = Vector2(495, 81)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_u0l7u")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/libras"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/ColorRect"]
 texture_filter = 1
-position = Vector2(794.286, 119.643)
-scale = Vector2(5.5, 5.5)
+position = Vector2(713, 52)
+scale = Vector2(3.74, 3.74)
 sprite_frames = SubResource("SpriteFrames_7vayk")
 animation = &"leite"
-frame_progress = 0.136313
+frame_progress = 0.158597
 
 [node name="completed" type="Label" parent="CanvasLayer/Control"]
 visible = false

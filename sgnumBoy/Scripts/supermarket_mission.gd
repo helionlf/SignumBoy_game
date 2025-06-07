@@ -3,7 +3,7 @@ extends Node
 
 @onready var cenario = $CanvasLayer/Control/TextureRect
 @onready var completed = $CanvasLayer/Control/completed
-@onready var anim = $CanvasLayer/Control/libras/AnimatedSprite2D
+@onready var anim = $CanvasLayer/Control/ColorRect/AnimatedSprite2D
 
 func _ready():
 	if not GlobalSM.current_phase == "completed":
@@ -11,7 +11,7 @@ func _ready():
 			button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
 		load_question()
 	else:
-		$CanvasLayer/Control/libras.visible = false
+		$CanvasLayer/Control/ColorRect.visible = false
 		$CanvasLayer/Control/TextureRect/btn_1.visible = false
 		$CanvasLayer/Control/TextureRect/btn_2.visible = false
 		$CanvasLayer/Control/TextureRect/btn_3.visible = false
@@ -19,12 +19,20 @@ func _ready():
 		
 func _process(delta):
 	if GlobalSM.current_phase == "fase_1":
+		anim.scale = Vector2(3.74, 3.74)
+		anim.position = Vector2(713, 52)
 		anim.play("ovos")
 	elif GlobalSM.current_phase == "fase_2":
+		anim.scale = Vector2(3.74, 3.74)
+		anim.position = Vector2(713, 52)
 		anim.play("manteiga")
 	elif GlobalSM.current_phase == "fase_3":
+		anim.scale = Vector2(1.92, 1.92)
+		anim.position = Vector2(713, 76)
 		anim.play("acucar")
 	else:
+		anim.scale = Vector2(1.92, 1.92)
+		anim.position = Vector2(713, 76)
 		anim.play("leite")
 
 func load_question():

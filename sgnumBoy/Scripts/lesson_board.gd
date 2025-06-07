@@ -7,6 +7,7 @@ func _ready():
 	$CanvasLayer/board/schoolMaterials2.visible = false
 	$CanvasLayer/board/ingredientes.visible = false
 	$CanvasLayer/board/ingredientes2.visible = false
+	$CanvasLayer/board/numeros.visible = false
 	
 func _process(delta):
 	if GlobalMGA.completed:
@@ -17,6 +18,8 @@ func _process(delta):
 	if GlobalSM.completed:
 		$CanvasLayer/board/ingredientes.visible = true
 		$CanvasLayer/board/ingredientes2.visible = true
+	if GlobalMGN.completed:
+		$CanvasLayer/board/numeros.visible = true
 
 func _input(event):
 	if event.is_action_pressed("sair"):
