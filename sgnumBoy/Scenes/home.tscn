@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://kd7a1qff1k1m"]
+[gd_scene load_steps=24 format=3 uid="uid://kd7a1qff1k1m"]
 
 [ext_resource type="PackedScene" uid="uid://s0gchwxgwkv2" path="res://Scenes/tileMap_home.tscn" id="1_pvil1"]
 [ext_resource type="PackedScene" uid="uid://7sob4gho1sd2" path="res://Scenes/daddy.tscn" id="2_sr7w4"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="3_a0pbc"]
 [ext_resource type="Script" path="res://Scripts/porta_sala.gd" id="4_u2syh"]
 [ext_resource type="PackedScene" uid="uid://ytvygxlugbgb" path="res://Scenes/map.tscn" id="5_672v6"]
+[ext_resource type="Script" path="res://Scripts/porta_sala_cozinha.gd" id="5_dv2lx"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="5_j57kf"]
 [ext_resource type="Script" path="res://Scripts/minigame_memoria.gd" id="5_lnhh2"]
 [ext_resource type="Script" path="res://Scripts/missao_1.gd" id="6_b246n"]
@@ -38,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3768h"]
-size = Vector2(34, 11)
+size = Vector2(8.66668, 29)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muqi5"]
 atlas = ExtResource("5_j57kf")
@@ -134,6 +135,24 @@ collision_mask = 2
 position = Vector2(7, -4.5)
 shape = SubResource("RectangleShape2D_3768h")
 
+[node name="porta_sala_cozinha" type="Node2D" parent="."]
+position = Vector2(-26.3333, 17.3333)
+script = ExtResource("5_dv2lx")
+
+[node name="key_E" type="AnimatedSprite2D" parent="porta_sala_cozinha"]
+visible = false
+position = Vector2(15, -6.33333)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_7tvuu")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="porta_sala_cozinha"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta_sala_cozinha/Area2D"]
+position = Vector2(26.6667, -5.5)
+shape = SubResource("RectangleShape2D_3768h")
+
 [node name="minigame_memoria" type="Node2D" parent="."]
 position = Vector2(104, 12)
 script = ExtResource("5_lnhh2")
@@ -183,6 +202,8 @@ position = Vector2(160, -3)
 
 [connection signal="body_entered" from="porta/Area2D" to="porta" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="porta/Area2D" to="porta" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="porta_sala_cozinha/Area2D" to="porta_sala_cozinha" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="porta_sala_cozinha/Area2D" to="porta_sala_cozinha" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="minigame_memoria/Area2D" to="minigame_memoria" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="minigame_memoria/Area2D" to="minigame_memoria" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="missao_1/Area2D" to="missao_1" method="_on_area_2d_body_entered"]
