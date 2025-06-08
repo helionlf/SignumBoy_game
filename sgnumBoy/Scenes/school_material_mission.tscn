@@ -2492,10 +2492,10 @@ texture = ExtResource("5_q370f")
 
 [node name="completed" type="Label" parent="CanvasLayer"]
 visible = false
-offset_left = 432.0
-offset_top = 139.0
-offset_right = 1081.0
-offset_bottom = 292.0
+offset_left = 453.0
+offset_top = 253.0
+offset_right = 1102.0
+offset_bottom = 406.0
 theme_override_fonts/font = ExtResource("9_mjnfj")
 theme_override_font_sizes/font_size = 29
 text = "Parabéns! Você completou  sua primeira tarefa.
@@ -2512,17 +2512,17 @@ color = Color(0, 0, 0, 0.321569)
 
 [node name="face" type="AnimatedSprite2D" parent="CanvasLayer/ColorRect"]
 texture_filter = 1
-position = Vector2(449, 82.9)
+position = Vector2(465, 78.9)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_woc32")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/ColorRect"]
 texture_filter = 1
-position = Vector2(663, 51.9)
+position = Vector2(679, 47.9)
 scale = Vector2(3.74, 3.74)
 sprite_frames = SubResource("SpriteFrames_ylc0j")
-animation = &"caderno"
-frame_progress = 0.585056
+animation = &"apontador"
+frame_progress = 0.0356569
 
 [node name="correct_song" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_m2amd")

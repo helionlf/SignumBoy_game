@@ -9,11 +9,18 @@ var matches_found = 0
 var total_matches = 0
 
 func _ready():
-	if not GlobalM.current_phase == "completed":
-		label.visible = false
-		for button in options_container.get_children():
-			button.connect("pressed", Callable(self, "_on_card_pressed").bind(button))
-		load_cards()
+	if GlobalM.current_phase == "completed":
+		label.text = "Parabéns, você completou o minigame!
+		Agora você está preparado para a segunda missão."
+		label.visible = true
+		options_container.visible = false
+		GlobalM.exit()
+		return
+	
+	label.visible = false
+	for button in options_container.get_children():
+		button.connect("pressed", Callable(self, "_on_card_pressed").bind(button))
+	load_cards()
 
 func load_cards():
 	if not GlobalM.current_phase == "completed":
@@ -68,6 +75,12 @@ func _on_card_pressed(button):
 		# Mostrar a animação
 		anim_sprite.frames = load(card_path)
 		button.texture_normal = load("res://Assets/UI/cards/branco.png")
+		
+		if GlobalM.current_phase == "fase_2" and (card_path.ends_with("leite.tres") or card_path.ends_with("acucar.tres")):
+			anim_sprite.scale = Vector2(9, 9)
+		else:
+			anim_sprite.scale = Vector2(14, 14)
+		
 		anim_sprite.visible = true
 		anim_sprite.play()
 	
