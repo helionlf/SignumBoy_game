@@ -2522,7 +2522,7 @@ position = Vector2(679, 47.9)
 scale = Vector2(3.74, 3.74)
 sprite_frames = SubResource("SpriteFrames_ylc0j")
 animation = &"apontador"
-frame_progress = 0.0356569
+frame_progress = 0.342014
 
 [node name="correct_song" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_m2amd")
