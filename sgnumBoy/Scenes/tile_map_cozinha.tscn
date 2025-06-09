@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cgcc6l4ndd772"]
+[gd_scene load_steps=21 format=3 uid="uid://cgcc6l4ndd772"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_wf0uh"]
 [ext_resource type="Texture2D" uid="uid://dvueutq1wcmsy" path="res://Assets/TileMaps/kitchen furniture.png" id="2_3jl42"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="5_pjls0"]
 [ext_resource type="Script" path="res://Scripts/porta_cozinha.gd" id="6_tefe0"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="7_jm4iv"]
+[ext_resource type="PackedScene" uid="uid://bdx67fof2b6my" path="res://Scenes/mom.tscn" id="9_myvbe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddyou"]
 texture = ExtResource("1_wf0uh")
@@ -646,6 +647,12 @@ sources/2 = SubResource("TileSetAtlasSource_2tbbm")
 sources/3 = SubResource("TileSetAtlasSource_6ht81")
 sources/4 = SubResource("TileSetAtlasSource_ffxuk")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_tfhmn"]
+vertices = PackedVector2Array(777, 398, 441, 398, 443, 350, 774, 350)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(434, 341, 784, 340, 787, 408, 431, 408)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wvo7l"]
 atlas = ExtResource("7_jm4iv")
 region = Rect2(16, 0, 16, 16)
@@ -691,6 +698,23 @@ layer_4/tile_data = PackedInt32Array(720930, 262146, 15, 720931, 327682, 15, 786
 layer_5/name = "objects"
 layer_5/tile_data = PackedInt32Array(1179690, 458754, 3, 1114154, 458754, 2)
 
+[node name="naviagation_positions" type="Node2D" parent="."]
+position = Vector2(175, 43)
+
+[node name="position_r" type="Marker2D" parent="naviagation_positions"]
+position = Vector2(611, 344)
+
+[node name="position_l" type="Marker2D" parent="naviagation_positions"]
+position = Vector2(289, 344)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(18, 14)
+navigation_polygon = SubResource("NavigationPolygon_tfhmn")
+
+[node name="Mom" parent="NavigationRegion2D" instance=ExtResource("9_myvbe")]
+position = Vector2(565, 360)
+scale = Vector2(2.8, 2.8)
+
 [node name="porta" type="Node2D" parent="."]
 position = Vector2(913, 467)
 script = ExtResource("6_tefe0")
@@ -710,7 +734,7 @@ position = Vector2(49, -1)
 shape = SubResource("RectangleShape2D_gg1mq")
 
 [node name="player" parent="." instance=ExtResource("5_pjls0")]
-position = Vector2(795, 455)
+position = Vector2(831, 461)
 scale = Vector2(3, 3)
 SPEED = 160.0
 
