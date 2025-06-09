@@ -8,7 +8,7 @@
 
 [sub_resource type="Resource" id="Resource_2md1k"]
 script = ExtResource("2_apaul")
-msg_queue = ["Oi, sou o papai", "Vamos conversar", "Segunda parte", "Continua"]
+msg_queue = ["** Amanhã é o seu primeiro dia de aula! **", "** Precisamos deixar o seu material escolar pronto. **", "** Ótimo, vou lhe ajudar com essa tarefa! **", "** Venha, vou lhe ajudar com o seus materiais. **"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1mdhj"]
 atlas = ExtResource("2_ogmh2")

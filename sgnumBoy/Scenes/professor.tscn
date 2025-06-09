@@ -8,7 +8,7 @@
 
 [sub_resource type="Resource" id="Resource_ihp0a"]
 script = ExtResource("2_7es81")
-msg_queue = ["Bom dia", "Sente-se na sua cadeira"]
+msg_queue = ["Bom dia!", "A Língua Brasileira de Sinais (Libras) é uma lingua complexa e rica!", "Ela possue uma estrutura gramatical própia.", "Isso significa que ela não é apenas  uma versão gestual do português."]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5imcc"]
 radius = 7.35425
