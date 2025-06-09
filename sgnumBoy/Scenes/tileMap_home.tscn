@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://s0gchwxgwkv2"]
+[gd_scene load_steps=22 format=3 uid="uid://s0gchwxgwkv2"]
 
 [ext_resource type="Texture2D" uid="uid://cygo8awqoifvr" path="res://Assets/TileMaps/interior free/interior free.png" id="1_ranga"]
 [ext_resource type="Texture2D" uid="uid://cqt8qe3a5ybrs" path="res://Assets/TileMaps/TopDownHouse_DoorsAndWindows.png" id="2_l5ym5"]
@@ -3074,6 +3074,19 @@ sources/5 = SubResource("TileSetAtlasSource_idup1")
 sources/6 = SubResource("TileSetAtlasSource_qy467")
 sources/8 = SubResource("TileSetAtlasSource_3rchu")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x71bs"]
+size = Vector2(24, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejjwr"]
+size = Vector2(22, 16.3125)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7kmjn"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ymhdi"]
+radius = 6.08276
+
 [node name="tileMap_home" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3094,3 +3107,40 @@ layer_5/name = "Objects"
 layer_5/tile_data = PackedInt32Array(65544, 0, 2, -65525, 524289, 0, 11, 524289, 1, 65547, 524289, 2, -65524, 589825, 0, 12, 589825, 1, 65548, 589825, 2)
 layer_6/name = "outros"
 layer_6/tile_data = PackedInt32Array(65544, 65536, 2, -65525, 393217, 0, 11, 393217, 1, 65547, 393217, 2, -65524, 458753, 0, 12, 458753, 1, 65548, 458753, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(59, 96.5)
+shape = SubResource("RectangleShape2D_x71bs")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(96, 110.688)
+shape = SubResource("RectangleShape2D_ejjwr")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(145, 109)
+shape = SubResource("RectangleShape2D_ejjwr")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(109, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(3, 2)
+shape = SubResource("RectangleShape2D_ejjwr")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(152, 77)
+shape = SubResource("CapsuleShape2D_7kmjn")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(136, 85)
+shape = SubResource("CircleShape2D_ymhdi")

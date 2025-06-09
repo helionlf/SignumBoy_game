@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://csqnv8vci566b"]
+[gd_scene load_steps=36 format=3 uid="uid://csqnv8vci566b"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="2_qgs11"]
@@ -4755,6 +4755,12 @@ size = Vector2(3200, 1100)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87pmm"]
 size = Vector2(28, 11)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guvwd"]
+size = Vector2(40.6667, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0kcy"]
+size = Vector2(31, 40)
+
 [node name="tileMap_quarto" type="Node2D"]
 position = Vector2(-404, -192)
 scale = Vector2(3, 3)
@@ -4850,6 +4856,24 @@ shape = SubResource("RectangleShape2D_87pmm")
 
 [node name="player" parent="." instance=ExtResource("12_jmdar")]
 position = Vector2(368, 162)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(244.667, 214)
+shape = SubResource("RectangleShape2D_guvwd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(437.333, 214.333)
+shape = SubResource("RectangleShape2D_c0kcy")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(424.5, 151.667)
+shape = SubResource("RectangleShape2D_c0kcy")
 
 [connection signal="body_entered" from="tablet/Area2D" to="tablet" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="tablet/Area2D" to="tablet" method="_on_area_2d_body_exited"]

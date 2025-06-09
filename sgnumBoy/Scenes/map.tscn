@@ -14,12 +14,16 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1159.0
 offset_bottom = 644.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 651.0
+offset_left = 12.0
+offset_top = -19.0
+offset_right = 1165.0
+offset_bottom = 632.0
 color = Color(0.482353, 0.737255, 0.317647, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -36,6 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_ym6q8")
+metadata/_edit_use_anchors_ = true
 
 [node name="home" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -51,6 +56,7 @@ theme_override_font_sizes/font_size = 33
 text = "Casa
 "
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="schol" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -66,6 +72,7 @@ theme_override_font_sizes/font_size = 33
 text = "Escola
 "
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="supermarket" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -80,6 +87,7 @@ theme_override_fonts/font = ExtResource("3_cuxx4")
 theme_override_font_sizes/font_size = 33
 text = "Supermercado"
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/Control/home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/schol" to="." method="_on_schol_pressed"]
