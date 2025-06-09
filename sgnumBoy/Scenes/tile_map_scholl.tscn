@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="3_tcc06"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="4_0xs2m"]
 [ext_resource type="PackedScene" uid="uid://ytvygxlugbgb" path="res://Scenes/map.tscn" id="5_65mb6"]
-[ext_resource type="PackedScene" uid="uid://dplg7rit3yrp7" path="res://Scenes/professor.tscn" id="7_ks6wc"]
+[ext_resource type="PackedScene" uid="uid://cx4xrj4pklo8k" path="res://Scenes/professor.tscn" id="7_ks6wc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbl8c"]
 texture = ExtResource("1_2h40d")
