@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqsyawp80m8i0"]
+[gd_scene load_steps=17 format=3 uid="uid://bqsyawp80m8i0"]
 
 [ext_resource type="Texture2D" uid="uid://b4ygu6f8rtqua" path="res://Assets/UI/quadroNegro.png" id="1_undbu"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_ybs2j"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://1nwwqhlhkkk3" path="res://Assets/UI/cards/8.png" id="11_f1gcj"]
 [ext_resource type="Texture2D" uid="uid://bl7i114ngu3or" path="res://Assets/UI/cards/9.png" id="12_cpbct"]
 [ext_resource type="AudioStream" uid="uid://cfs2dgw2p25ui" path="res://Assets/Souds/ミニゲーム_loop.wav" id="14_tlvqh"]
+[ext_resource type="Texture2D" uid="uid://b1rq5rx32cve0" path="res://Assets/UI/ButtonsText/PremadeButtons_XWhiteOutline.png" id="14_wwk5l"]
+[ext_resource type="Texture2D" uid="uid://fwgbjokbidu4" path="res://Assets/UI/ButtonsText/PremadeButtons_XRed.png" id="15_0mcot"]
 
 [node name="minigame_numeros" type="Node2D"]
 
@@ -237,6 +239,17 @@ offset_bottom = 800.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_cpbct")
 
+[node name="sair" type="TextureButton" parent="CanvasLayer/Control"]
+offset_left = 1016.0
+offset_top = 71.0
+offset_right = 1297.0
+offset_bottom = 352.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("14_wwk5l")
+texture_pressed = ExtResource("15_0mcot")
+
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_tlvqh")
 volume_db = -20.0
+
+[connection signal="pressed" from="CanvasLayer/Control/sair" to="CanvasLayer/Control/0" method="_on_sair_pressed"]

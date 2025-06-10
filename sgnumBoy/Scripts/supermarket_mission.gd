@@ -77,8 +77,12 @@ func _on_button_pressed(button):
 	if GlobalSM.current_question_index >= GlobalSM.data[GlobalSM.current_phase].size():
 		GlobalSM.exit()
 	
-	load_question()
+	#load_question()
 	
 func _input(event):
 	if event.is_action_pressed("sair"):
 		Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
+
+
+func _on_sair_pressed():
+	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")

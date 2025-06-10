@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://re6i552al1bl"]
+[gd_scene load_steps=7 format=3 uid="uid://re6i552al1bl"]
 
 [ext_resource type="Script" path="res://Scripts/memoria.gd" id="1_bdhrc"]
 [ext_resource type="Texture2D" uid="uid://dy356hmd54qv7" path="res://Assets/UI/tela.png" id="2_e2yqq"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_eax51"]
+[ext_resource type="Texture2D" uid="uid://fwgbjokbidu4" path="res://Assets/UI/ButtonsText/PremadeButtons_XRed.png" id="3_8m7a4"]
+[ext_resource type="Texture2D" uid="uid://b1rq5rx32cve0" path="res://Assets/UI/ButtonsText/PremadeButtons_XWhiteOutline.png" id="4_mjhme"]
 [ext_resource type="AudioStream" uid="uid://cfs2dgw2p25ui" path="res://Assets/Souds/ミニゲーム_loop.wav" id="4_whmgk"]
 
 [node name="Memoria" type="Node2D"]
@@ -130,6 +132,16 @@ position = Vector2(870, 445)
 scale = Vector2(14, 14)
 autoplay = "default"
 
+[node name="sair" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1092.0
+offset_top = 3.0
+offset_right = 1373.0
+offset_bottom = 284.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_mjhme")
+texture_pressed = ExtResource("3_8m7a4")
+
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 8
@@ -152,3 +164,5 @@ vertical_alignment = 1
 stream = ExtResource("4_whmgk")
 volume_db = -20.0
 autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Control/sair" to="." method="_on_sair_pressed"]

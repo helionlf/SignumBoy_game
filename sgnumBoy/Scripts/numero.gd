@@ -33,3 +33,7 @@ func _gui_input(event):
 func _input(event):
 	if event.is_action_pressed("sair"):
 		Transition.fade_to_scene("res://Scenes/tile_map_scholl.tscn")
+
+
+func _on_sair_pressed():
+	Transition.fade_to_scene("res://Scenes/tile_map_scholl.tscn")
