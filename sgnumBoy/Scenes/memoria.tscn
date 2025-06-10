@@ -150,5 +150,5 @@ vertical_alignment = 1
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_whmgk")
-volume_db = -20.0
+volume_db = -12.0
 autoplay = true

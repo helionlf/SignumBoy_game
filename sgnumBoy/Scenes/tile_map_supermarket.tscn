@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://cq2oel00he2y5"]
+[gd_scene load_steps=14 format=3 uid="uid://cq2oel00he2y5"]
 
 [ext_resource type="Texture2D" uid="uid://dewsbuvt3fvws" path="res://Assets/TileMaps/Supermarket/MarketSet_Tileset.png" id="1_lmtah"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="2_c368n"]
 [ext_resource type="Script" path="res://Scripts/prateleiras.gd" id="2_sxmoh"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="3_akny5"]
 [ext_resource type="PackedScene" uid="uid://ytvygxlugbgb" path="res://Scenes/map.tscn" id="4_yam1f"]
+[ext_resource type="AudioStream" uid="uid://bhgvy6m4u7xw3" path="res://Assets/Souds/A Small Adventure.wav" id="6_kicc4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sj58"]
 texture = ExtResource("1_lmtah")
@@ -415,6 +416,11 @@ shape = SubResource("RectangleShape2D_sxm4r")
 [node name="player" parent="." instance=ExtResource("2_c368n")]
 position = Vector2(303.182, 310.909)
 SPEED = 85.0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_kicc4")
+volume_db = -12.0
+autoplay = true
 
 [connection signal="body_entered" from="prateleiras/Area2D" to="prateleiras" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="prateleiras/Area2D" to="prateleiras" method="_on_area_2d_body_exited"]

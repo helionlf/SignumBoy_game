@@ -45,7 +45,17 @@ func _process(delta):
 func start_dialogue():
 	if Interaction == null:
 		return
-	dialogue_node.add_msg(Interaction.msg_queue)
+
+	var msgs_to_send = []
+	if GlobalSMM.unlocked:
+		if Interaction.msg_queue.size() >= 3:
+			msgs_to_send.append(Interaction.msg_queue[2])
+	else:
+		if Interaction.msg_queue.size() >= 2:
+			msgs_to_send.append(Interaction.msg_queue[0])
+			msgs_to_send.append(Interaction.msg_queue[1])
+
+	dialogue_node.add_msg(msgs_to_send)
 	
 func handle_animation():
 	if velocity.x > 0:
