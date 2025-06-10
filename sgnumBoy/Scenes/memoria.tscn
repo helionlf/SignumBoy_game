@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://re6i552al1bl"]
+[gd_scene load_steps=5 format=3 uid="uid://re6i552al1bl"]
 
 [ext_resource type="Script" path="res://Scripts/memoria.gd" id="1_bdhrc"]
 [ext_resource type="Texture2D" uid="uid://dy356hmd54qv7" path="res://Assets/UI/tela.png" id="2_e2yqq"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_eax51"]
+[ext_resource type="AudioStream" uid="uid://cfs2dgw2p25ui" path="res://Assets/Souds/ミニゲーム_loop.wav" id="4_whmgk"]
 
 [node name="Memoria" type="Node2D"]
 script = ExtResource("1_bdhrc")
@@ -146,3 +147,8 @@ theme_override_fonts/font = ExtResource("2_eax51")
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_whmgk")
+volume_db = -20.0
+autoplay = true

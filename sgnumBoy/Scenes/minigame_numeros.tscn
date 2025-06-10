@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqsyawp80m8i0"]
+[gd_scene load_steps=15 format=3 uid="uid://bqsyawp80m8i0"]
 
 [ext_resource type="Texture2D" uid="uid://b4ygu6f8rtqua" path="res://Assets/UI/quadroNegro.png" id="1_undbu"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_ybs2j"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://hw54oivx8ss1" path="res://Assets/UI/cards/7.png" id="10_7xhng"]
 [ext_resource type="Texture2D" uid="uid://1nwwqhlhkkk3" path="res://Assets/UI/cards/8.png" id="11_f1gcj"]
 [ext_resource type="Texture2D" uid="uid://bl7i114ngu3or" path="res://Assets/UI/cards/9.png" id="12_cpbct"]
+[ext_resource type="AudioStream" uid="uid://cfs2dgw2p25ui" path="res://Assets/Souds/ミニゲーム_loop.wav" id="14_tlvqh"]
 
 [node name="minigame_numeros" type="Node2D"]
 
@@ -235,3 +236,7 @@ offset_right = 800.0
 offset_bottom = 800.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_cpbct")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_tlvqh")
+volume_db = -20.0

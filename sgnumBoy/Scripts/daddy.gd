@@ -26,8 +26,6 @@ func _ready():
 
 	dialogue_node.visible = false
 
-	# Conecta o sinal do diálogo aqui
-	dialogue_node.connect("dialogue_finished", Callable(self, "_on_dialogue_finished"))
 
 func _process(delta):
 	handle_animation()
@@ -69,7 +67,6 @@ func start_dialogue():
 	# Depois que o diálogo termina
 	if GlobalSMM.unlocked:
 		Transition.fade_to_scene("res://Scenes/school_material_mission.tscn")
-
 
 func wait_for_dialogue_end() -> void:
 	while dialogue_node.visible:

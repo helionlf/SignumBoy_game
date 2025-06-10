@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://csqnv8vci566b"]
+[gd_scene load_steps=35 format=3 uid="uid://csqnv8vci566b"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="2_qgs11"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://Scripts/porta_quarto.gd" id="13_s4fve"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="14_tec3d"]
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="15_2px4v"]
+[ext_resource type="AudioStream" uid="uid://bhgvy6m4u7xw3" path="res://Assets/Souds/A Small Adventure.wav" id="18_6jo63"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8w06x"]
 texture = ExtResource("1_56lqo")
@@ -4905,6 +4906,11 @@ shape = SubResource("RectangleShape2D_87pmm")
 
 [node name="player" parent="." instance=ExtResource("12_jmdar")]
 position = Vector2(368, 162)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_6jo63")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="body_entered" from="tablet/Area2D" to="tablet" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="tablet/Area2D" to="tablet" method="_on_area_2d_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cgcc6l4ndd772"]
+[gd_scene load_steps=22 format=3 uid="uid://cgcc6l4ndd772"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_wf0uh"]
 [ext_resource type="Texture2D" uid="uid://dvueutq1wcmsy" path="res://Assets/TileMaps/kitchen furniture.png" id="2_3jl42"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/porta_cozinha.gd" id="6_tefe0"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="7_jm4iv"]
 [ext_resource type="PackedScene" uid="uid://bdx67fof2b6my" path="res://Scenes/mom.tscn" id="9_myvbe"]
+[ext_resource type="AudioStream" uid="uid://bhgvy6m4u7xw3" path="res://Assets/Souds/A Small Adventure.wav" id="10_am4rx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddyou"]
 texture = ExtResource("1_wf0uh")
@@ -2031,6 +2032,11 @@ shape = SubResource("RectangleShape2D_gg1mq")
 position = Vector2(831, 461)
 scale = Vector2(3, 3)
 SPEED = 160.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_am4rx")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="body_entered" from="porta/Area2D" to="porta" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="porta/Area2D" to="porta" method="_on_area_2d_body_exited"]

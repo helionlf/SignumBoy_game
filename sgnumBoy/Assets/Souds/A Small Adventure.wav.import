@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhgvy6m4u7xw3"
+path="res://.godot/imported/A Small Adventure.wav-a82bbe09a559720f8bb1cda431362e68.sample"
+
+[deps]
+
+source_file="res://Assets/Souds/A Small Adventure.wav"
+dest_files=["res://.godot/imported/A Small Adventure.wav-a82bbe09a559720f8bb1cda431362e68.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

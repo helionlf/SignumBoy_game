@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://dplg7rit3yrp7"]
 
 [ext_resource type="Texture2D" uid="uid://dwghp6c6257oh" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/032.png" id="1_a74jd"]
-[ext_resource type="Script" path="res://Scenes/professor.gd" id="1_ri71c"]
+[ext_resource type="Script" path="res://Scripts/professor.gd" id="1_ri71c"]
 [ext_resource type="Script" path="res://Scripts/Metadaddos.gd" id="2_7es81"]
 [ext_resource type="PackedScene" uid="uid://bdbkeyyf10xgd" path="res://Scenes/canvas_layer.tscn" id="4_iyhbp"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="5_mqj3o"]
