@@ -37,14 +37,15 @@ func next_level():
 		
 	
 func exit():
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(2).timeout
 	next_level()
-	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
+	if current_phase != "completed":
+		Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
 	
 
 
 func set_completed():
 	completed = true
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(2).timeout
 	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
 	

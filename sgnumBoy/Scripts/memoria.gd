@@ -132,3 +132,6 @@ func _on_card_pressed(button):
 func _input(event):
 	if event.is_action_pressed("sair"):
 		Transition.fade_to_scene("res://Scenes/home.tscn")
+
+func _on_sair_pressed():
+	Transition.fade_to_scene("res://Scenes/home.tscn")

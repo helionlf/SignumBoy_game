@@ -2029,7 +2029,7 @@ position = Vector2(49, -1)
 shape = SubResource("RectangleShape2D_gg1mq")
 
 [node name="player" parent="." instance=ExtResource("5_pjls0")]
-position = Vector2(831, 461)
+position = Vector2(885, 457)
 scale = Vector2(3, 3)
 SPEED = 160.0
 

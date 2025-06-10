@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cag150mqv5fmg"]
+[gd_scene load_steps=46 format=3 uid="uid://cag150mqv5fmg"]
 
 [ext_resource type="Script" path="res://Scripts/supermarket_mission.gd" id="1_s8oer"]
 [ext_resource type="Texture2D" uid="uid://c4t8u2sxlo86e" path="res://Assets/UI/prateleiras.png" id="1_yqqib"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c836wmjit2ewf" path="res://Assets/UI/Leite-Sheet.png" id="5_5hde8"]
 [ext_resource type="Texture2D" uid="uid://cl03txi01u7kh" path="res://Assets/UI/Manteiga-Sheet.png" id="6_86baw"]
 [ext_resource type="Texture2D" uid="uid://ddqhyykllwgjn" path="res://Assets/UI/Ovo-Sheet.png" id="7_57qpc"]
+[ext_resource type="Texture2D" uid="uid://b1rq5rx32cve0" path="res://Assets/UI/ButtonsText/PremadeButtons_XWhiteOutline.png" id="9_s4m4p"]
+[ext_resource type="Texture2D" uid="uid://fwgbjokbidu4" path="res://Assets/UI/ButtonsText/PremadeButtons_XRed.png" id="10_ad2bw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp27x"]
 atlas = ExtResource("3_obiwd")
@@ -339,10 +341,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -457.5
-offset_top = -40.5
-offset_right = 457.5
-offset_bottom = 40.5
+offset_left = -457.0
+offset_top = -289.0
+offset_right = 458.0
+offset_bottom = -208.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_xl4sg")
@@ -351,6 +353,15 @@ text = "Parabéns! Vcê concluiu a segunda missão e agora
 já tem os ingredientes nescessários para fazer o bolo."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="sair" type="TextureButton" parent="CanvasLayer/Control"]
+offset_left = 1100.0
+offset_top = 9.0
+offset_right = 1381.0
+offset_bottom = 290.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("9_s4m4p")
+texture_pressed = ExtResource("10_ad2bw")
 
 [node name="correct_song" type="AudioStreamPlayer2D" parent="CanvasLayer/Control"]
 position = Vector2(222, 176)
@@ -361,3 +372,5 @@ stream = ExtResource("3_2k0c6")
 position = Vector2(222, 176)
 scale = Vector2(0.3, 0.3)
 stream = ExtResource("4_x33qp")
+
+[connection signal="pressed" from="CanvasLayer/Control/sair" to="." method="_on_sair_pressed"]

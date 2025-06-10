@@ -3306,7 +3306,7 @@ position = Vector2(4.16669, 7.33333)
 shape = SubResource("RectangleShape2D_ei5br")
 
 [node name="player" parent="." instance=ExtResource("3_a0pbc")]
-position = Vector2(160.667, 2.33333)
+position = Vector2(99.6667, 28.6667)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_tbdns")

@@ -16,6 +16,7 @@ var current_target: Vector2
 var waiting = false
 var player_near = false
 var dialogue_triggered = false
+var can_move = true
 
 func _ready():
 	target_position_r = position_r.global_position
@@ -29,15 +30,18 @@ func _ready():
 
 func _process(delta):
 	handle_animation()
-
-	if not waiting:
-		if navigation_agent_2d.is_navigation_finished():
-			await pause_and_switch_target()
-		else:
-			var next_point = navigation_agent_2d.get_next_path_position()
-			var direction = (next_point - global_position).normalized()
-			velocity = direction * SPEED
-			move_and_slide()
+	
+	if can_move:
+		if not waiting:
+			if navigation_agent_2d.is_navigation_finished():
+				await pause_and_switch_target()
+			else:
+				var next_point = navigation_agent_2d.get_next_path_position()
+				var direction = (next_point - global_position).normalized()
+				velocity = direction * SPEED
+				move_and_slide()
+	else :
+		animation.play("idle")
 
 	# Acionar diálogo com tecla E
 	if player_near and Input.is_action_just_pressed("e") and not dialogue_triggered:
@@ -98,6 +102,7 @@ func handle_animation():
 
 func _on_area_2d_body_entered(body):
 	if body.name == "player":
+		can_move = false
 		player_near = true
 		key_E.visible = true
 		dialogue_node.visible = false
@@ -105,6 +110,7 @@ func _on_area_2d_body_entered(body):
 
 func _on_area_2d_body_exited(body):
 	if body.name == "player":
+		can_move = true
 		player_near = false
 		key_E.visible = false
 		dialogue_node.visible = false
