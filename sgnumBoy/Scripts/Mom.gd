@@ -51,7 +51,7 @@ func start_dialogue():
 		return
 
 	var msgs_to_send = []
-	if GlobalSMM.unlocked:
+	if GlobalSM.unlocked:
 		if Interaction.msg_queue.size() >= 3:
 			msgs_to_send.append(Interaction.msg_queue[2])
 	else:
