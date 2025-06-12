@@ -104,11 +104,11 @@ func _on_card_pressed(button):
 				options_container.visible = false
 				
 				if GlobalM.current_phase == "fase_1":
-					label.text = "Parabéns, você completou a primeira fase.
-					Conclua sua primeira missão para desbloquear a próxima."
+					label.text = "Parabéns, você completou a primeira fase desse mini jogo!
+					Conclua sua primeira missão para desbloquear a próxima fase."
 				else :
-					label.text = "Parabéns, você completou o minigame!
-					Agora você está preparado para a segunda missão."
+					label.text = "Parabéns, você completou esse mini jogo!
+					Agora você está preparado para a sua segunda missão."
 				
 				label.visible = true
 				GlobalM.exit()

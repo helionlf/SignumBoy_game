@@ -417,7 +417,7 @@ shape = SubResource("RectangleShape2D_sxm4r")
 position = Vector2(303.182, 310.909)
 SPEED = 85.0
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_kicc4")
 volume_db = -12.0
 autoplay = true

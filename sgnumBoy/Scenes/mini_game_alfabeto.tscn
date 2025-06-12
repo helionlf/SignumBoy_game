@@ -96,6 +96,7 @@ grow_vertical = 2
 scale = Vector2(0.075, 0.075)
 
 [node name="sair" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 899.0
 offset_top = 130.0
 offset_right = 1180.0

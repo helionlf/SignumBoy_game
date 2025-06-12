@@ -240,6 +240,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_cpbct")
 
 [node name="sair" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 1016.0
 offset_top = 71.0
 offset_right = 1297.0
@@ -250,6 +251,7 @@ texture_pressed = ExtResource("15_0mcot")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_tlvqh")
-volume_db = -20.0
+volume_db = -12.0
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Control/sair" to="CanvasLayer/Control/0" method="_on_sair_pressed"]
