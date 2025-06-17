@@ -42,6 +42,6 @@ O jogo se passa em ambientes interativos como a casa, escola e supermercado. Nel
 
 3. Execute o projeto com o botão ▶️.
 
-## 📁 Desnvolvido por:
+## 👨🏻‍💻 Desnvolvido por:
 
 https://github.com/helionlf | https://github.com/Eymardes | https://github.com/Infernape333 | https://github.com/vitordiniz15
