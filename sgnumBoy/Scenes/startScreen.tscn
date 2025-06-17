@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/startScreen.gd" id="1_hos0j"]
 [ext_resource type="FontFile" uid="uid://d0tncuiek8mtd" path="res://Assets/UI/Pixellari.ttf" id="2_ekyuc"]
 [ext_resource type="Texture2D" uid="uid://chpu63rwo0vtk" path="res://Assets/UI/startScreen.png" id="2_nagki"]
-[ext_resource type="AudioStream" uid="uid://hs7grbiuo7m1" path="res://Assets/Souds/Gentle Breeze.ogg" id="4_rowx8"]
+[ext_resource type="AudioStream" path="res://Assets/Souds/Gentle Breeze.ogg" id="4_rowx8"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_hos0j")

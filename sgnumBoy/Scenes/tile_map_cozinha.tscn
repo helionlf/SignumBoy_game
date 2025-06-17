@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cgcc6l4ndd772"]
 
-[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_wf0uh"]
+[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TileMaps/TopDownHouse_FloorsAndWalls.png" id="1_wf0uh"]
 [ext_resource type="Texture2D" uid="uid://dvueutq1wcmsy" path="res://Assets/TileMaps/kitchen furniture.png" id="2_3jl42"]
 [ext_resource type="Texture2D" uid="uid://k2hpoydj6bwr" path="res://Assets/TileMaps/TopDownHouse_FurnitureState1.png" id="3_gmmgb"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="4_nqw0n"]
@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/porta_cozinha.gd" id="6_tefe0"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="7_jm4iv"]
 [ext_resource type="PackedScene" uid="uid://bdx67fof2b6my" path="res://Scenes/mom.tscn" id="9_myvbe"]
-[ext_resource type="AudioStream" uid="uid://nqr3w0f26h1v" path="res://Assets/Souds/A Small Adventure.ogg" id="10_jdgc7"]
+[ext_resource type="AudioStream" path="res://Assets/Souds/A Small Adventure.ogg" id="10_jdgc7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddyou"]
 texture = ExtResource("1_wf0uh")

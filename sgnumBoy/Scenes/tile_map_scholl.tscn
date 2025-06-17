@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://ka1v6yrjfg45" path="res://Assets/TileMaps/school/CoolSchool_tileset.png" id="1_2h40d"]
 [ext_resource type="Script" path="res://Scripts/minigame_numeros.gd" id="2_6fajo"]
 [ext_resource type="Texture2D" uid="uid://dewsbuvt3fvws" path="res://Assets/TileMaps/Supermarket/MarketSet_Tileset.png" id="2_gro7h"]
-[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="3_0ppki"]
+[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TileMaps/TopDownHouse_FloorsAndWalls.png" id="3_0ppki"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="3_tcc06"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="4_0xs2m"]
 [ext_resource type="PackedScene" uid="uid://ytvygxlugbgb" path="res://Scenes/map.tscn" id="5_65mb6"]
 [ext_resource type="PackedScene" uid="uid://dplg7rit3yrp7" path="res://Scenes/professor.tscn" id="7_ks6wc"]
-[ext_resource type="AudioStream" uid="uid://nqr3w0f26h1v" path="res://Assets/Souds/A Small Adventure.ogg" id="9_b0dxa"]
+[ext_resource type="AudioStream" path="res://Assets/Souds/A Small Adventure.ogg" id="9_b0dxa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbl8c"]
 texture = ExtResource("1_2h40d")
