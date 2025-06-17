@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://csqnv8vci566b"]
 
-[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TileMaps/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
+[ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="2_qgs11"]
 [ext_resource type="Texture2D" uid="uid://uu4sdh8dn38p" path="res://Assets/TileMaps/Supermarket/supermarket_tileset_32x32.png" id="3_5p4dj"]
 [ext_resource type="Texture2D" uid="uid://k2hpoydj6bwr" path="res://Assets/TileMaps/TopDownHouse_FurnitureState1.png" id="3_i84bh"]
@@ -17,7 +17,7 @@
 [ext_resource type="Script" path="res://Scripts/porta_quarto.gd" id="13_s4fve"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="14_tec3d"]
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="15_2px4v"]
-[ext_resource type="AudioStream" path="res://Assets/Souds/A Small Adventure.ogg" id="18_gjyxf"]
+[ext_resource type="AudioStream" uid="uid://nqr3w0f26h1v" path="res://Assets/Souds/A Small Adventure.ogg" id="18_gjyxf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8w06x"]
 texture = ExtResource("1_56lqo")
