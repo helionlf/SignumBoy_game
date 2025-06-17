@@ -17,7 +17,7 @@
 [ext_resource type="Script" path="res://Scripts/porta_quarto.gd" id="13_s4fve"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="14_tec3d"]
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="15_2px4v"]
-[ext_resource type="AudioStream" uid="uid://bhgvy6m4u7xw3" path="res://Assets/Souds/A Small Adventure.wav" id="18_6jo63"]
+[ext_resource type="AudioStream" uid="uid://nqr3w0f26h1v" path="res://Assets/Souds/A Small Adventure.ogg" id="18_gjyxf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8w06x"]
 texture = ExtResource("1_56lqo")
@@ -4908,7 +4908,7 @@ shape = SubResource("RectangleShape2D_87pmm")
 position = Vector2(368, 162)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("18_6jo63")
+stream = ExtResource("18_gjyxf")
 volume_db = -12.0
 autoplay = true
 

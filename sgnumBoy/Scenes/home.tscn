@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://3pckvu0hmxdx" path="res://Assets/TileMaps/TopDownHouse_FurnitureState2.png" id="6_hkwy2"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="7_ly0vm"]
 [ext_resource type="Texture2D" uid="uid://uu4sdh8dn38p" path="res://Assets/TileMaps/Supermarket/supermarket_tileset_32x32.png" id="8_mttcr"]
-[ext_resource type="AudioStream" uid="uid://bhgvy6m4u7xw3" path="res://Assets/Souds/A Small Adventure.wav" id="16_tbdns"]
+[ext_resource type="AudioStream" uid="uid://nqr3w0f26h1v" path="res://Assets/Souds/A Small Adventure.ogg" id="16_0myih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a131"]
 texture = ExtResource("1_cqqen")
@@ -3309,7 +3309,7 @@ shape = SubResource("RectangleShape2D_ei5br")
 position = Vector2(99.6667, 28.6667)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("16_tbdns")
+stream = ExtResource("16_0myih")
 volume_db = -12.0
 autoplay = true
 

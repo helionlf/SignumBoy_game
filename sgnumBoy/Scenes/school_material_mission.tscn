@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c5d1vle107vet" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/003.png" id="11_whoeb"]
 [ext_resource type="Texture2D" uid="uid://dbpux65actxxu" path="res://Assets/UI/Caderno-Sheet.png" id="12_n3wtb"]
 [ext_resource type="Texture2D" uid="uid://b7kijcwus7f1u" path="res://Assets/UI/Caneta02-Sheet.png" id="13_6hyts"]
-[ext_resource type="AudioStream" uid="uid://cfs2dgw2p25ui" path="res://Assets/Souds/ミニゲーム_loop.wav" id="19_a7xvl"]
+[ext_resource type="AudioStream" uid="uid://dopcyc4etay2t" path="res://Assets/Souds/ミニゲーム_loop.ogg" id="17_dlai1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g0ng6"]
 texture = ExtResource("2_jr3bp")
@@ -2532,6 +2532,6 @@ stream = ExtResource("6_m2amd")
 stream = ExtResource("7_wgx8d")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("19_a7xvl")
+stream = ExtResource("17_dlai1")
 volume_db = -12.0
 autoplay = true

@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://hw54oivx8ss1" path="res://Assets/UI/cards/7.png" id="10_7xhng"]
 [ext_resource type="Texture2D" uid="uid://1nwwqhlhkkk3" path="res://Assets/UI/cards/8.png" id="11_f1gcj"]
 [ext_resource type="Texture2D" uid="uid://bl7i114ngu3or" path="res://Assets/UI/cards/9.png" id="12_cpbct"]
-[ext_resource type="AudioStream" uid="uid://cfs2dgw2p25ui" path="res://Assets/Souds/ミニゲーム_loop.wav" id="14_tlvqh"]
 [ext_resource type="Texture2D" uid="uid://b1rq5rx32cve0" path="res://Assets/UI/ButtonsText/PremadeButtons_XWhiteOutline.png" id="14_wwk5l"]
 [ext_resource type="Texture2D" uid="uid://fwgbjokbidu4" path="res://Assets/UI/ButtonsText/PremadeButtons_XRed.png" id="15_0mcot"]
+[ext_resource type="AudioStream" uid="uid://dopcyc4etay2t" path="res://Assets/Souds/ミニゲーム_loop.ogg" id="16_hbh2l"]
 
 [node name="minigame_numeros" type="Node2D"]
 
@@ -250,7 +250,7 @@ texture_normal = ExtResource("14_wwk5l")
 texture_pressed = ExtResource("15_0mcot")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("14_tlvqh")
+stream = ExtResource("16_hbh2l")
 volume_db = -12.0
 autoplay = true
 
