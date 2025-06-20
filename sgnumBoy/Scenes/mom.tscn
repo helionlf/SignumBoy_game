@@ -1,9 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bdx67fof2b6my"]
+[gd_scene load_steps=20 format=3 uid="uid://bdx67fof2b6my"]
 
 [ext_resource type="Script" path="res://Scripts/Mom.gd" id="1_uunv4"]
 [ext_resource type="Texture2D" uid="uid://c2le8k6yqdv7f" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/013.png" id="2_ds1iv"]
 [ext_resource type="Script" path="res://Scripts/Metadaddos.gd" id="2_w2bhl"]
-[ext_resource type="PackedScene" uid="uid://dlpd1r2mpo3it" path="res://Scenes/canvas_layer.tscn" id="3_ongkj"]
+[ext_resource type="PackedScene" uid="uid://bdbkeyyf10xgd" path="res://Scenes/canvas_layer.tscn" id="3_ongkj"]
 [ext_resource type="Texture2D" uid="uid://b4et7q20ecvjj" path="res://Assets/UI/Game Prompts/Transparent/Letters.png" id="5_bkdpr"]
 
 [sub_resource type="Resource" id="Resource_23g1q"]
@@ -25,6 +25,18 @@ region = Rect2(20, 64, 20, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fgdq5"]
 atlas = ExtResource("2_ds1iv")
 region = Rect2(40, 64, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uet87"]
+atlas = ExtResource("2_ds1iv")
+region = Rect2(0, 96, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hapl"]
+atlas = ExtResource("2_ds1iv")
+region = Rect2(20, 96, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7vvj"]
+atlas = ExtResource("2_ds1iv")
+region = Rect2(40, 96, 20, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sggeh"]
 animations = [{
@@ -48,6 +60,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uet87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hapl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7vvj")
+}],
+"loop": true,
+"name": &"walk_north",
 "speed": 5.0
 }]
 
@@ -81,6 +107,8 @@ animations = [{
 
 [node name="Mom" type="CharacterBody2D"]
 scale = Vector2(0.854912, 0.854912)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_uunv4")
 Interaction = SubResource("Resource_23g1q")
 
@@ -88,7 +116,7 @@ Interaction = SubResource("Resource_23g1q")
 texture_filter = 1
 scale = Vector2(1.259, 1.259)
 sprite_frames = SubResource("SpriteFrames_sggeh")
-animation = &"walk"
+animation = &"idle"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_sleex")
@@ -96,10 +124,11 @@ shape = SubResource("CapsuleShape2D_sleex")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="Dialogue" parent="." instance=ExtResource("3_ongkj")]
+visible = false
 
 [node name="InteractionShape" type="Area2D" parent="."]
-collision_layer = 5
-collision_mask = 15
+collision_layer = 4
+collision_mask = 3
 
 [node name="InteractionCollision" type="CollisionShape2D" parent="InteractionShape"]
 shape = SubResource("CircleShape2D_k8ob0")
@@ -111,6 +140,7 @@ texture_filter = 1
 position = Vector2(0, -26.9034)
 sprite_frames = SubResource("SpriteFrames_bqej5")
 animation = &"Key_E"
+autoplay = "Key_E"
 
 [connection signal="body_entered" from="InteractionShape" to="." method="_on_interaction_shape_body_entered"]
 [connection signal="body_exited" from="InteractionShape" to="." method="_on_interaction_shape_body_exited"]

@@ -63,10 +63,16 @@ func start_dialogue():
 	
 func handle_animation():
 	if velocity.x > 0:
-		animation.play("walk")
+		if get_tree().current_scene .scene_file_path == "res://Scenes/tile_map_quarto.tscn":
+			animation.play("walk_north")
+		else:
+			animation.play("walk")
 		animation.flip_h = false
 	elif velocity.x < 0:
-		animation.play("walk")
+		if get_tree().current_scene .scene_file_path == "res://Scenes/tile_map_quarto.tscn":
+			animation.play("walk_north")
+		else:
+			animation.play("walk")
 		animation.flip_h = true
 	else:
 		animation.play("idle")

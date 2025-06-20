@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://csqnv8vci566b"]
+[gd_scene load_steps=37 format=3 uid="uid://csqnv8vci566b"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="2_qgs11"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://Scripts/porta_quarto.gd" id="13_s4fve"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="14_tec3d"]
 [ext_resource type="Texture2D" uid="uid://cxsxq4oq8b02l" path="res://Assets/quadro.png" id="15_2px4v"]
+[ext_resource type="PackedScene" uid="uid://bdx67fof2b6my" path="res://Scenes/mom.tscn" id="17_tshuh"]
 [ext_resource type="AudioStream" uid="uid://nqr3w0f26h1v" path="res://Assets/Souds/A Small Adventure.ogg" id="18_gjyxf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8w06x"]
@@ -4811,6 +4812,12 @@ size = Vector2(3200, 1100)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87pmm"]
 size = Vector2(28, 11)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_y4tpu"]
+vertices = PackedVector2Array(608, 447, 599, 447, 599, 370, 609, 370)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(618.667, 360, 618.333, 457, 589, 457, 589, 360)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
 [node name="tileMap_quarto" type="Node2D"]
 position = Vector2(-404, -192)
 scale = Vector2(3, 3)
@@ -4871,7 +4878,7 @@ autoplay = "default"
 frame_progress = 0.426234
 
 [node name="Area2D" type="Area2D" parent="porta"]
-collision_mask = 2
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta/Area2D"]
 position = Vector2(8, -6)
@@ -4904,8 +4911,25 @@ collision_mask = 2
 position = Vector2(8, -6)
 shape = SubResource("RectangleShape2D_87pmm")
 
+[node name="naviagation_positions" type="Node2D" parent="."]
+position = Vector2(-79.6667, -176.667)
+
+[node name="position_r" type="Marker2D" parent="naviagation_positions"]
+position = Vector2(446.333, 418.333)
+
+[node name="position_l" type="Marker2D" parent="naviagation_positions"]
+position = Vector2(447, 341.333)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-236.667, -205.667)
+navigation_polygon = SubResource("NavigationPolygon_y4tpu")
+
+[node name="Mom" parent="NavigationRegion2D" instance=ExtResource("17_tshuh")]
+position = Vector2(603.667, 420.667)
+scale = Vector2(0.7, 0.7)
+
 [node name="player" parent="." instance=ExtResource("12_jmdar")]
-position = Vector2(368, 162)
+position = Vector2(384.333, 214.333)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_gjyxf")
