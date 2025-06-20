@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3pogju5vvhfa"]
+
+[ext_resource type="PackedScene" uid="uid://bdbkeyyf10xgd" path="res://Scenes/canvas_layer.tscn" id="1_3i4m2"]
+[ext_resource type="Script" path="res://Scripts/dialogue_inicio.gd" id="1_waie1"]
+[ext_resource type="Script" path="res://Scripts/Metadaddos.gd" id="2_86e6m"]
+
+[sub_resource type="Resource" id="Resource_sbn4g"]
+script = ExtResource("2_86e6m")
+msg_queue = ["** Bom dia! Já está na hora de acordar. **", "** Vamos levantar, hoje temos um dia cheio! **"]
+
+[node name="dialogue_inicio" type="Node2D"]
+script = ExtResource("1_waie1")
+interaction = SubResource("Resource_sbn4g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[node name="Dialogue" parent="." instance=ExtResource("1_3i4m2")]

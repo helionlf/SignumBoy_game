@@ -6,18 +6,14 @@ extends Node2D
 func _ready():
 	map.visible = false
 
-
 func _on_home_pressed():
 	Transition.fade_to_scene("res://Scenes/home.tscn")
-
 
 func _on_schol_pressed():
 	Transition.fade_to_scene("res://Scenes/tile_map_scholl.tscn")
 
-
 func _on_supermarket_pressed():
 	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
-
 
 func _on_area_2d_body_entered(body):
 	if body.get_name() == "player":

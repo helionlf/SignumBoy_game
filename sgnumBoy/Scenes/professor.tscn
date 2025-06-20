@@ -103,6 +103,7 @@ shape = SubResource("CircleShape2D_khbir")
 debug_color = Color(0.470386, 0, 0.09813, 0.42)
 
 [node name="Dialogue" parent="." instance=ExtResource("4_iyhbp")]
+visible = false
 
 [node name="Key_E" type="AnimatedSprite2D" parent="."]
 visible = false
