@@ -77,11 +77,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sleex"]
-radius = 7.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ec5wu"]
+size = Vector2(18.7154, 38.0156)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k8ob0"]
-radius = 20.025
+radius = 22.2553
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8pm6c"]
 atlas = ExtResource("5_bkdpr")
@@ -119,7 +119,8 @@ sprite_frames = SubResource("SpriteFrames_sggeh")
 animation = &"idle"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_sleex")
+position = Vector2(0, 1.47)
+shape = SubResource("RectangleShape2D_ec5wu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
@@ -131,6 +132,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="InteractionCollision" type="CollisionShape2D" parent="InteractionShape"]
+position = Vector2(0, 2.33942)
 shape = SubResource("CircleShape2D_k8ob0")
 debug_color = Color(0.85354, 0, 0.312942, 0.42)
 
