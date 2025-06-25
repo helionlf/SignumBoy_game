@@ -4,7 +4,7 @@ const SAVE_PATH := "user://save_data.json"
 var save_data := {}
 
 func _ready():
-	load_save_data()   # <- ESSENCIAL! Carrega dados assim que o jogo começa
+	load_save_data()
 
 func save():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -30,3 +30,11 @@ func load_save_data():
 			save_data = {}
 			push_error("Erro ao carregar JSON: conteúdo inválido")
 		file.close()
+
+func reset_save():
+	if FileAccess.file_exists(SAVE_PATH):
+		DirAccess.remove_absolute(SAVE_PATH)
+		save_data = {}
+		print("Progresso resetado!")
+	else:
+		print("Nenhum save encontrado para apagar.")

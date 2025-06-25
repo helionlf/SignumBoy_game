@@ -1,17 +1,17 @@
 extends Node
 
 
-var completed
-var current_phase
-var current_question_index
+@export var completed : bool
+var current_phase : String
+var current_question_index : int
 
 func _ready():
 	if "quiz_module" in SaveManager.save_data:
 		var data = SaveManager.save_data["quiz_module"]
-		completed = data.get("completed")
-		current_phase = data.get("current_phase")
-		current_question_index = data.get("current_question_index")
-		print("Quiz carregado do save:", current_phase, current_question_index)
+		completed = data.get("completed", false)
+		current_phase = data.get("current_phase", "fase_1")
+		current_question_index = data.get("current_question_index", 0)
+		print("Quiz carregado do save:", current_phase, " : ", current_question_index)
 	else:
 		completed = false
 		current_phase = "fase_1"
