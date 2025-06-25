@@ -23,6 +23,7 @@ GlobalSM="*res://Scripts/global/global_supermarket_mission.gd"
 GlobalM="*res://Scripts/global/GlobalMemoria.gd"
 GlobalMGN="*res://Scripts/global/global_miniGame_numeros.gd"
 GlobalSingleton="*res://Scripts/global/global_singleton.gd"
+SaveManager="*res://Scripts/global/SaveManager.gd"
 
 [input]
 

@@ -1,10 +1,29 @@
 extends Node
 
 
-var completed = false
+var completed
+var current_phase
+var current_question_index
 
-var current_phase = "fase_1"
-var current_question_index = 0
+func _ready():
+	if "quiz_module" in SaveManager.save_data:
+		var data = SaveManager.save_data["quiz_module"]
+		completed = data.get("completed")
+		current_phase = data.get("current_phase")
+		current_question_index = data.get("current_question_index")
+		print("Quiz carregado do save:", current_phase, current_question_index)
+	else:
+		completed = false
+		current_phase = "fase_1"
+		current_question_index = 0
+
+func save_progress():
+	SaveManager.save_data["quiz_module"] = {
+		"completed": completed,
+		"current_phase": current_phase,
+		"current_question_index": current_question_index
+	}
+	SaveManager.save()
 
 var quiz_data = {
 	#TEM QUE CRIAR UM VETOR COM CADA OPÇÂO PRA CADA FASE
@@ -63,6 +82,7 @@ func next_level():
 	elif current_phase == "fase_6":
 		current_phase = "completed"
 		completed = true
+	save_progress()
 	
 func exit():
 	completed = true
