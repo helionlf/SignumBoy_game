@@ -1,7 +1,7 @@
 extends Node
 
 
-@export var completed : bool
+var completed : bool
 var current_phase : String
 var current_question_index : int
 
@@ -11,7 +11,7 @@ func _ready():
 		completed = data.get("completed", false)
 		current_phase = data.get("current_phase", "fase_1")
 		current_question_index = data.get("current_question_index", 0)
-		print("Quiz carregado do save:", current_phase, " : ", current_question_index)
+		print("Alfabeto carregado do save:", current_phase, " : ", current_question_index)
 	else:
 		completed = false
 		current_phase = "fase_1"
@@ -88,4 +88,9 @@ func exit():
 	completed = true
 	await get_tree().create_timer(5).timeout
 	Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")
-	
+
+func reset():
+	completed = false
+	current_phase = "fase_1"
+	current_question_index = 0
+	save_progress()

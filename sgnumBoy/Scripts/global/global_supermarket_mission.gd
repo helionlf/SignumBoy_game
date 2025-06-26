@@ -1,11 +1,33 @@
 extends Node
 
 
-var unlocked = false
-var completed = false
+var unlocked : bool
+var completed : bool
+var current_phase : String
+var current_question_index : int
 
-var current_phase = "fase_1"
-var current_question_index = 0
+func _ready():
+	if "supermarket_module" in SaveManager.save_data:
+		var data = SaveManager.save_data["supermarket_module"]
+		unlocked = data.get("unlocked", false)
+		completed = data.get("completed", false)
+		current_phase = data.get("current_phase", "fase_1")
+		current_question_index = data.get("current_question_index", 0)
+		print("Supermercado carregado:", current_phase, " : ", current_question_index)
+	else:
+		unlocked = false
+		completed = false
+		current_phase = "fase_1"
+		current_question_index = 0
+
+func save_progress():
+	SaveManager.save_data["supermarket_module"] = {
+		"unlocked": unlocked,
+		"completed": completed,
+		"current_phase": current_phase,
+		"current_question_index": current_question_index
+	}
+	SaveManager.save()
 
 var data = {
 	#TEM QUE CRIAR UM VETOR COM CADA OPÇÂO PRA CADA FASE
@@ -34,6 +56,7 @@ func next_level():
 	elif current_phase == "fase_4":
 		current_phase = "completed"
 		set_completed()
+	save_progress()
 		
 	
 func exit():
@@ -48,4 +71,10 @@ func set_completed():
 	completed = true
 	await get_tree().create_timer(2).timeout
 	Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
-	
+
+func reset():
+	unlocked = false
+	completed = false
+	current_phase = "fase_1"
+	current_question_index = 0
+	save_progress()

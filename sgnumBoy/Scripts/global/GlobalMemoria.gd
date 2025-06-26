@@ -1,9 +1,29 @@
 extends Node
 
-var completed = false
-var current_phase = "fase_1"
-var current_question_index = 0
 
+var completed : bool
+var current_phase : String
+var current_question_index : int
+
+func _ready():
+	if "memory_module" in SaveManager.save_data:
+		var data = SaveManager.save_data["memory_module"]
+		completed = data.get("completed", false)
+		current_phase = data.get("current_phase", "fase_1")
+		current_question_index = data.get("current_question_index", 0)
+		print("Memória carregada:", current_phase, " : ", current_question_index)
+	else:
+		completed = false
+		current_phase = "fase_1"
+		current_question_index = 0
+
+func save_progress():
+	SaveManager.save_data["memory_module"] = {
+		"completed": completed,
+		"current_phase": current_phase,
+		"current_question_index": current_question_index
+	}
+	SaveManager.save()
 
 var memory_data = {
 	"fase_1": [
@@ -56,7 +76,14 @@ func next_level():
 		current_phase = "completed"
 		completed = true
 		GlobalSM.unlocked = true
+	save_progress()
 
 func exit():
 	await get_tree().create_timer(4).timeout
 	get_tree().change_scene_to_file("res://Scenes/home.tscn")
+
+func reset():
+	completed = false
+	current_phase = "fase_1"
+	current_question_index = 0
+	save_progress()

@@ -7,3 +7,13 @@ func _on_start_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_new_game_pressed():
+	SaveManager.reset_save()
+	GlobalM.reset()
+	GlobalSM.reset()
+	GlobalSMM.reset()
+	GlobalMGN.reset()
+	GlobalMGA.reset()
+	get_tree().reload_current_scene()
