@@ -6,8 +6,8 @@ var current_phase : String
 var current_question_index : int
 
 func _ready():
-	if "memory_module" in SaveManager.save_data:
-		var data = SaveManager.save_data["memory_module"]
+	if "minigame_memoria" in SaveManager.save_data:
+		var data = SaveManager.save_data["minigame_memoria"]
 		completed = data.get("completed", false)
 		current_phase = data.get("current_phase", "fase_1")
 		current_question_index = data.get("current_question_index", 0)
@@ -18,7 +18,7 @@ func _ready():
 		current_question_index = 0
 
 func save_progress():
-	SaveManager.save_data["memory_module"] = {
+	SaveManager.save_data["minigame_memoria"] = {
 		"completed": completed,
 		"current_phase": current_phase,
 		"current_question_index": current_question_index

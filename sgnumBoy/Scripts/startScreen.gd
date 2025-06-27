@@ -2,8 +2,10 @@ extends CanvasLayer
 
 
 func _on_start_pressed():
-	Transition.fade_to_scene("res://Scenes/dialogue_inicio.tscn")
-
+	if GlobalSingleton.mae_removida:
+		Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")
+	else:
+		Transition.fade_to_scene("res://Scenes/dialogue_inicio.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()

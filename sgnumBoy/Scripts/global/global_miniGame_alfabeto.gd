@@ -6,19 +6,19 @@ var current_phase : String
 var current_question_index : int
 
 func _ready():
-	if "quiz_module" in SaveManager.save_data:
-		var data = SaveManager.save_data["quiz_module"]
+	if "minigame_alfabeto" in SaveManager.save_data:
+		var data = SaveManager.save_data["minigame_alfabeto"]
 		completed = data.get("completed", false)
 		current_phase = data.get("current_phase", "fase_1")
 		current_question_index = data.get("current_question_index", 0)
-		print("Alfabeto carregado do save:", current_phase, " : ", current_question_index)
+		print("Alfabeto carregado:", current_phase, " : ", current_question_index)
 	else:
 		completed = false
 		current_phase = "fase_1"
 		current_question_index = 0
 
 func save_progress():
-	SaveManager.save_data["quiz_module"] = {
+	SaveManager.save_data["minigame_alfabeto"] = {
 		"completed": completed,
 		"current_phase": current_phase,
 		"current_question_index": current_question_index

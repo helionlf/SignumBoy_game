@@ -19,7 +19,7 @@ func _on_area_2d_body_entered(body):
 		$key_E.visible = true
 	else:
 		GlobalSingleton.mae_removida = true
-		body.animation.play("idle")
+		GlobalSingleton.save_progress()
 		await get_tree().create_timer(0.8).timeout 
 		body.queue_free()
 

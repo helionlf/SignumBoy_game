@@ -7,8 +7,8 @@ var current_phase : String
 var current_question_index : int
 
 func _ready():
-	if "supermarket_module" in SaveManager.save_data:
-		var data = SaveManager.save_data["supermarket_module"]
+	if "missão_supermercado" in SaveManager.save_data:
+		var data = SaveManager.save_data["missão_supermercado"]
 		unlocked = data.get("unlocked", false)
 		completed = data.get("completed", false)
 		current_phase = data.get("current_phase", "fase_1")
@@ -21,7 +21,7 @@ func _ready():
 		current_question_index = 0
 
 func save_progress():
-	SaveManager.save_data["supermarket_module"] = {
+	SaveManager.save_data["missão_supermercado"] = {
 		"unlocked": unlocked,
 		"completed": completed,
 		"current_phase": current_phase,

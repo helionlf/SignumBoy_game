@@ -5,8 +5,8 @@ var completed : bool
 var palavra : String
 
 func _ready():
-	if "smm_module" in SaveManager.save_data:
-		var data = SaveManager.save_data["smm_module"]
+	if "missão_materialEscolar" in SaveManager.save_data:
+		var data = SaveManager.save_data["missão_materialEscolar"]
 		unlocked = data.get("unlocked", false)
 		completed = data.get("completed", false)
 		palavra = data.get("palavra", "caneta")
@@ -17,7 +17,7 @@ func _ready():
 		palavra = "caneta"
 
 func save_progress():
-	SaveManager.save_data["smm_module"] = {
+	SaveManager.save_data["missão_materialEscolar"] = {
 		"unlocked": unlocked,
 		"completed": completed,
 		"palavra": palavra
