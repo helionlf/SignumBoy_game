@@ -2022,7 +2022,7 @@ navigation_polygon = SubResource("NavigationPolygon_tfhmn")
 
 [node name="Mom" parent="NavigationRegion2D" instance=ExtResource("9_myvbe")]
 position = Vector2(565, 360)
-scale = Vector2(2.8, 2.8)
+scale = Vector2(2.6, 2.6)
 
 [node name="porta" type="Node2D" parent="."]
 position = Vector2(913, 467)
@@ -2043,9 +2043,9 @@ position = Vector2(49, -1)
 shape = SubResource("RectangleShape2D_gg1mq")
 
 [node name="player" parent="." instance=ExtResource("5_pjls0")]
-position = Vector2(885, 457)
-scale = Vector2(3, 3)
-SPEED = 160.0
+position = Vector2(913, 464)
+scale = Vector2(2.45, 2.45)
+SPEED = 110.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_jdgc7")

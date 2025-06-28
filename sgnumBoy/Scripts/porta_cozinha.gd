@@ -5,6 +5,7 @@ var player_in_area := false
 
 func _process(delta):
 	if player_in_area and Input.is_action_just_pressed("e"):
+		GlobalSingleton.ultima_entrada = "sala_cozinha"
 		Transition.fade_to_scene("res://Scenes/home.tscn")
 
 

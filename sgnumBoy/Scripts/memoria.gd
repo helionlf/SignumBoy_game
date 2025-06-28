@@ -131,7 +131,9 @@ func _on_card_pressed(button):
 
 func _input(event):
 	if event.is_action_pressed("sair"):
+		GlobalSingleton.ultima_entrada = "memoria"
 		Transition.fade_to_scene("res://Scenes/home.tscn")
 
 func _on_sair_pressed():
+	GlobalSingleton.ultima_entrada = "memoria"
 	Transition.fade_to_scene("res://Scenes/home.tscn")

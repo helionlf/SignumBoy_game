@@ -66,8 +66,10 @@ func _on_button_pressed(button):
 		
 func _input(event):
 	if event.is_action_pressed("sair"):
+		GlobalSingleton.ultima_entrada = "tablet"
 		Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")
 
 
 func _on_sair_pressed():
+	GlobalSingleton.ultima_entrada = "tablet"
 	Transition.fade_to_scene("res://Scenes/tile_map_quarto.tscn")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=37 format=3 uid="uid://csqnv8vci566b"]
+[gd_scene load_steps=39 format=3 uid="uid://csqnv8vci566b"]
 
 [ext_resource type="Texture2D" uid="uid://dork5i6vlk7pf" path="res://Assets/TopDownHouse_FloorsAndWalls.png" id="1_56lqo"]
+[ext_resource type="Script" path="res://Scripts/quarto.gd" id="1_takqd"]
 [ext_resource type="Texture2D" uid="uid://d11dqw0tqvek3" path="res://Assets/TileMaps/TopDownHouse_SmallItems.png" id="2_qgs11"]
 [ext_resource type="Texture2D" uid="uid://uu4sdh8dn38p" path="res://Assets/TileMaps/Supermarket/supermarket_tileset_32x32.png" id="3_5p4dj"]
 [ext_resource type="Texture2D" uid="uid://k2hpoydj6bwr" path="res://Assets/TileMaps/TopDownHouse_FurnitureState1.png" id="3_i84bh"]
@@ -4808,20 +4809,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05je1"]
-size = Vector2(3200, 1100)
+size = Vector2(3200, 655.559)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87pmm"]
-size = Vector2(28, 11)
+size = Vector2(26.3333, 3.83333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk7dh"]
+size = Vector2(34.6667, 6)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_y4tpu"]
-vertices = PackedVector2Array(608, 447, 599, 447, 599, 370, 609, 370)
+vertices = PackedVector2Array(612, 438, 606, 441, 568, 369, 574, 369)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(618.667, 360, 618.333, 457, 589, 457, 589, 360)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(580.334, 358, 626.334, 443, 601.667, 455.667, 552.667, 362.333)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="tileMap_quarto" type="Node2D"]
 position = Vector2(-404, -192)
 scale = Vector2(3, 3)
+script = ExtResource("1_takqd")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -4841,6 +4846,17 @@ layer_5/name = "objects"
 layer_5/tile_data = PackedInt32Array(458775, 589828, 5, 524311, 589828, 6, 589847, 589828, 7, 458774, 524292, 5, 524310, 524292, 6, 589846, 524292, 7)
 layer_6/name = "outros"
 layer_6/tile_data = PackedInt32Array(655381, 5, 3, 655382, 65541, 3, 655383, 131077, 3, 655384, 196613, 3)
+
+[node name="positions" type="Node2D" parent="."]
+
+[node name="sala_position" type="Marker2D" parent="positions"]
+position = Vector2(368.333, 164.667)
+
+[node name="quadro_position" type="Marker2D" parent="positions"]
+position = Vector2(329.667, 163.667)
+
+[node name="tablet_position" type="Marker2D" parent="positions"]
+position = Vector2(276.667, 179.667)
 
 [node name="tablet" type="Node2D" parent="."]
 position = Vector2(265, 147)
@@ -4863,7 +4879,7 @@ position = Vector2(66.666, 0)
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tablet/Area2D"]
-position = Vector2(733.334, 2383.33)
+position = Vector2(733.334, 2161.11)
 shape = SubResource("RectangleShape2D_05je1")
 
 [node name="porta" type="Node2D" parent="."]
@@ -4882,7 +4898,7 @@ frame_progress = 0.426234
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta/Area2D"]
-position = Vector2(8, -6)
+position = Vector2(8.83333, -9.58333)
 shape = SubResource("RectangleShape2D_87pmm")
 
 [node name="board" type="Node2D" parent="."]
@@ -4909,20 +4925,20 @@ frame_progress = 0.426234
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="board/Area2D"]
-position = Vector2(8, -6)
-shape = SubResource("RectangleShape2D_87pmm")
+position = Vector2(9.99999, -7.33333)
+shape = SubResource("RectangleShape2D_dk7dh")
 
 [node name="naviagation_positions" type="Node2D" parent="."]
-position = Vector2(-79.6667, -176.667)
+position = Vector2(-46.3333, -176.667)
 
 [node name="position_r" type="Marker2D" parent="naviagation_positions"]
-position = Vector2(446.333, 418.333)
+position = Vector2(450, 404.667)
 
 [node name="position_l" type="Marker2D" parent="naviagation_positions"]
-position = Vector2(447, 341.333)
+position = Vector2(414, 344.333)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-position = Vector2(-236.667, -205.667)
+position = Vector2(-203.334, -205.667)
 navigation_polygon = SubResource("NavigationPolygon_y4tpu")
 
 [node name="Mom" parent="NavigationRegion2D" instance=ExtResource("17_tshuh")]
@@ -4930,7 +4946,7 @@ position = Vector2(603.667, 420.667)
 scale = Vector2(0.7, 0.7)
 
 [node name="player" parent="." instance=ExtResource("12_jmdar")]
-position = Vector2(384.333, 214.333)
+position = Vector2(415, 222.667)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_gjyxf")
