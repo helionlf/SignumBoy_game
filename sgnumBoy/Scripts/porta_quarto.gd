@@ -9,11 +9,11 @@ func _ready():
 
 func _process(delta):
 	if player_in_area and Input.is_action_just_pressed("e"):
+		GlobalSingleton.ultima_entrada = "sala_quarto"
 		Transition.fade_to_scene("res://Scenes/home.tscn")
 
 
 func _on_area_2d_body_entered(body):
-	print(body.get_name())
 	if body.get_name() == "player":
 		player_in_area = true
 		$key_E.visible = true

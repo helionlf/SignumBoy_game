@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://cq2oel00he2y5"]
+[gd_scene load_steps=15 format=3 uid="uid://cq2oel00he2y5"]
 
+[ext_resource type="Script" path="res://Scripts/supermercado.gd" id="1_13ac8"]
 [ext_resource type="Texture2D" uid="uid://dewsbuvt3fvws" path="res://Assets/TileMaps/Supermarket/MarketSet_Tileset.png" id="1_lmtah"]
 [ext_resource type="PackedScene" uid="uid://c84cxg7156886" path="res://Scenes/player.tscn" id="2_c368n"]
 [ext_resource type="Script" path="res://Scripts/prateleiras.gd" id="2_sxmoh"]
@@ -285,6 +286,7 @@ size = Vector2(30.9091, 6.72729)
 [node name="tileMap_supermarket" type="Node2D"]
 position = Vector2(-128, -295)
 scale = Vector2(2.2, 2.2)
+script = ExtResource("1_13ac8")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_x1vam")
@@ -303,6 +305,14 @@ layer_5/name = "objects"
 layer_5/tile_data = PackedInt32Array(851997, 196608, 4, 917533, 196608, 5, 851998, 262144, 4, 851999, 327680, 4, 917535, 327680, 5, 851994, 196608, 4, 917530, 196608, 5, 851995, 262144, 4, 917531, 262144, 5, 851996, 327680, 4, 917532, 327680, 5, 1048602, 0, 3, 1114138, 0, 4, 1179674, 0, 5, 1245210, 0, 6, 1048605, 0, 3, 1114141, 0, 4, 1179677, 0, 5, 1245213, 0, 6, 786440, 65536, 7, 786441, 65536, 7, 786442, 65536, 7, 786443, 65536, 7, 851976, 65536, 8, 851977, 65536, 8, 851978, 65536, 8, 851979, 65536, 8, 786444, 131072, 7, 851980, 131072, 8, 786445, 393216, 2, 851981, 393216, 3, 917517, 393216, 4, 786448, 393216, 2, 851984, 393216, 3, 917520, 393216, 4, 786451, 393216, 2, 851987, 393216, 3, 917523, 393216, 4, 917534, 262144, 5, 1441812, 196608, 0, 1507348, 196608, 1, 1441813, 262144, 0, 1507349, 262144, 1, 1441814, 327680, 0, 1507350, 327680, 1, 1310740, 196608, 0, 1376276, 196608, 1, 1310741, 262144, 0, 1376277, 262144, 1, 1310742, 327680, 0, 1376278, 327680, 1, 1179668, 196608, 0, 1245204, 196608, 1, 1179669, 262144, 0, 1245205, 262144, 1, 1179670, 327680, 0, 1245206, 327680, 1, 1048596, 196608, 0, 1114132, 196608, 1, 1048597, 262144, 0, 1114133, 262144, 1, 1048598, 327680, 0, 1114134, 327680, 1, 720924, 196608, 6, 786460, 196608, 7, 720925, 262144, 6, 786461, 262144, 7, 720926, 327680, 6, 786462, 327680, 7, 720918, 196608, 6, 786454, 196608, 7, 720919, 262144, 6, 786455, 262144, 7, 720920, 327680, 6, 786456, 327680, 7)
 layer_6/name = "outros"
 layer_6/tile_data = PackedInt32Array(720905, 196608, 6, 786441, 196608, 7, 720906, 262144, 6, 786442, 262144, 7, 720907, 327680, 6, 786443, 327680, 7)
+
+[node name="positions" type="Node2D" parent="."]
+
+[node name="map_supermercado" type="Marker2D" parent="positions"]
+position = Vector2(465, 401.818)
+
+[node name="prateleiras" type="Marker2D" parent="positions"]
+position = Vector2(301.364, 312.273)
 
 [node name="prateleiras" type="Node2D" parent="."]
 position = Vector2(224, 292)
@@ -423,7 +433,7 @@ position = Vector2(3.09091, 10.0909)
 shape = SubResource("RectangleShape2D_sxm4r")
 
 [node name="player" parent="." instance=ExtResource("2_c368n")]
-position = Vector2(303.182, 310.909)
+position = Vector2(301.364, 312.273)
 SPEED = 85.0
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]

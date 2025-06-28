@@ -63,6 +63,7 @@ func exit():
 	await get_tree().create_timer(2).timeout
 	next_level()
 	if current_phase != "completed":
+		GlobalSingleton.ultima_entrada = "map_escola"
 		Transition.fade_to_scene("res://Scenes/tile_map_supermarket.tscn")
 	
 

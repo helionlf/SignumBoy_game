@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bdx67fof2b6my"]
+[gd_scene load_steps=21 format=3 uid="uid://bdx67fof2b6my"]
 
 [ext_resource type="Script" path="res://Scripts/Mom.gd" id="1_uunv4"]
 [ext_resource type="Texture2D" uid="uid://c2le8k6yqdv7f" path="res://Assets/Characters/sprite/2D Top Down Pixel Art Characters/013.png" id="2_ds1iv"]
@@ -13,6 +13,10 @@ msg_queue = ["** Estou fazendo um bolo delicioso! **", "** haaa... Ainda não te
 [sub_resource type="AtlasTexture" id="AtlasTexture_5vtsf"]
 atlas = ExtResource("2_ds1iv")
 region = Rect2(20, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pff3o"]
+atlas = ExtResource("2_ds1iv")
+region = Rect2(20, 96, 20, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_604q1"]
 atlas = ExtResource("2_ds1iv")
@@ -46,6 +50,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pff3o")
+}],
+"loop": true,
+"name": &"idle_north",
 "speed": 5.0
 }, {
 "frames": [{
@@ -116,7 +128,7 @@ Interaction = SubResource("Resource_23g1q")
 texture_filter = 1
 scale = Vector2(1.259, 1.259)
 sprite_frames = SubResource("SpriteFrames_sggeh")
-animation = &"idle"
+animation = &"idle_north"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.47)
