@@ -2,6 +2,7 @@ extends Node
 
 
 var mae_removida : bool
+var ultima_entrada := ""
 
 func _ready():
 	if "singletonGlobal" in SaveManager.save_data:
