@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://hbgbv8yb4387"]
+
+[ext_resource type="Script" path="res://Scripts/minigame_frutas.gd" id="1_10cb7"]
+[ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="2_fnqqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brlpy"]
+size = Vector2(117, 37)
+
+[node name="minigame_frutas" type="Node2D"]
+script = ExtResource("1_10cb7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer"]
+position = Vector2(504, 571)
+script = ExtResource("2_fnqqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/CharacterBody2D"]
+position = Vector2(48.5, -8.5)
+shape = SubResource("RectangleShape2D_brlpy")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
